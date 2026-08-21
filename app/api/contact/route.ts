@@ -4,11 +4,20 @@ import { supabase } from '../../../lib/supabase';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, org, phone, email, service, location, message } = body;
+    const { name, org, phone, email, service, location, area, timeline, budget, message } = body;
 
-    if (!name || !phone || !message) {
-      return NextResponse.json({ error: 'Name, phone and message are required.' }, { status: 400 });
+    if (!name || !phone) {
+      return NextResponse.json({ error: 'Name and mobile number are required.' }, { status: 400 });
     }
+
+    const metadataParts = [
+      message ? `Notes: ${message}` : null,
+      area ? `Approx Area: ${area}` : null,
+      timeline ? `Timeline: ${timeline}` : null,
+      budget ? `Indicative Budget: ${budget}` : null,
+    ].filter(Boolean);
+
+    const formattedMessage = metadataParts.length > 0 ? metadataParts.join('\n') : 'Direct website inquiry';
 
     const { data, error } = await supabase.from('inquiries').insert({
       name,
@@ -17,7 +26,7 @@ export async function POST(req: NextRequest) {
       email: email || null,
       service: service || null,
       location: location || null,
-      message,
+      message: formattedMessage,
       status: 'new',
     }).select().single();
 
@@ -26,8 +35,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, id: data.id });
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
+    console.error('Inquiry submission error:', err);
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
 }
