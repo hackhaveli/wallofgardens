@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getSupabaseClient } from '../../lib/supabase';
+import { canOptimize } from '../../lib/img';
 
 const TYPE_TO_CAT: Record<string, string> = {
   'corporate landscaping': 'corporate',
@@ -195,10 +197,12 @@ export default function ProjectsPage() {
                     data-n={`${prj.name} — ${prj.location}`}
                     style={{ minHeight: '260px', width: '100%', position: 'relative', display: 'block' }}
                   >
-                    <img
+                    <Image
                       src={prj.image}
                       alt={prj.name}
-                      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      fill
+                      sizes="(max-width: 1340px) 100vw, 1220px"
+                      unoptimized={!canOptimize(prj.image)}
                     />
                   </div>
                 </div>
@@ -231,10 +235,10 @@ export default function ProjectsPage() {
 
           <div className="cs-imgs rv">
             <div className="plate rvp has-img" data-n="Before — existing condition">
-              <img src="/project_04.jpg" alt="Before existing condition" />
+              <Image src="/project_04.jpg" alt="Before existing condition" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
             <div className="plate rvp has-img" data-n="After — completed">
-              <img src="/project_01.jpg" alt="After completed" />
+              <Image src="/project_01.jpg" alt="After completed" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
           </div>
 
@@ -309,7 +313,7 @@ export default function ProjectsPage() {
       {/* CLOSING */}
       <section className="close">
         <div className="plate dk has-img" data-n="Wall of Gardens Projects">
-          <img src="/cta_bg.jpg" alt="Wall of Gardens Projects" />
+          <Image src="/cta_bg.jpg" alt="Wall of Gardens Projects" fill sizes="100vw" />
         </div>
         <div className="shell">
           <div className="close-in rv">

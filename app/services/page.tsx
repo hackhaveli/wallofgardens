@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -297,7 +298,7 @@ export default function ServicesPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Wall of Gardens Services — Delhi NCR">
-          <img src="/cta_bg.jpg" alt="Wall of Gardens Services" />
+          <Image src="/cta_bg.jpg" alt="Wall of Gardens Services" fill sizes="100vw" />
         </div>
         <div className="shell">
           <div className="close-in rv">

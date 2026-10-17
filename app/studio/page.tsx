@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -364,7 +365,7 @@ export default function StudioPage() {
             <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Shangri-La</span>
           </div>
           <div className="plate dk rvp has-img" data-n="Studio / Team — Wall of Gardens" style={{ aspectRatio: '21/8', minHeight: '220px' }}>
-            <img src="/project_01.jpg" alt="Wall of Gardens Studio and Team" />
+            <Image src="/project_01.jpg" alt="Wall of Gardens Studio and Team" fill sizes="(max-width: 1340px) 100vw, 1220px" />
           </div>
         </div>
       </section>
@@ -372,7 +373,7 @@ export default function StudioPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Studio Janakpuri — Wall of Gardens">
-          <img src="/cta_bg.jpg" alt="Wall of Gardens Studio" />
+          <Image src="/cta_bg.jpg" alt="Wall of Gardens Studio" fill sizes="100vw" />
         </div>
         <div className="shell">
           <div className="close-in rv">
