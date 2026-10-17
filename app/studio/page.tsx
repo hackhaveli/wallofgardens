@@ -364,8 +364,8 @@ export default function StudioPage() {
             <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Holiday Inn</span>
             <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Shangri-La</span>
           </div>
-          <div className="plate dk rvp has-img" data-n="Studio / Team — Wall of Gardens" style={{ aspectRatio: '21/8', minHeight: '220px' }}>
-            <Image src="/project_01.jpg" alt="Wall of Gardens Studio and Team" fill sizes="(max-width: 1340px) 100vw, 1220px" />
+          <div className="plate dk rvp has-img" data-n="In-House Crew On Site — Wall of Gardens" style={{ aspectRatio: '21/8', minHeight: '220px' }}>
+            <Image src="/crew_onsite.jpg" alt="Wall of Gardens in-house technical crew installing living wall modules on site" fill sizes="(max-width: 1340px) 100vw, 1220px" />
           </div>
         </div>
       </section>
