@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -6,7 +7,18 @@ export default function Footer() {
       <div className="shell">
         <div className="ft-g">
           <div>
-            <div className="ft-b">Wall <b>of</b> Gardens</div>
+            <div className="ft-brand-row">
+              <div className="brand-logo-wrap">
+                <Image
+                  src="/icon.jpg"
+                  alt="Wall of Gardens"
+                  width={34}
+                  height={34}
+                  className="brand-logo-img"
+                />
+              </div>
+              <div className="ft-b">Wall <b>of</b> Gardens</div>
+            </div>
             <div className="tag" style={{ marginTop: '13px' }}>Landscaping / Vertical Gardens / Green Spaces</div>
           </div>
           <div>
@@ -21,12 +33,18 @@ export default function Footer() {
           <div>
             <h4>Studio</h4>
             <Link href="/projects">Projects</Link>
+            <Link href="/services">Services</Link>
             <Link href="/studio">Studio</Link>
             <Link href="/contact">Contact</Link>
           </div>
           <div>
             <h4>Contact</h4>
-            <a href="tel:+919990960669">+91 99909 60669</a>
+            <a href="tel:+919990960669" className="ft-phone-link">
+              <strong>+91 99909 60669</strong>
+            </a>
+            <a href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
+              WhatsApp Studio &rarr;
+            </a>
             <a href="mailto:founder@wallofgardens.com">founder@wallofgardens.com</a>
             <li>6th Floor, MERI, Janakpuri,<br />New Delhi – 110058</li>
           </div>

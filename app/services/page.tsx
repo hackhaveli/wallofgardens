@@ -3,313 +3,293 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ServicesExplorer from '../components/ServicesExplorer';
 
 export const metadata: Metadata = {
-  title: 'Services — Landscaping, Living Walls & Green Spaces | Wall of Gardens',
-  description: 'Six disciplines from one Delhi NCR studio: corporate landscaping, vertical gardens, terrace gardens, balcony gardens, preserved moss walls and corporate plantscaping.',
+  title: 'Services — Engineered Living Walls, Terraces & Landscapes | Wall of Gardens',
+  description: 'Six living architecture disciplines engineered by one studio across Delhi NCR. Corporate landscaping, vertical gardens, terrace landscapes, balcony gardens, preserved moss walls, and workplace plantscaping.',
 };
+
+const STATS = [
+  { n: '06', l: 'Dedicated Disciplines', s: 'Designed & maintained in-house' },
+  { n: '100%', l: 'In-House Crew', s: 'Zero sub-contracting' },
+  { n: '0₹', l: 'Free Site Visit', s: 'Delhi NCR · No obligation' },
+  { n: '2019', l: 'Practice Established', s: 'Corporate & luxury residential' },
+];
+
+const INVARIANTS = [
+  {
+    no: '01',
+    title: 'Light & Exposure Mapping',
+    p: 'Measured at the actual surface, not at the room window. Natural light levels determine whether a wall should be living, hybrid, or preserved.',
+  },
+  {
+    no: '02',
+    title: 'Structural Load Calculation',
+    p: 'Wet-weight analysis accounting for saturated growing media, root systems, and peak rainwater retention. Especially critical for terraces and high walls.',
+  },
+  {
+    no: '03',
+    title: 'Waterproofing Integrity First',
+    p: 'We inspect, certify, or re-engineer substrate waterproofing before a single planter or bracket is mounted. Prevention costs a fraction of remediation.',
+  },
+  {
+    no: '04',
+    title: 'Sub-surface Automated Irrigation',
+    p: 'Pressure-compensating drip systems with timed solenoid valves and dedicated runoff drain channels. No messy overspray or manual hose watering.',
+  },
+  {
+    no: '05',
+    title: 'Single-Team Responsibility',
+    p: 'The same landscape architects and horticulturists who draft your drawings supervise installation and handle ongoing scheduled maintenance.',
+  },
+  {
+    no: '06',
+    title: 'Transparent Itemized Scope',
+    p: 'Every bracket grade, substrate formulation, drainage layer, and plant cultivar is specified in line-item quotes with clear lead times.',
+  },
+];
+
+const STEPS = [
+  { no: '01', phase: 'Understand', title: 'Site Assessment', desc: 'We inspect orientation, lux levels, water supply, drainage routes, and slab load on site. Free across Delhi NCR.' },
+  { no: '02', phase: 'Design', title: 'Drawings & Spec', desc: 'Architectural shop drawings, plant species palettes, and plumbing schematics issued for review before procurement.' },
+  { no: '03', phase: 'Execute', title: 'In-House Installation', desc: 'Our trained crew fabricates sub-frames, installs irrigation, and plants out to an agreed project schedule.' },
+  { no: '04', phase: 'Maintain', title: 'Handover & Upkeep', desc: 'Full care documentation plus scheduled maintenance contracts to keep your landscape thriving year-round.' },
+];
 
 export default function ServicesPage() {
   return (
     <>
       <Navbar />
 
-      <section className="bnr sheet on-dark">
+      {/* LUXURY HERO HEADER */}
+      <section className="sv-hero on-dark" id="top">
+        <div className="sv-hero-bg" aria-hidden="true">
+          <Image
+            src="/project_03.jpg"
+            alt="Wall of Gardens living architecture"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="shell">
           <div className="crumb"><Link href="/">Home</Link> / Services</div>
-          <div className="rule-tag"><span className="tag gold">Sheet 00 — Register</span></div>
-          <h1 className="d1">Six disciplines, one studio.</h1>
-          <p className="lede light">
-            Every one of them is designed, installed and maintained by the same team. <em className="g">Which one you need is usually decided by the space, not the budget.</em>
+          <div className="sv-trust">
+            <span>Delhi NCR</span><i aria-hidden="true" />
+            <span>Scope of Works</span><i aria-hidden="true" />
+            <span>Living Architecture</span>
+          </div>
+          <h1 className="sv-hero-title">
+            Six disciplines, <em className="g">engineered</em> under one studio.
+          </h1>
+          <p className="sv-hero-lede">
+            Every living wall, corporate terrace, and indoor botanical installation is executed end-to-end by our own in-house architects and horticulturists. Which discipline you need is decided by your space’s light, load, and water access.
           </p>
+          <div className="sv-hero-actions">
+            <Link className="hx-cta" href="/contact">
+              Book a Free Site Visit <span aria-hidden="true">&rarr;</span>
+            </Link>
+            <a className="hx-link" href="tel:+919990960669">
+              Call studio: +91 99909 60669 <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          {/* KEY STATS BAR */}
+          <div className="sv-stats">
+            {STATS.map((s, i) => (
+              <div key={i} className="sv-stat-item">
+                <span className="sv-stat-num">{s.n}</span>
+                <span className="sv-stat-lbl">{s.l}</span>
+                <span style={{ fontSize: '11px', color: 'rgba(244,243,236,0.5)', marginTop: '4px', display: 'block' }}>{s.s}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* SELECTOR */}
-      <section className="sec sheet">
+      {/* INTERACTIVE SERVICES SHOWCASE */}
+      <section className="sec sheet" id="disciplines">
         <div className="shell">
-          <div className="hd rv">
+          <header className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Selection</span></div>
-              <h2 className="d2">Start with where the space is.</h2>
-              <p className="lede" style={{ marginTop: '16px', maxWidth: '58ch' }}>
-                Two questions get most enquiries to the right place: is the space indoors or outdoors, and are we working on a wall, a floor or a roof.
+              <div className="rule-tag"><span className="tag">Sheet 02 — Disciplines</span></div>
+              <h2 className="d2">The six core disciplines.</h2>
+              <p className="lede" style={{ marginTop: '14px', maxWidth: '60ch' }}>
+                Filter by installation type or explore individual technical specifications below.
               </p>
             </div>
-          </div>
+          </header>
 
-          <div className="mtx rv">
-            <div className="mtx-r mtx-h">
-              <div className="mtx-c"><span>Space</span></div>
-              <div className="mtx-c"><span>On a wall</span></div>
-              <div className="mtx-c"><span>On the floor</span></div>
-              <div className="mtx-c"><span>On a roof</span></div>
-            </div>
-
-            <div className="mtx-r">
-              <div className="mtx-c"><span>Indoors</span></div>
-              <div className="mtx-c">
-                <Link href="/services/moss-wall">Moss Walls<small>No water, no light</small></Link>
-                <Link href="/services/vertical-gardens">Vertical Gardens<small>Hybrid or artificial</small></Link>
-              </div>
-              <div className="mtx-c">
-                <Link href="/services/plantscaping">Corporate Plantscaping<small>Installed &amp; maintained</small></Link>
-              </div>
-              <div className="mtx-c"><span className="none">&mdash;</span></div>
-            </div>
-
-            <div className="mtx-r">
-              <div className="mtx-c"><span>Outdoors</span></div>
-              <div className="mtx-c">
-                <Link href="/services/vertical-gardens">Vertical Gardens<small>Natural, zoned irrigation</small></Link>
-              </div>
-              <div className="mtx-c">
-                <Link href="/services/corporate-landscaping">Corporate Landscaping<small>Campuses &amp; commercial</small></Link>
-                <Link href="/services/balcony-gardens">Balcony Gardens<small>Compact residential</small></Link>
-              </div>
-              <div className="mtx-c">
-                <Link href="/services/terrace-garden">Terrace Gardens<small>Load &amp; drainage first</small></Link>
-              </div>
-            </div>
-          </div>
-
-          <p className="tag rv" style={{ marginTop: '20px' }}>
-            Not sure? Send a photograph. We will tell you which of these your space can actually support.
-          </p>
+          <ServicesExplorer />
         </div>
       </section>
 
-      {/* REGISTER */}
-      <section className="sec sec-t sheet">
+      {/* SPACE DECISION MATRIX */}
+      <section className="sec sec-t sheet" id="selector">
         <div className="shell">
-          <div className="hd rv">
+          <header className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Register</span></div>
-              <h2 className="d2">The six sheets.</h2>
-            </div>
-            <span className="tag">Each sheet carries its own technical detail</span>
-          </div>
-
-          <div className="reg">
-            <Link className="rg rv" href="/services/corporate-landscaping">
-              <span className="no">01</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <rect x="6" y="6" width="108" height="72" stroke="rgba(14,24,17,.28)" strokeWidth="1" fill="none" />
-                  <rect x="7" y="7" width="20" height="70" fill="rgba(127,166,92,.2)" />
-                  <rect x="7" y="7" width="106" height="10" fill="rgba(127,166,92,.2)" />
-                  <rect x="38" y="22" width="46" height="26" stroke="rgba(14,24,17,.34)" strokeWidth="1" fill="rgba(14,24,17,.07)" />
-                  <rect x="32" y="58" width="58" height="16" fill="rgba(127,166,92,.32)" />
-                  <path d="M84 54 H44 m5 -3 -5 3 5 3" stroke="#7FA65C" strokeWidth="1.1" fill="none" />
-                  <path d="M30 66 H68" stroke="#C8A55B" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div>
-                <h3>Corporate Landscaping</h3>
-                <div className="sub">Offices · Campuses · Commercial</div>
-              </div>
-              <p>Ground-level landscape delivered in phases so the site keeps running. Levels and drainage set before hardscape or planting.</p>
-              <span className="go">Sheet 01 &rarr;</span>
-            </Link>
-
-            <Link className="rg rv dl1" href="/services/vertical-gardens">
-              <span className="no">02</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="t1" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#C8A55B" stopOpacity=".4" />
-                      <stop offset="55%" stopColor="#7FA65C" stopOpacity=".22" />
-                      <stop offset="100%" stopColor="#25506F" stopOpacity=".42" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="10" y="12" width="38" height="62" stroke="rgba(14,24,17,.28)" strokeWidth="1" fill="url(#t1)" />
-                  <path d="M29 12 V70" stroke="#7FA65C" strokeWidth="1" strokeDasharray="2 4" />
-                  <rect x="70" y="12" width="38" height="62" stroke="rgba(14,24,17,.28)" strokeWidth="1" fill="rgba(127,166,92,.24)" />
-                  <path d="M64 12 V70 M64 24 H104 M64 43 H104 M64 62 H104" stroke="#C8A55B" strokeWidth="1" />
-                  <g fill="#7FA65C">
-                    <circle cx="86" cy="24" r="1.6" />
-                    <circle cx="100" cy="24" r="1.6" />
-                    <circle cx="86" cy="43" r="1.6" />
-                    <circle cx="100" cy="43" r="1.6" />
-                    <circle cx="86" cy="62" r="1.6" />
-                    <circle cx="100" cy="62" r="1.6" />
-                  </g>
-                </svg>
-              </div>
-              <div>
-                <h3>Vertical Gardens</h3>
-                <div className="sub">Natural · Hybrid · Artificial</div>
-              </div>
-              <p>Living walls where structure, zoned irrigation and drainage are engineered before a single plant is specified.</p>
-              <span className="go">Sheet 02 &rarr;</span>
-            </Link>
-
-            <Link className="rg rv dl2" href="/services/terrace-garden">
-              <span className="no">03</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <rect x="10" y="60" width="100" height="14" stroke="rgba(14,24,17,.3)" strokeWidth="1" fill="rgba(14,24,17,.06)" />
-                  <path d="M10 60 H110 V56 L10 52 Z" fill="rgba(14,24,17,.08)" stroke="rgba(14,24,17,.24)" strokeWidth="1" />
-                  <path d="M10 52 L110 56 L110 52 L10 48 Z" fill="rgba(200,165,91,.45)" stroke="#C8A55B" strokeWidth="1" />
-                  <path d="M10 48 L110 52 L110 42 L10 38 Z" fill="rgba(127,166,92,.14)" stroke="rgba(14,24,17,.22)" strokeWidth="1" />
-                  <path d="M10 38 L110 42" stroke="rgba(14,24,17,.36)" strokeWidth="1" strokeDasharray="3 2" />
-                  <path d="M10 38 L110 42 L110 24 L10 20 Z" fill="rgba(127,166,92,.22)" stroke="rgba(14,24,17,.2)" strokeWidth="1" />
-                  <g fill="#7FA65C" opacity=".8">
-                    <circle cx="28" cy="15" r="4" />
-                    <circle cx="52" cy="12" r="5" />
-                    <circle cx="76" cy="15" r="4" />
-                    <circle cx="96" cy="13" r="4.5" />
-                  </g>
-                </svg>
-              </div>
-              <div>
-                <h3>Terrace Gardens</h3>
-                <div className="sub">Rooftop · Load · Drainage</div>
-              </div>
-              <p>Rooftop landscapes built over your waterproofing, not onto it. Load worked out before the planting is chosen.</p>
-              <span className="go">Sheet 03 &rarr;</span>
-            </Link>
-
-            <Link className="rg rv dl3" href="/services/balcony-gardens">
-              <span className="no">04</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <circle cx="60" cy="40" r="30" stroke="rgba(14,24,17,.18)" strokeWidth="1" strokeDasharray="2 3" fill="none" />
-                  <path d="M92 40 A32 32 0 0 1 28 40" stroke="#C8A55B" strokeWidth="1" strokeDasharray="3 3" fill="none" />
-                  <rect x="50" y="30" width="20" height="20" stroke="rgba(14,24,17,.32)" strokeWidth="1" fill="rgba(14,24,17,.06)" />
-                  <rect x="53" y="20" width="14" height="9" stroke="rgba(14,24,17,.34)" strokeWidth="1" fill="rgba(127,166,92,.16)" />
-                  <rect x="71" y="33" width="9" height="14" stroke="rgba(14,24,17,.34)" strokeWidth="1" fill="rgba(127,166,92,.34)" />
-                  <rect x="53" y="51" width="14" height="9" stroke="rgba(14,24,17,.34)" strokeWidth="1" fill="rgba(200,165,91,.3)" />
-                  <rect x="40" y="33" width="9" height="14" stroke="rgba(14,24,17,.34)" strokeWidth="1" fill="rgba(190,120,60,.34)" />
-                  <circle cx="60" cy="72" r="3" fill="#C8A55B" />
-                </svg>
-              </div>
-              <div>
-                <h3>Balcony Gardens</h3>
-                <div className="sub">Compact · Residential</div>
-              </div>
-              <p>Small spaces planned to the square foot, with drainage contained so nothing reaches the balcony below.</p>
-              <span className="go">Sheet 04 &rarr;</span>
-            </Link>
-
-            <Link className="rg rv dl4" href="/services/moss-wall">
-              <span className="no">05</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <rect x="14" y="10" width="94" height="58" stroke="rgba(14,24,17,.2)" strokeWidth="1" fill="none" />
-                  <rect x="14" y="10" width="26" height="58" fill="rgba(200,165,91,.16)" />
-                  <rect x="88" y="10" width="20" height="58" fill="rgba(37,80,111,.16)" />
-                  <rect x="14" y="10" width="94" height="18" fill="rgba(190,120,60,.16)" />
-                  <rect x="40" y="28" width="48" height="40" fill="rgba(127,166,92,.3)" stroke="#7FA65C" strokeWidth="1.2" />
-                  <circle cx="58" cy="52" r="3" fill="#7FA65C" />
-                  <circle cx="74" cy="40" r="3" fill="#7FA65C" />
-                  <path d="M14 74 H108" stroke="rgba(14,24,17,.24)" strokeWidth="1" />
-                </svg>
-              </div>
-              <div>
-                <h3>Moss Walls</h3>
-                <div className="sub">Preserved · Interiors only</div>
-              </div>
-              <p>Real moss, preserved rather than growing. No irrigation, no sunlight, no maintenance schedule to forget.</p>
-              <span className="go">Sheet 05 &rarr;</span>
-            </Link>
-
-            <Link className="rg rv dl5" href="/services/plantscaping">
-              <span className="no">06</span>
-              <div className="thumb">
-                <svg viewBox="0 0 120 84" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="t2" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#C8A55B" stopOpacity=".34" />
-                      <stop offset="45%" stopColor="#7FA65C" stopOpacity=".16" />
-                      <stop offset="100%" stopColor="#7FA65C" stopOpacity=".03" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="14" y="12" width="94" height="60" stroke="rgba(14,24,17,.28)" strokeWidth="1" fill="url(#t2)" />
-                  <path d="M12 12 V72" stroke="#C8A55B" strokeWidth="2" />
-                  <path d="M42 12 V72 M66 12 V72 M90 12 V72" stroke="rgba(14,24,17,.16)" strokeWidth="1" strokeDasharray="2 3" />
-                  <rect x="90" y="30" width="18" height="26" stroke="rgba(14,24,17,.3)" strokeWidth="1" fill="rgba(14,24,17,.07)" />
-                  <g fill="#7FA65C">
-                    <circle cx="26" cy="26" r="4" />
-                    <circle cx="24" cy="56" r="3.4" />
-                    <circle cx="54" cy="38" r="3" />
-                    <circle cx="52" cy="64" r="2.6" />
-                  </g>
-                  <g fill="none" stroke="#C8A55B" strokeWidth="1.2">
-                    <circle cx="78" cy="24" r="2.6" />
-                    <circle cx="78" cy="62" r="2.6" />
-                  </g>
-                </svg>
-              </div>
-              <div>
-                <h3>Corporate Plantscaping</h3>
-                <div className="sub">Office planting · Maintained</div>
-              </div>
-              <p>Indoor planting specified against measured light, installed by us, maintained on contract. You own the plants.</p>
-              <span className="go">Sheet 06 &rarr;</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* COMMON TO ALL */}
-      <section className="sec sec-d sheet on-dark">
-        <div className="shell">
-          <div className="hd rv">
-            <div>
-              <div className="rule-tag"><span className="tag gold">Common to all six</span></div>
-              <h2 className="d2">Whatever the sheet, these do not change.</h2>
-              <p className="lede light" style={{ marginTop: '16px', maxWidth: '56ch' }}>
-                Different disciplines, same working method. This is what you get on any project we take on.
+              <div className="rule-tag"><span className="tag">Selection Guide</span></div>
+              <h2 className="d2">Where is your space?</h2>
+              <p className="lede" style={{ marginTop: '14px', maxWidth: '58ch' }}>
+                Two physical constraints decide 90% of specifications: whether the location is indoor or outdoor, and if it rests on a wall, floor, or roof slab.
               </p>
             </div>
-          </div>
-          <div className="idx">
-            <div className="ir rv tri"><span className="no">01</span><h3>A site visit before a price</h3><p>We establish light, water, drainage, load and access on site. Within Delhi NCR the visit is free and carries no obligation.</p></div>
-            <div className="ir rv tri"><span className="no">02</span><h3>A line-item scope, not a lump sum</h3><p>Materials, quantities and timeline written out, so you can compare our quote against anyone else’s properly.</p></div>
-            <div className="ir rv tri"><span className="no">03</span><h3>Our own crew on site</h3><p>Design, procurement and installation stay with the same team, so the person who drew it answers for it.</p></div>
-            <div className="ir rv tri"><span className="no">04</span><h3>An honest answer about what will not work</h3><p>If a wall is too dark, a slab too loaded or a species wrong for the exposure, you hear it before the quote rather than after the install.</p></div>
-            <div className="ir rv tri"><span className="no">05</span><h3>A written care schedule at handover</h3><p>What needs doing and when, so the work can be maintained by us, by your team, or by anyone competent.</p></div>
+          </header>
+
+          <div className="sv-space-grid">
+            <div className="sv-space-col">
+              <div className="sv-space-header">
+                <h3>On a Wall</h3>
+                <span>Vertical Surfaces</span>
+              </div>
+              <Link href="/services/vertical-gardens" className="sv-space-item">
+                <strong>Natural Living Walls</strong>
+                <span>Outdoor or high-light interior walls with zoned automated drip irrigation.</span>
+              </Link>
+              <Link href="/services/moss-wall" className="sv-space-item">
+                <strong>Preserved Moss Walls</strong>
+                <span>Zero water, zero sunlight, zero plumbing. 100% natural acoustic greenery.</span>
+              </Link>
+              <Link href="/services/vertical-gardens" className="sv-space-item">
+                <strong>Hybrid / Artificial Green Walls</strong>
+                <span>For deep interior spaces where plumbing or natural daylight is impossible.</span>
+              </Link>
+            </div>
+
+            <div className="sv-space-col">
+              <div className="sv-space-header">
+                <h3>On the Floor</h3>
+                <span>Ground &amp; Interior</span>
+              </div>
+              <Link href="/services/corporate-landscaping" className="sv-space-item">
+                <strong>Corporate Landscaping</strong>
+                <span>Offices, commercial campuses, entry plazas, and masterplanned grounds.</span>
+              </Link>
+              <Link href="/services/plantscaping" className="sv-space-item">
+                <strong>Corporate Plantscaping</strong>
+                <span>Indoor office planting installed and routinely serviced under SLA maintenance.</span>
+              </Link>
+              <Link href="/services/balcony-gardens" className="sv-space-item">
+                <strong>Balcony Gardens</strong>
+                <span>Compact residential spaces planned with concealed, zero-runoff drainage.</span>
+              </Link>
+            </div>
+
+            <div className="sv-space-col">
+              <div className="sv-space-header">
+                <h3>On a Roof</h3>
+                <span>High-Altitude</span>
+              </div>
+              <Link href="/services/terrace-garden" className="sv-space-item">
+                <strong>Terrace Gardens</strong>
+                <span>Structural load safety, waterproofing barrier, and high-flow drain cells first.</span>
+              </Link>
+              <Link href="/services/vertical-gardens" className="sv-space-item">
+                <strong>Terrace Boundary Living Walls</strong>
+                <span>Wind-rated modular vertical planters providing lush privacy screens.</span>
+              </Link>
+              <Link href="/contact" className="sv-space-item">
+                <strong>Need custom feasibility?</strong>
+                <span>Our structural engineers inspect roof slabs across Delhi NCR free of cost.</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="sec sheet">
+      {/* THE SIX INVARIANTS / ENGINEERING METHOD */}
+      <section className="sec sec-d sheet on-dark" id="invariants">
         <div className="shell">
-          <div className="hd rv">
+          <header className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Sequence</span></div>
+              <div className="rule-tag"><span className="tag gold">The Engineering Standard</span></div>
+              <h2 className="d2">Whatever the project, these six rules never change.</h2>
+              <p className="lede light" style={{ marginTop: '16px', maxWidth: '58ch' }}>
+                Every discipline shares the same strict methodology. This is how we ensure installations remain lush years after handover.
+              </p>
+            </div>
+          </header>
+
+          <div className="sv-invariants-grid">
+            {INVARIANTS.map((inv) => (
+              <div key={inv.no} className="sv-invariant-card">
+                <span className="sv-invariant-num">RULE {inv.no}</span>
+                <h3>{inv.title}</h3>
+                <p>{inv.p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEQUENCE: 4-STAGE EXECUTION */}
+      <section className="sec sheet" id="process">
+        <div className="shell">
+          <header className="hd rv">
+            <div>
+              <div className="rule-tag"><span className="tag">Project Sequence</span></div>
               <h2 className="d2">Four stages, one point of contact.</h2>
+              <p className="lede" style={{ marginTop: '14px', maxWidth: '56ch' }}>
+                From initial lux survey to ongoing routine care, you work with a unified team.
+              </p>
             </div>
-          </div>
+          </header>
+
           <div className="rail">
             <div className="rail-in">
-              <div className="st rv"><span className="no">01 / Understand</span><h3>Site assessment</h3><p>Constraints established on site, before anything is priced.</p></div>
-              <div className="st rv dl1"><span className="no">02 / Design</span><h3>Drawing &amp; spec</h3><p>Layout and material specification issued for sign-off.</p></div>
-              <div className="st rv dl2"><span className="no">03 / Execute</span><h3>Installation</h3><p>Our crew, to an agreed timeline, around your site hours.</p></div>
-              <div className="st rv dl3"><span className="no">04 / Maintain</span><h3>Handover &amp; care</h3><p>Written schedule, and a maintenance contract where you want one.</p></div>
+              {STEPS.map((st) => (
+                <div key={st.no} className="st rv">
+                  <span className="no">{st.no} / {st.phase}</span>
+                  <h3>{st.title}</h3>
+                  <p>{st.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CLOSING */}
-      <section className="close" id="contact">
-        <div className="plate dk has-img" data-n="Wall of Gardens Services — Delhi NCR">
-          <Image src="/cta_bg.jpg" alt="Wall of Gardens Services" fill sizes="100vw" />
+      {/* HIGH-IMPACT CLOSING SECTION */}
+      <section className="hcta on-dark" id="contact">
+        <div className="hcta-bg rv" aria-hidden="true">
+          <Image src="/cta_bg.jpg" alt="Wall of Gardens living architecture" fill sizes="100vw" />
         </div>
-        <div className="shell">
-          <div className="close-in rv">
-            <div className="rule-tag"><span className="tag gold">Contact</span></div>
-            <h2 className="d2">Still not sure which one you need?</h2>
-            <p className="lede light">Send a photograph and rough dimensions. We will tell you what the space can support before you commit to anything.</p>
-            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '28px', alignItems: 'center' }}>
-              <Link className="btn btn-g" href="/contact"><span>Book a Site Visit</span></Link>
-              <a className="btn btn-o" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer"><span>WhatsApp Us</span></a>
+        <div className="shell hcta-in">
+          <div className="hcta-copy rv">
+            <div className="rule-tag"><span className="tag gold">Sheet 07 — Project Consultation</span></div>
+            <h2 className="d2">Have a space that needs a greener direction?</h2>
+            <p>
+              Site visits within Delhi NCR are free and carry no obligation. Tell us about your space and our engineers will visit to measure light, water, and load constraints.
+            </p>
+            <div className="hcta-act">
+              <Link className="hx-cta" href="/contact">
+                Start a Project <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <a className="hx-link" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
+                WhatsApp the Studio <span aria-hidden="true">&rarr;</span>
+              </a>
             </div>
           </div>
+          <ul className="hcta-card rv" style={{ '--d': 1 } as React.CSSProperties}>
+            <li>
+              <span>Direct Call</span>
+              <a href="tel:+919990960669">+91 99909 60669</a>
+            </li>
+            <li>
+              <span>WhatsApp</span>
+              <a href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">Message our team</a>
+            </li>
+            <li>
+              <span>Studio</span>
+              <b>Janakpuri, New Delhi</b>
+            </li>
+            <li>
+              <span>Coverage</span>
+              <b>Delhi NCR &amp; pan-India</b>
+            </li>
+          </ul>
         </div>
       </section>
 

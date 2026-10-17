@@ -5,6 +5,10 @@ import ClientObserver from "./components/ClientObserver";
 export const metadata: Metadata = {
   title: "Wall of Gardens — Living Architecture, Engineered | Delhi NCR",
   description: "Vertical gardens, terraces and living walls engineered for corporate and premium residential spaces across Delhi NCR. Design, installation and maintenance under one team.",
+  icons: {
+    icon: "/icon.jpg",
+    apple: "/icon.jpg",
+  },
 };
 
 export default function RootLayout({

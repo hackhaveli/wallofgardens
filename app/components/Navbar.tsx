@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -18,10 +19,16 @@ export default function Navbar() {
       <div className="shell">
         <div className="nav-in">
           <Link className="brand" href="/" onClick={() => setOpen(false)}>
-            <svg width="23" height="23" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-              <rect x="1" y="1" width="24" height="24" stroke="#C8A55B"/>
-              <path d="M13 20V13M13 13C13 13 8 12 8 7C8 7 13 7 13 13ZM13 13C13 13 18 12 18 7C18 7 13 7 13 13Z" stroke="#7FA65C" strokeWidth="1.1" strokeLinejoin="round"/>
-            </svg>
+            <div className="brand-logo-wrap">
+              <Image
+                src="/icon.jpg"
+                alt="Wall of Gardens Logo"
+                width={36}
+                height={36}
+                className="brand-logo-img"
+                priority
+              />
+            </div>
             <span className="brand-n">Wall <b>of</b> Gardens</span>
           </Link>
           <nav className="nav-l">
@@ -31,7 +38,12 @@ export default function Navbar() {
             <Link href="/contact" className={isContact ? 'on' : ''}>Contact</Link>
           </nav>
           <div className="nav-r">
-            <a href="tel:+919990960669" className="tag light">+91 99909 60669</a>
+            <a href="tel:+919990960669" className="nav-phone" title="Call Wall of Gardens">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+91 99909 60669</span>
+            </a>
             <Link className="btn btn-g" href="/contact"><span>Start a Project</span></Link>
           </div>
           <button
@@ -49,7 +61,20 @@ export default function Navbar() {
           <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
           <Link href="/studio" onClick={() => setOpen(false)}>Studio</Link>
           <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
-          <Link href="/contact" style={{ color: 'var(--gold)' }} onClick={() => setOpen(false)}>Start a Project</Link>
+          <div className="mob-cta-box">
+            <Link className="btn btn-g" href="/contact" onClick={() => setOpen(false)}>
+              <span>Start a Project &rarr;</span>
+            </Link>
+            <a href="tel:+919990960669" className="mob-phone-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+91 99909 60669</span>
+            </a>
+            <a href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer" className="mob-wa-link">
+              <span>Message on WhatsApp &rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>
