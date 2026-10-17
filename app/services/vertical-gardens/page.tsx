@@ -335,6 +335,96 @@ export default function VerticalGardensPage() {
         </div>
       </section>
 
+      {/* REAL COMPLETED VERTICAL GARDEN INSTALLATIONS */}
+      <section className="sec sheet on-dark" id="installations">
+        <div className="shell">
+          <div className="hd rv">
+            <div>
+              <div className="rule-tag"><span className="tag gold">Our Real Work — On-Site Portfolio</span></div>
+              <h2 className="d2">Completed Vertical Gardens.</h2>
+              <p className="lede light" style={{ marginTop: '16px', maxWidth: '64ch' }}>
+                Every living wall below is an actual on-site installation engineered, built, and maintained by our own team across Delhi NCR.
+              </p>
+            </div>
+            <Link className="hhd-link" href="/projects">View all projects &rarr;</Link>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px', marginTop: '36px' }}>
+            {/* Card 1 */}
+            <div className="rv rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Holiday Inn Atrium Multi-Story Living Wall" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Hospitality Atrium · Delhi NCR</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Holiday Inn Multi-Story Living Wall</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Multi-story living wall integrated into hospitality atrium with custom modular cassette subframe, pressure-compensating drip, and illuminated emblem.</p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="rv dl1 rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/courtyard-atrium-skylight.jpg" alt="Courtyard Atrium Skylight Living Wall" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Double-Height Skylight Atrium</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Courtyard Atrium Skylight Living Wall</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Double-height courtyard atrium living wall flanked by carved parametric stone cladding and natural daylighting skylight.</p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rv dl2 rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/architectural-staircase.jpg" alt="Double-Height Staircase Living Columns" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Corporate Interior · Gurugram</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Architectural Staircase Living Columns</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Double-height vertical living columns alternating with custom matte black fluted architectural louvers and track lighting.</p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="rv rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/resort-poolside-pergola.jpg" alt="Resort Poolside Living Wall & Pergola" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Hospitality & Wellness Resort</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Resort Poolside Pergola Living Wall</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Expansive poolside living wall with multi-tone cultivars (purple Tradescantia & ribbon grass) flanking teak cabana pergolas.</p>
+              </div>
+            </div>
+
+            {/* Card 5 */}
+            <div className="rv dl1 rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/multi-species-wave-wall.jpg" alt="Curved Wave Pattern Living Wall" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Penthouse Pool Terrace</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Curved Multi-Species Wave Living Wall</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Diagonal bands of golden Chlorophytum, Sedum, and purple Tradescantia engineered with poolside timber decking.</p>
+              </div>
+            </div>
+
+            {/* Card 6 */}
+            <div className="rv dl2 rvp has-img" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: '#112217' }}>
+              <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4' }}>
+                <img src="/projects/vertical-gardens/commercial-plaza-uplight.jpg" alt="Commercial Plaza Living Wall with LED Uplighting" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div style={{ padding: '20px' }}>
+                <span style={{ fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#c8a55b', fontFamily: 'monospace' }}>Commercial Entrance Plaza</span>
+                <h3 style={{ fontSize: '18px', color: '#fff', margin: '8px 0 6px 0', fontFamily: 'serif' }}>Commercial Plaza LED Living Wall</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.5', margin: 0 }}>Full-length plaza living wall with polished granite flooring, drainage channel, and integrated LED ground lighting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* OTHER SERVICES */}
       <section className="sec sheet">
         <div className="shell">
@@ -370,8 +460,8 @@ export default function VerticalGardensPage() {
 
       {/* CLOSING */}
       <section className="close" id="contact">
-        <div className="plate dk has-img" data-n="Living Wall Installation — Wall of Gardens">
-          <img src="/project_03.jpg" alt="Vertical living wall" />
+        <div className="plate dk has-img" data-n="Holiday Inn Multi-Story Living Wall — Wall of Gardens">
+          <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Vertical living wall installation at Holiday Inn" />
         </div>
         <div className="shell">
           <div className="close-in rv">

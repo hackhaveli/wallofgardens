@@ -46,8 +46,8 @@ const SERVICES_DATA: ServiceItem[] = [
       'Multi-zone automated drip & fertigation',
       'Cultivars mapped to measured Lux & UV levels',
     ],
-    img: '/project_03.jpg',
-    alt: 'Living wall vertical garden in hotel atrium',
+    img: '/projects/vertical-gardens/holiday-inn-atrium.jpg',
+    alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens',
     href: '/services/vertical-gardens',
   },
   {
