@@ -13,11 +13,11 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  */
 
 const SLIDES = [
-  { src: '/hero/hero_slide_1.jpg', no: 'P—01', name: 'Flagship Multi-Story Living Wall', place: 'Holiday Inn Hospitality Atrium', alt: 'Multi-story outdoor living wall with Holiday Inn emblem reaching through open courtyard' },
-  { src: '/hero/hero_slide_2.jpg', no: 'P—02', name: 'Resort Poolside Pergola Living Wall', place: 'Luxury Resort & Wellness Terrace', alt: 'Expansive poolside living wall with teak cabana pergolas and purple Tradescantia' },
-  { src: '/hero/hero_slide_3.jpg', no: 'P—03', name: 'Architectural Staircase Vertical Wall', place: 'Corporate Atrium & Industrial Fluted Slats', alt: 'Double height living columns integrated with modern industrial steel staircase and track lighting' },
-  { src: '/hero/hero_slide_4.jpg', no: 'P—04', name: 'Rooftop Lap Pool Vertical Garden', place: 'Penthouse Infinity Pool Terrace', alt: 'Multi-species rooftop swimming pool living wall with Tradescantia and jade greens' },
-  { src: '/hero/hero_slide_5.jpg', no: 'P—05', name: 'Curved Wave Pattern Living Wall', place: 'Executive Stone Terrace Plaza', alt: 'Terrace living wall featuring wave bands of ribbon grass, sedum, and purple Tradescantia' },
+  { src: '/project_03.jpg', no: 'P—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
+  { src: '/project_01.jpg', no: 'P—02', name: 'Corporate Plant Maintenance (AMC)', place: 'CyberCity, Gurugram', alt: 'Biophilic executive office plantscaping and regular maintenance' },
+  { src: '/project_04.jpg', no: 'P—03', name: 'Penthouse Rooftop Terrace Lounge', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with pergola, bougainvillea, and deck lighting' },
+  { src: '/project_05.jpg', no: 'P—04', name: 'Bespoke Balcony Garden Sanctuary', place: 'Golf Course Road, Gurugram', alt: 'Luxury apartment balcony with modular living wall and golf course view' },
+  { src: '/project_02.jpg', no: 'P—05', name: 'Executive Boardroom Moss Feature', place: 'Barakhamba Road, New Delhi', alt: 'Preserved moss feature wall with fluted walnut acoustic panels' },
 ];
 
 const HOLD_MS = 7000;
