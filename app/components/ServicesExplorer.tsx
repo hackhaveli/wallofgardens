@@ -78,8 +78,8 @@ const SERVICES_DATA: ServiceItem[] = [
       'Custom modular planter joinery & lightweight media',
       'Low-maintenance ambient lighting & drip lines',
     ],
-    img: '/cta_bg.jpg',
-    alt: 'Balcony garden green sanctuary',
+    img: '/project_05.jpg',
+    alt: 'Luxury apartment balcony garden with living wall',
     href: '/services/balcony-gardens',
   },
   {
@@ -95,7 +95,7 @@ const SERVICES_DATA: ServiceItem[] = [
       'Dust-repellent, hypoallergenic & fire-rated',
     ],
     img: '/project_02.jpg',
-    alt: 'Preserved botanical moss wall in corporate lobby',
+    alt: 'Preserved botanical moss wall in executive boardroom',
     href: '/services/moss-wall',
   },
   {
@@ -110,8 +110,8 @@ const SERVICES_DATA: ServiceItem[] = [
       'Bi-weekly professional servicing & hydration checks',
       'Immediate replacement guarantee for distressed plants',
     ],
-    img: '/project_05.jpg',
-    alt: 'Indoor corporate plantscaping for workspace',
+    img: '/project_01.jpg',
+    alt: 'Indoor corporate plantscaping for executive workspace',
     href: '/services/plantscaping',
   },
 ];

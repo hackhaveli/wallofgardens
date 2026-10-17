@@ -13,11 +13,11 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  */
 
 const SLIDES = [
-  { src: '/project_03.jpg', no: 'P—03', name: 'Hybrid Living Wall — Lobby', place: 'Noida, Uttar Pradesh', alt: 'Floor-to-ceiling living wall in a hotel lobby' },
-  { src: '/project_06.jpg', no: 'P—06', name: 'Natural Living Wall — Exterior', place: 'Faridabad, Haryana', alt: 'Natural living wall covering a building facade' },
-  { src: '/project_04.jpg', no: 'P—04', name: 'Rooftop Terrace — Residence', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with pergola and seating' },
-  { src: '/project_01.jpg', no: 'P—01', name: 'Corporate Campus Landscape', place: 'Gurugram, Haryana', alt: 'Landscaped corporate campus garden at sunset' },
-  { src: '/project_02.jpg', no: 'P—02', name: 'Preserved Moss Feature Wall', place: 'Connaught Place, Delhi', alt: 'Preserved moss wall behind an office reception desk' },
+  { src: '/project_03.jpg', no: 'P—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
+  { src: '/project_01.jpg', no: 'P—02', name: 'Corporate Plant Maintenance (AMC)', place: 'CyberCity, Gurugram', alt: 'Biophilic executive office plantscaping and regular maintenance' },
+  { src: '/project_04.jpg', no: 'P—03', name: 'Penthouse Rooftop Terrace Lounge', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with pergola, bougainvillea, and deck lighting' },
+  { src: '/project_05.jpg', no: 'P—04', name: 'Bespoke Balcony Garden Sanctuary', place: 'Golf Course Road, Gurugram', alt: 'Luxury apartment balcony with modular living wall and golf course view' },
+  { src: '/project_02.jpg', no: 'P—05', name: 'Executive Boardroom Moss Feature', place: 'Barakhamba Road, New Delhi', alt: 'Preserved moss feature wall with fluted walnut acoustic panels' },
 ];
 
 const HOLD_MS = 7000;

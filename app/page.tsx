@@ -20,9 +20,9 @@ const SERVICES = [
   { no: '01', href: '/services/plant-maintenance-amc', title: 'Plant Maintenance (AMC)', text: 'Annual Maintenance Contracts for offices, living walls and gardens. Scheduled visits, pest control and free plant replacements.', img: '/project_01.jpg', alt: 'Plant Maintenance AMC by Wall of Gardens' },
   { no: '02', href: '/services/vertical-gardens', title: 'Vertical Gardens', text: 'Natural, artificial and hybrid living walls, engineered before they are planted.', img: '/project_03.jpg', alt: 'Living wall in a hotel lobby' },
   { no: '03', href: '/services/terrace-garden', title: 'Terrace Gardens', text: 'Rooftop landscapes designed around load, waterproofing and where the water actually goes.', img: '/project_04.jpg', alt: 'Rooftop terrace garden at dusk' },
-  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/cta_bg.jpg', alt: 'Planted residential outdoor space at night' },
-  { no: '05', href: '/services/moss-wall', title: 'Moss Walls', text: 'Preserved moss installations. No irrigation, no sunlight, no watering schedule.', img: '/project_02.jpg', alt: 'Preserved moss wall behind a reception desk' },
-  { no: '06', href: '/services/plantscaping', title: 'Corporate Plantscaping', text: 'Office indoor planting, installed and then maintained. The plants are yours; the upkeep is ours.', img: '/project_05.jpg', alt: 'Indoor office plantscaping' },
+  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/project_05.jpg', alt: 'Luxury apartment balcony garden with living wall' },
+  { no: '05', href: '/services/moss-wall', title: 'Moss Walls', text: 'Preserved moss installations. No irrigation, no sunlight, no watering schedule.', img: '/project_02.jpg', alt: 'Preserved moss wall in executive boardroom' },
+  { no: '06', href: '/services/plantscaping', title: 'Corporate Plantscaping', text: 'Office indoor planting, installed and then maintained. The plants are yours; the upkeep is ours.', img: '/project_01.jpg', alt: 'Indoor corporate office plantscaping' },
 ];
 
 const METHOD = [
