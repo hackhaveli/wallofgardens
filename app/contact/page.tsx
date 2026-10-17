@@ -171,32 +171,106 @@ export default function ContactPage() {
       </section>
 
       {/* STUDIO / MAP */}
-      <section className="sec sheet">
+      <section className="sec sheet studio-loc-sec" id="studio-location">
         <div className="shell">
           <div className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Visit</span></div>
-              <h2 className="d2">The studio.</h2>
-              <p className="lede" style={{ marginTop: '16px', maxWidth: '56ch' }}>
-                Sixth floor at MERI, Janakpuri. Design and specification happen here; if you want to see samples of moss, panel systems or planters before deciding, come by — call first so someone is in.
+              <div className="rule-tag"><span className="tag gold">Studio &amp; Workshop</span></div>
+              <h2 className="d2">Visit the Janakpuri studio.</h2>
+              <p className="lede" style={{ marginTop: '16px', maxWidth: '62ch' }}>
+                Design specification, material mockups, and client walkthroughs happen on the 6th floor at MERI, Janakpuri. Touch living wall modules, preserved moss textures, and irrigation hardware in person before your project begins.
               </p>
             </div>
             <span className="tag">6th Floor, MERI, Janakpuri, New Delhi</span>
           </div>
-          <div
-            className="plate rvp has-img"
-            data-n="Studio Location — MERI, Janakpuri, New Delhi 110058"
-            style={{ aspectRatio: '21/8', minHeight: '260px' }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2471690040683!2d77.08585407632669!3d28.62234037567088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c106518177%3A0xe54d9c4fb26fa457!2sMERI%20College!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0, position: 'absolute', inset: 0, filter: 'grayscale(0.35) contrast(1.1)' }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+
+          <div className="studio-showcase rv">
+            {/* LEFT: STUDIO ACCESS CARD */}
+            <div className="studio-card">
+              <div className="studio-card-head">
+                <span className="studio-pin-dot" aria-hidden="true"></span>
+                <span className="studio-card-tag">Physical Headquarters &amp; Sample Library</span>
+              </div>
+
+              <h3 className="studio-title">Wall of Gardens Studio</h3>
+              <p className="studio-addr">
+                6th Floor, MERI College Campus,<br />
+                Institutional Area, Janakpuri,<br />
+                New Delhi – 110058
+              </p>
+
+              <div className="studio-meta-grid">
+                <div className="studio-meta-item">
+                  <span className="meta-k">Nearest Metro</span>
+                  <strong className="meta-v">Janakpuri West Interchange</strong>
+                  <span className="meta-sub">Blue &amp; Magenta Lines · 5 mins away</span>
+                </div>
+                <div className="studio-meta-item">
+                  <span className="meta-k">Studio Hours</span>
+                  <strong className="meta-v">Mon – Sat · 10:00 AM – 6:30 PM</strong>
+                  <span className="meta-sub">Please call before visiting for gate entry</span>
+                </div>
+                <div className="studio-meta-item">
+                  <span className="meta-k">Material Samples On Site</span>
+                  <strong className="meta-v">Live modules, moss, planters &amp; drip systems</strong>
+                  <span className="meta-sub">Review physical specimens with lead designers</span>
+                </div>
+                <div className="studio-meta-item">
+                  <span className="meta-k">Direct Telephone</span>
+                  <strong className="meta-v">
+                    <a href="tel:+919990960669" className="studio-phone-link">+91 99909 60669</a>
+                  </strong>
+                  <span className="meta-sub">Immediate response during studio hours</span>
+                </div>
+              </div>
+
+              <div className="studio-actions">
+                <a
+                  className="btn btn-g"
+                  href="https://maps.google.com/?q=MERI+College+Janakpuri+New+Delhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Open in Google Maps &rarr;</span>
+                </a>
+                <a
+                  className="btn btn-o"
+                  href="tel:+919990960669"
+                >
+                  <span>Call Studio</span>
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT: INTERACTIVE CRISP GOOGLE MAP */}
+            <div className="studio-map-frame">
+              <div className="studio-map-topbar">
+                <div className="map-topbar-left">
+                  <span className="map-live-dot" aria-hidden="true"></span>
+                  <span>MERI Campus, Janakpuri · West Delhi</span>
+                </div>
+                <a
+                  href="https://maps.google.com/?q=MERI+College+Janakpuri+New+Delhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-topbar-link"
+                >
+                  <span>Get Directions ↗</span>
+                </a>
+              </div>
+              <div className="studio-map-wrap">
+                <iframe
+                  title="Wall of Gardens Studio Location - MERI College, Janakpuri, New Delhi"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2471690040683!2d77.08585407632669!3d28.62234037567088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c106518177%3A0xe54d9c4fb26fa457!2sMERI%20College!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>

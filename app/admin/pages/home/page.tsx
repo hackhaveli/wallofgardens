@@ -71,8 +71,8 @@ export default function HomePageEditor() {
           label="Strip Items"
           items={content.spec_strip as { label: string; value: string }[]}
           fields={[
-            { key: 'label', label: 'Bold Label (e.g. Practice)' },
-            { key: 'value', label: 'Value (e.g. Since 2019)' },
+            { key: 'label', label: 'Bold Label (e.g. Registered)' },
+            { key: 'value', label: 'Value (e.g. 17 Oct 2021)' },
           ]}
           onChange={v => updateSection('spec_strip', v as HomeContent['spec_strip'])}
           addLabel="Add Strip Item"

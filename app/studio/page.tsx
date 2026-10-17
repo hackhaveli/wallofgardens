@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: 'About — Landscape & Living Wall Studio, Delhi NCR | Wall of Gardens',
-  description: 'Wall of Gardens is a Delhi NCR landscape and living wall studio working since 2019. Design, procurement, installation and maintenance held by one team.',
+  description: 'Wall of Gardens is a Delhi NCR landscape and living wall studio registered on 17 October 2021. Design, procurement, installation and maintenance held by one team.',
 };
 
 export default function StudioPage() {
@@ -20,7 +20,7 @@ export default function StudioPage() {
           <div className="rule-tag"><span className="tag gold">Sheet 07 — Practice</span></div>
           <h1 className="d1">A landscape studio that stays on site.</h1>
           <p className="lede light">
-            Working across Delhi NCR since 2019, on corporate, hospitality and residential projects. <em className="g">Design and execution held by the same team, deliberately.</em>
+            Working across Delhi NCR since registration on 17 October 2021, on corporate, hospitality and residential projects. <em className="g">Design and execution held by the same team, deliberately.</em>
           </p>
         </div>
       </section>

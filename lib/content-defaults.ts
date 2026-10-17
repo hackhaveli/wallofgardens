@@ -42,7 +42,7 @@ export const DEFAULT_SITE_SETTINGS = {
 
 export const DEFAULT_HOME_CONTENT = {
   hero: {
-    badge: 'Sheet 01 — Delhi NCR — Est. 2019',
+    badge: 'Sheet 01 — Delhi NCR — Registered 17 Oct 2021',
     heading: 'Living walls are <em>built,</em> not planted.',
     lede: 'We design, engineer and install vertical gardens, terraces and living walls for corporate campuses and premium residences — then maintain them. One team from the first drawing to the third year.',
     cta_primary_label: 'Selected Work',
@@ -51,7 +51,7 @@ export const DEFAULT_HOME_CONTENT = {
     cta_secondary_href: '#contact',
   },
   spec_strip: [
-    { label: 'Practice', value: 'Since 2019' },
+    { label: 'Registered', value: '17 Oct 2021' },
     { label: 'Studio', value: 'Janakpuri, New Delhi' },
     { label: 'Coverage', value: 'Delhi NCR & pan-India' },
     { label: 'Scope', value: 'Design → Install → Maintain' },
@@ -508,7 +508,7 @@ export const DEFAULT_STUDIO_CONTENT = {
   banner: {
     badge: 'Sheet 07 — Practice',
     heading: 'A landscape studio that stays on site.',
-    lede: 'Working across Delhi NCR since 2019, on corporate, hospitality and residential projects. Design and execution held by the same team, deliberately.',
+    lede: 'Working across Delhi NCR since registration on 17 October 2021, on corporate, hospitality and residential projects. Design and execution held by the same team, deliberately.',
     breadcrumb: 'Home / Studio',
   },
   delivery_model: {

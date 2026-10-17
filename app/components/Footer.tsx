@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="ft-bot">
-          <span>© 2026 Wall of Gardens Private Limited · GSTIN 07AADCW0848G1ZB</span>
+          <span>© 2026 Wall of Gardens Private Limited · Registered 17 Oct 2021 · GSTIN 07AADCW0848G1ZB</span>
           <span><Link href="/contact">Privacy</Link><Link href="/contact">Terms</Link></span>
         </div>
       </div>

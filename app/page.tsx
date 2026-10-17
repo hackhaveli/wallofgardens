@@ -10,7 +10,7 @@ import { DEFAULT_PROJECTS, DEFAULT_TESTIMONIALS } from '../lib/content-defaults'
 import { canOptimize } from '../lib/img';
 
 const FACTS = [
-  { k: 'Practice', v: 'Since 2019', s: 'Living architecture, end to end' },
+  { k: 'Registered', v: '17 Oct 2021', s: 'Incorporated & active, Delhi NCR' },
   { k: 'Studio', v: 'Janakpuri', s: 'New Delhi' },
   { k: 'Coverage', v: 'Delhi NCR', s: '& pan-India projects' },
   { k: 'Scope', v: 'One team', s: 'Design → Install → Maintain' },
@@ -76,7 +76,7 @@ export default async function Home() {
         <div className="shell hx-in">
           <div className="hx-copy">
             <p className="hx-trust">
-              <span>Delhi NCR</span><i aria-hidden="true" /><span>Est. 2019</span><i aria-hidden="true" /><span>Corporate &amp; premium residential</span>
+              <span>Delhi NCR</span><i aria-hidden="true" /><span>Est. 17 Oct 2021</span><i aria-hidden="true" /><span>Corporate &amp; premium residential</span>
             </p>
             <h1 className="hx-h" id="hx-title">Living walls &amp; gardens, <em className="g">engineered</em> to last.</h1>
             <p className="hx-sub">Designed, installed and maintained by one studio — for corporate campuses and premium homes.</p>

@@ -14,7 +14,7 @@ const STATS = [
   { n: '06', l: 'Dedicated Disciplines', s: 'Designed & maintained in-house' },
   { n: '100%', l: 'In-House Crew', s: 'Zero sub-contracting' },
   { n: '0₹', l: 'Free Site Visit', s: 'Delhi NCR · No obligation' },
-  { n: '2019', l: 'Practice Established', s: 'Corporate & luxury residential' },
+  { n: '17 Oct 2021', l: 'Company Registered', s: 'Corporate & luxury residential' },
 ];
 
 const INVARIANTS = [
