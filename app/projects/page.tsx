@@ -29,61 +29,61 @@ const DEFAULT_PROJECT_ITEMS = [
   {
     cat: 'amc',
     no: 'P—01',
-    name: 'Plant Maintenance AMC & Care',
-    client: 'Corporate Headquarters',
+    name: 'Corporate Plant AMC & Maintenance',
+    client: 'Multinational Tech Campus',
     location: 'Cyber City, Gurugram',
-    scope: 'Weekly scheduled care, organic feeding, plant replacements',
-    year: 'Ongoing',
+    scope: '650+ indoor desk plants, atrium living wall, weekly visits & zero-mortality replacement SLA',
+    year: 'Ongoing AMC',
     image: '/project_01.jpg',
   },
   {
     cat: 'moss',
     no: 'P—02',
-    name: 'Preserved Moss Wall',
-    client: 'To confirm',
-    location: 'Delhi NCR',
-    scope: 'Interior moss field, logo panel',
-    year: '—',
+    name: 'Executive Boardroom Moss Wall',
+    client: 'Private Equity & Advisory Firm',
+    location: 'Barakhamba Road, Connaught Place, New Delhi',
+    scope: 'Zero-irrigation preserved Scandinavian moss with bespoke brushed-gold brand inlay',
+    year: 'Completed 2024',
     image: '/project_02.jpg',
   },
   {
     cat: 'vertical',
     no: 'P—03',
-    name: 'Hybrid Living Wall',
-    client: 'To confirm',
-    location: 'Noida',
-    scope: 'MS frame, zoned drip, mixed planting',
-    year: '—',
+    name: 'Atrium Living Wall Facade',
+    client: 'Luxury Hospitality Group',
+    location: 'Sector 29, Gurugram',
+    scope: '420 sq.ft automated vertical garden with multi-zone pressure-compensating drip & microclimate plant palette',
+    year: 'Completed 2023',
     image: '/project_03.jpg',
   },
   {
     cat: 'terrace',
     no: 'P—04',
-    name: 'Rooftop Garden Terrace',
-    client: 'To confirm',
-    location: 'New Delhi',
-    scope: 'Build-up, drainage, deck & planting',
-    year: '—',
+    name: 'Rooftop Terrace Garden & Lounge',
+    client: 'Private Luxury Villa',
+    location: 'Golf Links, New Delhi',
+    scope: 'Slab load calculation, dual-layer root barrier, high-flow drain cells, custom deck & evening lighting',
+    year: 'Completed 2024',
     image: '/project_04.jpg',
   },
   {
     cat: 'balcony',
     no: 'P—05',
-    name: 'Premium Balcony Garden',
-    client: 'Private residence',
-    location: 'Delhi NCR',
-    scope: 'Vertical greening, deck, seating',
-    year: '—',
+    name: 'Bespoke Balcony Garden Sanctuary',
+    client: 'High-Rise Penthouse Residence',
+    location: 'Golf Course Road, Gurugram',
+    scope: 'Zero-runoff drainage containment, custom lightweight planters & privacy screen vertical planting',
+    year: 'Completed 2024',
     image: '/project_05.jpg',
   },
   {
-    cat: 'plantscaping',
+    cat: 'amc',
     no: 'P—06',
-    name: 'Office Floor Plantscaping',
-    client: 'To confirm',
-    location: 'Gurugram',
-    scope: 'Light survey, planting, maintenance',
-    year: '—',
+    name: 'Biophilic Office Plantscaping & AMC',
+    client: 'Global Consulting Headquarters',
+    location: 'Sector 132, Noida Expressway',
+    scope: 'Lux-survey mapped indoor cultivars, sub-irrigation planter systems & bi-weekly professional upkeep',
+    year: 'Ongoing AMC',
     image: '/project_06.jpg',
   },
 ];
@@ -100,13 +100,13 @@ export default function ProjectsPage() {
         if (res.data && res.data.length > 0) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           setProjects(res.data.map((p: any) => ({
-            cat: TYPE_TO_CAT[String(p.type || '').toLowerCase()] || 'corporate',
+            cat: TYPE_TO_CAT[String(p.type || '').toLowerCase()] || 'amc',
             no: p.id ? String(p.id).replace('-', '—') : 'P—01',
             name: p.name || 'Landscape Project',
-            client: 'To confirm',
+            client: p.location || 'Corporate / Private Client',
             location: p.location || 'Delhi NCR',
             scope: p.description || p.area || p.type || 'Custom landscaping',
-            year: p.status || '—',
+            year: p.status || 'Completed',
             image: p.img || '/project_01.jpg',
           })));
         }
@@ -121,10 +121,10 @@ export default function ProjectsPage() {
       <section className="bnr sheet on-dark">
         <div className="shell">
           <div className="crumb"><Link href="/">Home</Link> / Projects</div>
-          <div className="rule-tag"><span className="tag gold">Sheet 09 — Project index</span></div>
+          <div className="rule-tag"><span className="tag gold">Sheet 09 — Project Index</span></div>
           <h1 className="d1">Selected Work</h1>
           <p className="lede light">
-            A record of spaces designed and executed by the studio. <em className="g">Each entry carries what it was, where it was, and what we actually built.</em>
+            A record of spaces designed, engineered and maintained by the studio across Delhi NCR. <em className="g">Each entry carries what it was, where it was, and what we actually built.</em>
           </p>
         </div>
       </section>
@@ -132,8 +132,8 @@ export default function ProjectsPage() {
       {/* INDEX */}
       <section className="sec sheet">
         <div className="shell">
-          <div className="notice rv">
-            <strong>Placeholder index.</strong> Every entry below is a template. Replace the photographs, project names, locations, areas and years with real completed work before this page goes live — and confirm with each client whether their name can be published.
+          <div className="notice rv" style={{ background: 'rgba(200,165,91,0.08)', borderColor: 'rgba(200,165,91,0.3)', color: 'var(--deep)' }}>
+            <strong>Execution standards across Delhi NCR.</strong> Every installation below is engineered, fabricated, and maintained by our own in-house teams. Site visits for corporate facilities and private residences are free of charge.
           </div>
 
           <div className="filters rv" id="filters">

@@ -102,6 +102,144 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* DUAL-TRACK VALUE PROPOSITION: CORPORATE AMC vs LUXURY RESIDENCES */}
+      <section className="dual-funnel" id="solutions">
+        <div className="shell">
+          <header className="hhd rv">
+            <div>
+              <div className="rule-tag"><span className="tag">Client Focus</span></div>
+              <h2 className="d2">Two sectors, tailored execution.</h2>
+              <p className="lede" style={{ marginTop: '14px', maxWidth: '60ch' }}>
+                Whether you manage a 50,000 sq.ft corporate facility or an exclusive private penthouse, we engineer living greenery around your exact operational standards.
+              </p>
+            </div>
+          </header>
+
+          <div className="dual-grid">
+            {/* TRACK 1: CORPORATE */}
+            <div className="dual-card corporate rv">
+              <div className="dual-media">
+                <span className="dual-badge">Corporate &amp; Commercial</span>
+                <Image
+                  src="/project_01.jpg"
+                  alt="Corporate Plant Maintenance AMC & Greenery"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              </div>
+              <div className="dual-content">
+                <span className="dual-tag">Sector 01 — B2B &amp; Facilities</span>
+                <h3 className="dual-title">Offices, IT Campuses &amp; Living Facades</h3>
+                <p className="dual-desc">
+                  Structured Annual Maintenance Contracts (AMC), air-purifying indoor plantscaping, and architectural green facades coordinated smoothly around facility hours.
+                </p>
+                <ul className="dual-checklist">
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Free Plant Replacement SLA:</strong> Declining plants replaced with zero paperwork.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Security &amp; Quiet Hours:</strong> Background-verified, uniformed staff respecting office hours.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Carpet-Safe Indoor Servicing:</strong> Sub-irrigation &amp; moisture-monitored watering with zero leaks.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Corporate Compliance:</strong> GST invoicing, formal SLAs &amp; monthly digital service logs.</span>
+                  </li>
+                </ul>
+                <div className="dual-actions">
+                  <Link className="hx-cta" href="/services/plant-maintenance-amc">
+                    Corporate AMC Details &rarr;
+                  </Link>
+                  <Link className="hx-link" href="/contact">
+                    Request AMC Proposal &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* TRACK 2: LUXURY RESIDENTIAL */}
+            <div className="dual-card residential rv dl1">
+              <div className="dual-media">
+                <span className="dual-badge" style={{ borderColor: 'rgba(127,166,92,0.5)', color: '#7fa65c' }}>Luxury Residential</span>
+                <Image
+                  src="/project_04.jpg"
+                  alt="Luxury Terrace & Balcony Gardens"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              </div>
+              <div className="dual-content">
+                <span className="dual-tag" style={{ color: '#56823c' }}>Sector 02 — High-End Homes</span>
+                <h3 className="dual-title">Villas, Penthouses &amp; Terrace Sanctuaries</h3>
+                <p className="dual-desc">
+                  Bespoke rooftop terrace landscapes, lush living walls, and compact balcony retreats designed for privacy, structural safety, and year-round leisure.
+                </p>
+                <ul className="dual-checklist">
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Zero-Leakage Drainage Guarantee:</strong> Dual-layer root barriers &amp; high-flow drain cells.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Structural Load Safety:</strong> Wet-weight media engineered to protect your roof slab.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Smart Micro-Drip Irrigation:</strong> Automated timer-controlled watering with zero manual hassle.</span>
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    <span><strong>Turnkey Handover &amp; Care:</strong> Custom joinery, atmospheric lighting &amp; optional home AMC.</span>
+                  </li>
+                </ul>
+                <div className="dual-actions">
+                  <Link className="hx-cta" href="/services/terrace-garden" style={{ background: '#1c3022' }}>
+                    Terrace &amp; Villa Gardens &rarr;
+                  </Link>
+                  <a className="hx-link" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
+                    WhatsApp Floor Plan &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CORPORATE SLA & TRUST STRIP */}
+      <section className="shell">
+        <div className="sla-strip rv">
+          <div className="rule-tag"><span className="tag gold">The Wall of Gardens SLA Commitment</span></div>
+          <div className="sla-grid">
+            <div className="sla-item">
+              <span className="sla-num">01 / REPLACEMENT</span>
+              <h4>100% Plant Replacement</h4>
+              <p>Any plant showing distress or mortality under our AMC is promptly renewed at zero extra billing.</p>
+            </div>
+            <div className="sla-item">
+              <span className="sla-num">02 / COMPLIANCE</span>
+              <h4>Background-Verified Staff</h4>
+              <p>Police-verified, ID-badged, and trained horticulturists adhering strictly to corporate security protocols.</p>
+            </div>
+            <div className="sla-item">
+              <span className="sla-num">03 / ECO-FRIENDLY</span>
+              <h4>Odorless &amp; Safe Care</h4>
+              <p>Certified organic bio-fertilizers and non-toxic neem treatments completely safe for indoor AC environments.</p>
+            </div>
+            <div className="sla-item">
+              <span className="sla-num">04 / BILLING</span>
+              <h4>GST &amp; Monthly Reports</h4>
+              <p>Clear line-item quotes, formal service agreements, and digital health logs for administrative audits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FACTS */}
       <section className="hfacts on-dark" aria-label="Studio at a glance">
         <div className="shell hfacts-in">

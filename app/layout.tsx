@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientObserver from "./components/ClientObserver";
+import MobileQuickBar from "./components/MobileQuickBar";
 
 export const metadata: Metadata = {
   title: "Wall of Gardens — Living Architecture, Engineered | Delhi NCR",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body>
         {children}
         <ClientObserver />
+        <MobileQuickBar />
       </body>
     </html>
   );

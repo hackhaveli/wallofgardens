@@ -245,13 +245,14 @@ export default function ContactPage() {
 }
 
 function ContactForm() {
+  const [clientType, setClientType] = useState<'corporate' | 'residential'>('corporate');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
     org: '',
-    service: 'Not sure yet',
-    location: 'Delhi',
+    service: 'Plant Maintenance Service (AMC)',
+    location: 'Gurugram',
     area: '',
     timeline: 'As soon as possible',
     budget: 'Not sure yet',
@@ -265,16 +266,29 @@ function ContactForm() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleSegmentChange = (type: 'corporate' | 'residential') => {
+    setClientType(type);
+    setFormData(prev => ({
+      ...prev,
+      service: type === 'corporate' ? 'Plant Maintenance Service (AMC)' : 'Terrace Garden & Rooftop Lounge',
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
     setErrorMsg('');
 
     try {
+      const payload = {
+        ...formData,
+        message: `[Client Type: ${clientType === 'corporate' ? 'Corporate / B2B' : 'Luxury Residential'}]\n${formData.message}`,
+      };
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (!res.ok || data.error) {
@@ -313,8 +327,8 @@ function ContactForm() {
                 phone: '',
                 email: '',
                 org: '',
-                service: 'Not sure yet',
-                location: 'Delhi',
+                service: 'Plant Maintenance Service (AMC)',
+                location: 'Gurugram',
                 area: '',
                 timeline: 'As soon as possible',
                 budget: 'Not sure yet',
@@ -332,8 +346,26 @@ function ContactForm() {
 
   return (
     <form className="form rv dl1" onSubmit={handleSubmit}>
+      {/* 2-WAY SEGMENT SWITCHER */}
+      <div className="form-segment" role="group" aria-label="Client Type">
+        <button
+          type="button"
+          className={`form-seg-btn ${clientType === 'corporate' ? 'active' : ''}`}
+          onClick={() => handleSegmentChange('corporate')}
+        >
+          🏢 Corporate &amp; Commercial
+        </button>
+        <button
+          type="button"
+          className={`form-seg-btn ${clientType === 'residential' ? 'active' : ''}`}
+          onClick={() => handleSegmentChange('residential')}
+        >
+          🏡 Luxury Residence &amp; Villa
+        </button>
+      </div>
+
       <div className="fbanner">
-        <strong>Direct Studio Inquiry.</strong> Fill out your requirements below, or contact us directly via WhatsApp or Phone for an immediate response.
+        <strong>{clientType === 'corporate' ? 'Corporate Facility Inquiry.' : 'Private Residence Inquiry.'}</strong> Site visits across Delhi NCR are free and carry no obligation.
       </div>
 
       {status === 'error' && (
@@ -344,89 +376,105 @@ function ContactForm() {
 
       <div className="frow">
         <div className="fld">
-          <label htmlFor="f-name">Name <i>*</i></label>
-          <input id="f-name" name="name" type="text" placeholder="Your name" autoComplete="name" required value={formData.name} onChange={handleChange} />
+          <label htmlFor="f-name">Your Name <i>*</i></label>
+          <input id="f-name" name="name" type="text" placeholder="Full name" autoComplete="name" required value={formData.name} onChange={handleChange} />
         </div>
         <div className="fld">
-          <label htmlFor="f-phone">Mobile <i>*</i></label>
-          <input id="f-phone" name="phone" type="tel" placeholder="+91" autoComplete="tel" required value={formData.phone} onChange={handleChange} />
-        </div>
-      </div>
-
-      <div className="frow">
-        <div className="fld">
-          <label htmlFor="f-email">Email</label>
-          <input id="f-email" name="email" type="email" placeholder="you@company.com" autoComplete="email" value={formData.email} onChange={handleChange} />
-        </div>
-        <div className="fld">
-          <label htmlFor="f-org">Company</label>
-          <input id="f-org" name="org" type="text" placeholder="If this is a corporate project" autoComplete="organization" value={formData.org} onChange={handleChange} />
+          <label htmlFor="f-phone">Mobile / Phone <i>*</i></label>
+          <input id="f-phone" name="phone" type="tel" placeholder="+91 99999 99999" autoComplete="tel" required value={formData.phone} onChange={handleChange} />
         </div>
       </div>
 
       <div className="frow">
         <div className="fld">
-          <label htmlFor="f-type">Project type</label>
+          <label htmlFor="f-email">Email Address</label>
+          <input id="f-email" name="email" type="email" placeholder={clientType === 'corporate' ? 'you@company.com' : 'you@email.com'} autoComplete="email" value={formData.email} onChange={handleChange} />
+        </div>
+        <div className="fld">
+          <label htmlFor="f-org">{clientType === 'corporate' ? 'Company / Organization' : 'Property Type'}</label>
+          <input
+            id="f-org"
+            name="org"
+            type="text"
+            placeholder={clientType === 'corporate' ? 'e.g. DLF / S&P / Firm Name' : 'e.g. Villa / Penthouse / Farmhouse'}
+            autoComplete="organization"
+            value={formData.org}
+            onChange={handleChange}
+          />
+        </div>
+      </div>
+
+      <div className="frow">
+        <div className="fld">
+          <label htmlFor="f-type">Scope of Work</label>
           <select id="f-type" name="service" value={formData.service} onChange={handleChange}>
-            <option>Not sure yet</option>
-            <option>Plant Maintenance Service (AMC)</option>
-            <option>Vertical garden / living wall</option>
-            <option>Terrace garden</option>
-            <option>Balcony garden</option>
-            <option>Moss wall / green feature</option>
-            <option>Corporate plantscaping</option>
-            <option>Maintenance only</option>
+            {clientType === 'corporate' ? (
+              <>
+                <option>Plant Maintenance Service (AMC)</option>
+                <option>Corporate Plantscaping (Indoor Workspaces)</option>
+                <option>Commercial Living Wall / Green Facade</option>
+                <option>Terrace Garden / Cafeteria Deck</option>
+                <option>Complete Office Green Fit-Out</option>
+                <option>Not sure yet / General inquiry</option>
+              </>
+            ) : (
+              <>
+                <option>Terrace Garden &amp; Rooftop Lounge</option>
+                <option>Living Wall / Vertical Garden</option>
+                <option>Bespoke Balcony Garden Sanctuary</option>
+                <option>Plant Maintenance Service (Home AMC)</option>
+                <option>Preserved Moss Wall Feature</option>
+                <option>Not sure yet / General inquiry</option>
+              </>
+            )}
           </select>
         </div>
         <div className="fld">
-          <label htmlFor="f-loc">Location</label>
+          <label htmlFor="f-loc">Location in NCR</label>
           <select id="f-loc" name="location" value={formData.location} onChange={handleChange}>
-            <option>Delhi</option>
-            <option>Gurugram</option>
-            <option>Noida</option>
-            <option>Ghaziabad</option>
-            <option>Faridabad</option>
-            <option>Elsewhere in India</option>
+            <option>Gurugram (Cyber City, Golf Course, etc.)</option>
+            <option>New Delhi (Central / South / West)</option>
+            <option>Noida / Greater Noida</option>
+            <option>Faridabad / Ghaziabad</option>
+            <option>Elsewhere in India (Pan-India project)</option>
           </select>
         </div>
       </div>
 
       <div className="frow">
         <div className="fld">
-          <label htmlFor="f-area">Approximate area</label>
-          <input id="f-area" name="area" type="text" placeholder="e.g. 400 sq ft, or 12 ft wall" value={formData.area} onChange={handleChange} />
+          <label htmlFor="f-area">{clientType === 'corporate' ? 'Plant Count or Area' : 'Approximate Area'}</label>
+          <input id="f-area" name="area" type="text" placeholder={clientType === 'corporate' ? 'e.g. 200 pots, or 500 sq.ft living wall' : 'e.g. 600 sq.ft terrace or 15 ft wall'} value={formData.area} onChange={handleChange} />
         </div>
         <div className="fld">
-          <label htmlFor="f-when">Timeline</label>
+          <label htmlFor="f-when">Required Timeline</label>
           <select id="f-when" name="timeline" value={formData.timeline} onChange={handleChange}>
             <option>As soon as possible</option>
+            <option>Within 1–2 weeks</option>
             <option>Within 1–3 months</option>
-            <option>3–6 months</option>
-            <option>Just exploring</option>
+            <option>Upcoming fiscal / Just exploring</option>
           </select>
         </div>
       </div>
 
       <div className="fld">
-        <label htmlFor="f-budget">Indicative budget</label>
-        <select id="f-budget" name="budget" value={formData.budget} onChange={handleChange}>
-          <option>Not sure yet</option>
-          <option>Under ₹1 lakh</option>
-          <option>₹1–3 lakh</option>
-          <option>₹3–5 lakh</option>
-          <option>₹5–10 lakh</option>
-          <option>₹10 lakh+</option>
-        </select>
+        <label htmlFor="f-msg">Tell us about the space</label>
+        <textarea id="f-msg" name="message" placeholder={clientType === 'corporate' ? 'Current plants on site, indoor light condition, required visit frequency, or specific facility requirements' : 'Facing direction, sunlight exposure, terrace access, water supply, or your design aesthetic'} value={formData.message} onChange={handleChange}></textarea>
       </div>
 
-      <div className="fld">
-        <label htmlFor="f-msg">About the space</label>
-        <textarea id="f-msg" name="message" placeholder="Indoor or outdoor, which way it faces, how much light it gets, anything else useful" value={formData.message} onChange={handleChange}></textarea>
+      <div style={{ marginTop: '14px', marginBottom: '18px', fontSize: '12px', color: 'rgba(14,24,17,0.7)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <span style={{ color: '#56823c', fontSize: '14px' }}>🛡️</span>
+        <span>Free on-site inspection across Delhi NCR with zero obligation.</span>
       </div>
 
-      <button className="btn btn-g" style={{ width: '100%', cursor: status === 'submitting' ? 'wait' : 'pointer', opacity: status === 'submitting' ? 0.7 : 1 }} type="submit" disabled={status === 'submitting'}>
-        <span>{status === 'submitting' ? 'Sending Enquiry...' : 'Send Enquiry'}</span>
-      </button>
+      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '12px' }}>
+        <button className="btn btn-g" style={{ width: '100%', cursor: status === 'submitting' ? 'wait' : 'pointer', opacity: status === 'submitting' ? 0.7 : 1 }} type="submit" disabled={status === 'submitting'}>
+          <span>{status === 'submitting' ? 'Submitting...' : 'Request Free Site Visit'}</span>
+        </button>
+        <a className="btn btn-o" href="https://wa.me/919990960669?text=Hi%20Wall%20of%20Gardens,%20I%20am%20inquiring%20about%20a%20project%20and%20would%20like%20to%20send%20photos." target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center' }}>
+          <span>WhatsApp Us &rarr;</span>
+        </a>
+      </div>
 
       <p className="fnote">
         We reply within one working day.<br />

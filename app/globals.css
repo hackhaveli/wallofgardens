@@ -1832,3 +1832,280 @@ a.chan-i:hover { background: #16241A; }
   .sv-hero-title { font-size: 32px; }
 }
 
+/* ============================================================
+   MOBILE FLOATING QUICK ACTION BAR (CALL + WHATSAPP)
+   ============================================================ */
+.mob-bar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mob-bar {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(10, 18, 13, 0.94);
+    backdrop-filter: blur(14px) saturate(1.4);
+    border-top: 1px solid rgba(200, 165, 91, 0.35);
+    box-shadow: 0 -8px 26px rgba(0, 0, 0, 0.55);
+  }
+  .mob-bar-in {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 10px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .mob-bar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 12px;
+    border-radius: 7px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.07em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .mob-bar-btn:active {
+    transform: scale(0.97);
+  }
+  .mob-bar-call {
+    background: rgba(244, 243, 236, 0.08);
+    color: var(--cream);
+    border: 1px solid rgba(200, 165, 91, 0.35);
+  }
+  .mob-bar-call svg {
+    color: var(--gold);
+  }
+  .mob-bar-wa {
+    background: #25D366;
+    color: #0b1a0e;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  }
+  .mob-bar-wa svg {
+    fill: #0b1a0e;
+  }
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* ============================================================
+   DUAL-TRACK FUNNEL: CORPORATE AMC vs LUXURY RESIDENCES
+   ============================================================ */
+.dual-funnel {
+  padding: clamp(60px, 7vw, 96px) 0;
+  background: var(--paper);
+  border-bottom: 1px solid rgba(14,24,17,.1);
+}
+.dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 2.8vw, 36px);
+  margin-top: 36px;
+}
+.dual-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(14,24,17,.12);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(14,24,17,.06);
+  transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out), border-color .35s ease;
+  position: relative;
+}
+.dual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(14,24,17,.12);
+  border-color: rgba(200,165,91,.6);
+}
+.dual-card.corporate {
+  border-top: 4px solid var(--gold);
+}
+.dual-card.residential {
+  border-top: 4px solid #56823c;
+}
+.dual-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--deep);
+}
+.dual-media img {
+  object-fit: cover;
+  transition: transform .8s var(--ease-out);
+}
+.dual-card:hover .dual-media img {
+  transform: scale(1.05);
+}
+.dual-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(14,24,17,.88);
+  border: 1px solid rgba(200,165,91,.45);
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  padding: 5px 11px;
+  border-radius: 4px;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+.dual-content {
+  padding: clamp(24px, 2.5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.dual-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.dual-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.15;
+  color: var(--deep);
+  margin-bottom: 14px;
+}
+.dual-desc {
+  font-size: 15px;
+  line-height: 1.62;
+  color: rgba(14,24,17,.78);
+  margin-bottom: 22px;
+}
+.dual-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  border-top: 1px dashed rgba(14,24,17,.14);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+.dual-checklist li {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(14,24,17,.85);
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+.dual-checklist li strong {
+  color: var(--deep);
+}
+.dual-checklist li svg {
+  color: #3e6b4a;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.dual-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(14,24,17,.08);
+}
+
+/* ============================================================
+   CORPORATE SLA & COMPLIANCE STRIP
+   ============================================================ */
+.sla-strip {
+  background: rgba(14,24,17,.92);
+  border: 1px solid rgba(200,165,91,.25);
+  padding: clamp(32px, 4vw, 48px) clamp(24px, 3vw, 42px);
+  margin: clamp(40px, 5vw, 64px) 0;
+  color: var(--cream);
+}
+.sla-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+  margin-top: 24px;
+}
+.sla-item {
+  display: flex;
+  flex-direction: column;
+}
+.sla-num {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .15em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.sla-item h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--cream);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.sla-item p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(244,243,236,.75);
+}
+
+/* ============================================================
+   SEGMENTED CONTACT FORM TOGGLE
+   ============================================================ */
+.form-segment {
+  display: flex;
+  background: rgba(14,24,17,.06);
+  border: 1px solid rgba(14,24,17,.12);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 24px;
+  gap: 4px;
+}
+.form-seg-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(14,24,17,.7);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-weight: 500;
+}
+.form-seg-btn.active {
+  background: var(--deep);
+  color: var(--gold);
+  box-shadow: 0 2px 8px rgba(14,24,17,.2);
+}
+
+@media(max-width: 900px) {
+  .dual-grid { grid-template-columns: 1fr; }
+  .sla-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width: 580px) {
+  .sla-grid { grid-template-columns: 1fr; }
+}
+
+
