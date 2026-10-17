@@ -17,7 +17,7 @@ const FACTS = [
 ];
 
 const SERVICES = [
-  { no: '01', href: '/services/corporate-landscaping', title: 'Corporate Landscaping', text: 'Green spaces for offices, campuses and commercial environments, coordinated with facilities teams.', img: '/project_01.jpg', alt: 'Landscaped corporate campus' },
+  { no: '01', href: '/services/plant-maintenance-amc', title: 'Plant Maintenance (AMC)', text: 'Annual Maintenance Contracts for offices, living walls and gardens. Scheduled visits, pest control and free plant replacements.', img: '/project_01.jpg', alt: 'Plant Maintenance AMC by Wall of Gardens' },
   { no: '02', href: '/services/vertical-gardens', title: 'Vertical Gardens', text: 'Natural, artificial and hybrid living walls, engineered before they are planted.', img: '/project_03.jpg', alt: 'Living wall in a hotel lobby' },
   { no: '03', href: '/services/terrace-garden', title: 'Terrace Gardens', text: 'Rooftop landscapes designed around load, waterproofing and where the water actually goes.', img: '/project_04.jpg', alt: 'Rooftop terrace garden at dusk' },
   { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/cta_bg.jpg', alt: 'Planted residential outdoor space at night' },

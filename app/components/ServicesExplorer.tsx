@@ -8,7 +8,7 @@ interface ServiceItem {
   id: string;
   no: string;
   title: string;
-  category: 'commercial' | 'walls' | 'rooftops' | 'indoor';
+  category: 'amc' | 'walls' | 'rooftops' | 'indoor';
   subtitle: string;
   desc: string;
   bullets: string[];
@@ -19,20 +19,20 @@ interface ServiceItem {
 
 const SERVICES_DATA: ServiceItem[] = [
   {
-    id: 'corporate-landscaping',
+    id: 'plant-maintenance-amc',
     no: '01',
-    category: 'commercial',
-    title: 'Corporate Landscaping',
-    subtitle: 'Campuses · Commercial · Masterplanning',
-    desc: 'Ground-level landscape delivered in phased schedules so your facility stays operational. Levels, drainage grading, and soil microbiology established before hardscaping or planting.',
+    category: 'amc',
+    title: 'Plant Maintenance Service (AMC)',
+    subtitle: 'Annual Contracts · Offices, Living Walls & Gardens',
+    desc: 'Comprehensive horticultural maintenance for corporate offices, commercial campuses, living walls, and residences. Scheduled expert visits, soil nutrition, pest management, irrigation audits, and free plant replacements.',
     bullets: [
-      'Campus masterplan & level grading',
-      'Commercial hardscape & soil amendments',
-      'Scheduled grounds maintenance contract',
+      'Weekly / bi-weekly scheduled visits by trained gardeners',
+      'Organic fertilization, pest management & pruning',
+      'Immediate plant replacement guarantee under AMC',
     ],
     img: '/project_01.jpg',
-    alt: 'Corporate landscaped commercial campus',
-    href: '/services/corporate-landscaping',
+    alt: 'Plant Maintenance AMC Service in Delhi NCR',
+    href: '/services/plant-maintenance-amc',
   },
   {
     id: 'vertical-gardens',
@@ -116,7 +116,7 @@ const SERVICES_DATA: ServiceItem[] = [
   },
 ];
 
-type FilterKey = 'all' | 'commercial' | 'walls' | 'rooftops' | 'indoor';
+type FilterKey = 'all' | 'amc' | 'walls' | 'rooftops' | 'indoor';
 
 export default function ServicesExplorer() {
   const [filter, setFilter] = useState<FilterKey>('all');
@@ -138,12 +138,12 @@ export default function ServicesExplorer() {
           All 06 Disciplines
         </button>
         <button
-          className={`sv-pill ${filter === 'commercial' ? 'active' : ''}`}
-          onClick={() => setFilter('commercial')}
+          className={`sv-pill ${filter === 'amc' ? 'active' : ''}`}
+          onClick={() => setFilter('amc')}
           role="tab"
-          aria-selected={filter === 'commercial'}
+          aria-selected={filter === 'amc'}
         >
-          Corporate &amp; Campuses
+          Plant AMC &amp; Maintenance
         </button>
         <button
           className={`sv-pill ${filter === 'walls' ? 'active' : ''}`}

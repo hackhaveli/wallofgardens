@@ -9,8 +9,10 @@ import { getSupabaseClient } from '../../lib/supabase';
 import { canOptimize } from '../../lib/img';
 
 const TYPE_TO_CAT: Record<string, string> = {
-  'corporate landscaping': 'corporate',
-  'corporate': 'corporate',
+  'plant maintenance amc': 'amc',
+  'amc': 'amc',
+  'corporate landscaping': 'amc',
+  'corporate': 'amc',
   'moss wall': 'moss',
   'moss': 'moss',
   'vertical garden': 'vertical',
@@ -25,13 +27,13 @@ const TYPE_TO_CAT: Record<string, string> = {
 
 const DEFAULT_PROJECT_ITEMS = [
   {
-    cat: 'corporate',
+    cat: 'amc',
     no: 'P—01',
-    name: 'Corporate Office Landscape',
-    client: 'To confirm',
-    location: 'Gurugram',
-    scope: 'Planted zones, green feature wall',
-    year: '—',
+    name: 'Plant Maintenance AMC & Care',
+    client: 'Corporate Headquarters',
+    location: 'Cyber City, Gurugram',
+    scope: 'Weekly scheduled care, organic feeding, plant replacements',
+    year: 'Ongoing',
     image: '/project_01.jpg',
   },
   {
@@ -143,11 +145,11 @@ export default function ProjectsPage() {
               All
             </button>
             <button
-              data-filter="corporate"
-              className={activeFilter === 'corporate' ? 'on' : ''}
-              onClick={() => setActiveFilter('corporate')}
+              data-filter="amc"
+              className={activeFilter === 'amc' ? 'on' : ''}
+              onClick={() => setActiveFilter('amc')}
             >
-              Corporate
+              Plant AMC
             </button>
             <button
               data-filter="vertical"

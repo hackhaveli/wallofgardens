@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
           <div>
             <h4>Services</h4>
-            <Link href="/services/corporate-landscaping">Corporate Landscaping</Link>
+            <Link href="/services/plant-maintenance-amc">Plant Maintenance (AMC)</Link>
             <Link href="/services/vertical-gardens">Vertical Gardens</Link>
             <Link href="/services/terrace-garden">Terrace Gardens</Link>
             <Link href="/services/balcony-gardens">Balcony Gardens</Link>

@@ -160,12 +160,12 @@ export default function ServicesPage() {
 
             <div className="sv-space-col">
               <div className="sv-space-header">
-                <h3>On the Floor</h3>
+                <h3>On the Floor &amp; Grounds</h3>
                 <span>Ground &amp; Interior</span>
               </div>
-              <Link href="/services/corporate-landscaping" className="sv-space-item">
-                <strong>Corporate Landscaping</strong>
-                <span>Offices, commercial campuses, entry plazas, and masterplanned grounds.</span>
+              <Link href="/services/plant-maintenance-amc" className="sv-space-item">
+                <strong>Plant Maintenance Service (AMC)</strong>
+                <span>Regular scheduled visits, organic feeding, pest control &amp; replacement guarantee for offices &amp; residences.</span>
               </Link>
               <Link href="/services/plantscaping" className="sv-space-item">
                 <strong>Corporate Plantscaping</strong>

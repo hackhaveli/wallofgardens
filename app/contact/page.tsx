@@ -369,7 +369,7 @@ function ContactForm() {
           <label htmlFor="f-type">Project type</label>
           <select id="f-type" name="service" value={formData.service} onChange={handleChange}>
             <option>Not sure yet</option>
-            <option>Corporate landscaping</option>
+            <option>Plant Maintenance Service (AMC)</option>
             <option>Vertical garden / living wall</option>
             <option>Terrace garden</option>
             <option>Balcony garden</option>
