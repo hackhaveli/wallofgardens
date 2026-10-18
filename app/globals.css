@@ -620,36 +620,118 @@ em.g { font-style: italic; color: var(--gold); }
 .strip-i span { font-size: 13px; color: rgba(244,243,236,.8); }
 
 /* ---------- clients marquee ---------- */
-.cl { position: relative; padding: clamp(38px, 4.5vw, 56px) 0; border-bottom: 1px solid var(--rule); overflow: hidden; }
-.cl .rule-tag { margin-bottom: clamp(22px, 2.6vw, 30px); }
+.cl {
+  position: relative;
+  padding: clamp(34px, 4.2vw, 54px) 0 clamp(36px, 4.5vw, 56px);
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+  overflow: hidden;
+}
+.cl-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: clamp(22px, 2.8vw, 32px);
+}
+.cl-head .rule-tag {
+  margin-bottom: 0;
+}
+.cl-trust-sub {
+  font-size: 13px;
+  color: rgba(14, 24, 17, 0.62);
+  margin: 0;
+  font-style: italic;
+  font-family: var(--serif);
+  max-width: 58ch;
+}
+@media (max-width: 768px) {
+  .cl-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 /* soft edge fade over the moving row only, so names enter/exit cleanly */
 .cl::before, .cl::after {
   content: '';
   position: absolute;
   bottom: 0;
-  height: calc(clamp(38px, 4.5vw, 56px) + 44px);
-  width: clamp(28px, 9vw, 140px);
+  height: calc(clamp(34px, 4.2vw, 54px) + 52px);
+  width: clamp(36px, 10vw, 160px);
   z-index: 2;
   pointer-events: none;
 }
 .cl::before { left: 0; background: linear-gradient(90deg, var(--cream), transparent); }
 .cl::after { right: 0; background: linear-gradient(270deg, var(--cream), transparent); }
+
 /* tracks size to their content so names never overlap on narrow screens; two identical tracks keep the loop seamless */
-.mq { display: flex; width: max-content; animation: mq 34s linear infinite; }
+.mq { display: flex; width: max-content; animation: mq 42s linear infinite; }
 .mq:hover { animation-play-state: paused; }
-.mq-t { display: flex; min-width: 100vw; flex: none; justify-content: space-around; align-items: center; gap: clamp(36px, 4vw, 56px); padding-right: clamp(36px, 4vw, 56px); }
-.mq-t span {
+.mq-t {
+  display: flex;
+  min-width: 100vw;
+  flex: none;
+  justify-content: space-around;
+  align-items: center;
+  gap: clamp(20px, 2.4vw, 32px);
+  padding-right: clamp(20px, 2.4vw, 32px);
+}
+
+/* Luxury Client Badge Card */
+.client-badge-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 24, 17, 0.08);
+  padding: 8px 18px 8px 12px;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(14, 24, 17, 0.03);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  user-select: none;
+}
+.client-badge-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(200, 165, 91, 0.55);
+  box-shadow: 0 10px 24px -6px rgba(14, 24, 17, 0.09), 0 0 0 1px rgba(200, 165, 91, 0.25);
+  background: #FFFDF9;
+}
+.cbc-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 24, 17, 0.02);
+  flex-shrink: 0;
+}
+.cbc-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.cbc-name {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(17px, 1.65vw, 22px);
-  line-height: 1;
-  letter-spacing: -.012em;
-  color: var(--forest);
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: #0E1811;
   white-space: nowrap;
-  opacity: .5;
-  transition: opacity .3s;
 }
-.mq-t span:hover { opacity: 1; }
+.cbc-cat {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8A6D2B;
+  margin-top: 2px;
+  white-space: nowrap;
+}
 @keyframes mq { to { transform: translateX(-50%); } }
 
 /* ============================================================

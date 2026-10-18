@@ -53,6 +53,80 @@ export const metadata: Metadata = {
   },
 };
 
+const CLIENT_PARTNERS = [
+  {
+    name: 'Godrej Properties',
+    category: 'Luxury Real Estate',
+    location: 'Delhi NCR & Pan-India',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="rgba(200,165,91,0.12)" stroke="rgba(200,165,91,0.4)" strokeWidth="1.2" />
+        <path d="M15.5 8.5A5.5 5.5 0 1 0 16 14.5H12" stroke="#8A6D2B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="16" cy="8.5" r="1" fill="#8A6D2B" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Shangri-La',
+    category: '5-Star Hospitality',
+    location: 'Central New Delhi',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" stroke="#C8A55B" strokeWidth="1.3" fill="rgba(200,165,91,0.08)" />
+        <path d="M8 8.5C8 7.1 9.8 6 12 6c2.2 0 4 1.1 4 2.5 0 2-3 2.5-4 3.5s0 2.5 0 2.5" stroke="#C8A55B" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="12" cy="17.5" r="1" fill="#C8A55B" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Holiday Inn',
+    category: 'Luxury Hotel & Suites',
+    location: 'Aerocity & New Delhi',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="rgba(31,61,43,0.08)" stroke="rgba(31,61,43,0.3)" strokeWidth="1.2" />
+        <path d="M7 6v12M17 6v12M7 12h10" stroke="#1F3D2B" strokeWidth="2.2" strokeLinecap="round" />
+        <circle cx="12" cy="6.5" r="1.5" fill="#C8A55B" />
+      </svg>
+    ),
+  },
+  {
+    name: 'S&P Global',
+    category: 'Fortune 500 Campus',
+    location: 'CyberCity Gurugram',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <polygon points="12,2 21,7 21,17 12,22 3,17 3,7" stroke="#1F3D2B" strokeWidth="1.4" fill="rgba(31,61,43,0.06)" />
+        <polyline points="3,7 12,12 21,7" stroke="#C8A55B" strokeWidth="1.5" />
+        <line x1="12" y1="12" x2="12" y2="22" stroke="#1F3D2B" strokeWidth="1.4" />
+      </svg>
+    ),
+  },
+  {
+    name: 'DLF CyberCity',
+    category: 'Commercial Developer',
+    location: 'Golf Course Road',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3" y="9" width="5" height="12" rx="1" fill="#1F3D2B" opacity="0.8" />
+        <rect x="9.5" y="3" width="5" height="18" rx="1" fill="#C8A55B" />
+        <rect x="16" y="11" width="5" height="10" rx="1" fill="#1F3D2B" opacity="0.8" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Hira Group',
+    category: 'Enterprise Infrastructure',
+    location: 'Industrial Campus',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <polygon points="12,3 21,12 12,21 3,12" stroke="#C8A55B" strokeWidth="1.6" fill="rgba(200,165,91,0.08)" />
+        <polygon points="12,7 17,12 12,17 7,12" fill="#1F3D2B" opacity="0.8" />
+      </svg>
+    ),
+  },
+];
+
 export default async function Home() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let featuredProjects: any[] = DEFAULT_PROJECTS.filter(p => p.featured);
@@ -91,20 +165,43 @@ export default async function Home() {
               <Link className="hx-cta" href="/contact">Book a Site Visit<span aria-hidden="true">&rarr;</span></Link>
               <a className="hx-link" href="#work">View selected work<span aria-hidden="true">&rarr;</span></a>
             </div>
-            <p className="hx-note">Free site visit within Delhi NCR · No obligation</p>
+            <p className="hx-note">Architectural site inspection across Delhi NCR · Studio consultation</p>
           </div>
         </div>
       </section>
 
-      {/* CLIENTS */}
-      <section className="cl">
-        <div className="shell"><div className="rule-tag"><span className="tag">Spaces we have worked on</span></div></div>
+      {/* CLIENTS / SPACES WORKED ON */}
+      <section className="cl" aria-label="Spaces we have worked on">
+        <div className="shell">
+          <div className="cl-head">
+            <div className="rule-tag"><span className="tag">Spaces We Have Worked On</span></div>
+            <p className="cl-trust-sub">
+              Trusted by Fortune 500 campuses, 5-star hotels &amp; premier residential estates across Delhi NCR
+            </p>
+          </div>
+        </div>
         <div className="mq">
           <div className="mq-t">
-            <span>S&amp;P Global</span><span>DLF</span><span>Godrej</span><span>Hira Group</span><span>Holiday Inn</span><span>Shangri-La</span>
+            {CLIENT_PARTNERS.map((c, i) => (
+              <div key={`c1-${i}`} className="client-badge-card">
+                <div className="cbc-icon">{c.icon}</div>
+                <div className="cbc-info">
+                  <span className="cbc-name">{c.name}</span>
+                  <span className="cbc-cat">{c.category} · {c.location}</span>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="mq-t" aria-hidden="true">
-            <span>S&amp;P Global</span><span>DLF</span><span>Godrej</span><span>Hira Group</span><span>Holiday Inn</span><span>Shangri-La</span>
+            {CLIENT_PARTNERS.map((c, i) => (
+              <div key={`c2-${i}`} className="client-badge-card">
+                <div className="cbc-icon">{c.icon}</div>
+                <div className="cbc-info">
+                  <span className="cbc-name">{c.name}</span>
+                  <span className="cbc-cat">{c.category} · {c.location}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
