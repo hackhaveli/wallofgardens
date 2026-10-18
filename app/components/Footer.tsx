@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import BrandLogo from './BrandLogo';
 
 export default function Footer() {
   return (
@@ -9,14 +9,7 @@ export default function Footer() {
           <div>
             <div className="ft-brand-row">
               <div className="brand-logo-wrap">
-                <Image
-                  src="/icon.svg"
-                  alt="Wall of Gardens"
-                  width={36}
-                  height={36}
-                  className="brand-logo-img"
-                  unoptimized
-                />
+                <BrandLogo size={36} />
               </div>
               <div className="ft-b">Wall <b>of</b> Gardens</div>
             </div>

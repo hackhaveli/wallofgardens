@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+import BrandLogo from './BrandLogo';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -20,15 +20,7 @@ export default function Navbar() {
         <div className="nav-in">
           <Link className="brand" href="/" onClick={() => setOpen(false)}>
             <div className="brand-logo-wrap">
-              <Image
-                src="/icon.svg"
-                alt="Wall of Gardens Logo"
-                width={38}
-                height={38}
-                className="brand-logo-img"
-                unoptimized
-                priority
-              />
+              <BrandLogo size={38} />
             </div>
             <span className="brand-n">Wall <b>of</b> Gardens</span>
           </Link>

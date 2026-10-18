@@ -1,19 +1,51 @@
 <svg viewBox="-91 -91 182 182" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .wog-leaf {
+        transform-origin: 43px 28px;
+        animation: leafBreeze 3.5s ease-in-out infinite;
+      }
+      @keyframes leafBreeze {
+        0%, 100% { transform: rotate(0deg) scale(1); }
+        25% { transform: rotate(-7deg) scale(1.08); }
+        60% { transform: rotate(5deg) scale(0.97); }
+        80% { transform: rotate(-3deg) scale(1.03); }
+      }
+      .wog-tile {
+        animation: tileSunlight 6s ease-in-out infinite;
+      }
+      .wog-t1 { animation-delay: 0.0s; }
+      .wog-t2 { animation-delay: 0.12s; }
+      .wog-t3 { animation-delay: 0.24s; }
+      .wog-t4 { animation-delay: 0.18s; }
+      .wog-t5 { animation-delay: 0.30s; }
+      .wog-t6 { animation-delay: 0.42s; }
+      .wog-t7 { animation-delay: 0.36s; }
+      .wog-t8 { animation-delay: 0.48s; }
+      .wog-t9 { animation-delay: 0.60s; }
+      @keyframes tileSunlight {
+        0%, 80%, 100% { fill: #F6F3EA; }
+        85% { fill: #FFFFFF; }
+        92% { fill: #F9EED2; }
+        96% { fill: #F6F3EA; }
+      }
+    </style>
+  </defs>
   <g>
     <!-- Row 1: Top 3 tiles -->
-    <rect x="-89" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="-28" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="33" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t1" x="-89" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t2" x="-28" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t3" x="33" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
 
     <!-- Row 2: Middle 3 tiles -->
-    <rect x="-89" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="-28" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="33" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t4" x="-89" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t5" x="-28" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t6" x="33" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
 
     <!-- Row 3: Bottom 3 tiles -->
-    <rect x="-89" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="-28" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
-    <rect x="33" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t7" x="-89" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t8" x="-28" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+    <rect class="wog-tile wog-t9" x="33" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
 
     <!-- 'W' in middle-left tile -->
     <g transform="translate(-89,-28)">
@@ -29,7 +61,7 @@
     <!-- 'G' in middle-right tile with leaf sprout -->
     <g transform="translate(33,-28)">
       <path d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28" fill="none" stroke="#101E17" stroke-width="6.5"/>
-      <path d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#101E17"/>
+      <path class="wog-leaf" d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#101E17"/>
     </g>
   </g>
 </svg>

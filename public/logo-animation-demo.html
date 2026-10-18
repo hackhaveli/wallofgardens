@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Gardens — Live Logo Animations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0B130E;
+      --forest: #14241A;
+      --cream: #F4F3EC;
+      --gold: #C8A55B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #070d09;
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 50px 20px 100px;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(200, 165, 91, 0.15);
+      border: 1px solid rgba(200, 165, 91, 0.35);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(26px, 4vw, 38px);
+      margin-bottom: 12px;
+    }
+    p.intro {
+      color: rgba(244,243,236,0.7);
+      font-size: 15px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    .card {
+      background: #0f1c14;
+      border: 1px solid rgba(200,165,91,0.25);
+      border-radius: 16px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .card-header {
+      padding: 18px 26px;
+      background: rgba(200,165,91,0.06);
+      border-bottom: 1px solid rgba(200,165,91,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .card-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(200,165,91,0.12);
+    }
+    .demo-bar {
+      background: rgba(11, 19, 14, 0.98);
+      border-bottom: 1px solid rgba(244,243,236,0.08);
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .brand-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+    .brand-n b {
+      color: var(--gold);
+      font-weight: 400;
+      font-style: italic;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(244,243,236,0.68);
+    }
+    .nav-cta {
+      background: var(--gold);
+      color: #0B130E;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 9px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .demo-info {
+      padding: 20px 26px;
+      background: rgba(0,0,0,0.2);
+      font-size: 14px;
+      color: rgba(244,243,236,0.75);
+      line-height: 1.6;
+    }
+    .zoom-box {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #14281c 0%, #08110b 70%);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      gap: 40px;
+    }
+    .zoom-item {
+      text-align: center;
+    }
+    .zoom-item p {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(244,243,236,0.5);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ----------------------------------------------------------------- */
+    /* LOGO ANIMATION STYLES: "LIVING BIOPHILIC ARCHITECTURE"             */
+    /* ----------------------------------------------------------------- */
+    
+    .wog-animated-logo {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      overflow: visible;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .wog-animated-logo.large {
+      width: 140px;
+      height: 140px;
+    }
+
+    /* 1. Leaf Flutter Animation (Continuous Living Breeze + Hover Perk) */
+    .wog-leaf {
+      transform-origin: 43px 28px;
+      animation: leafBreeze 3.5s ease-in-out infinite;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes leafBreeze {
+      0%, 100% {
+        transform: rotate(0deg) scale(1);
+      }
+      25% {
+        transform: rotate(-7deg) scale(1.08);
+      }
+      60% {
+        transform: rotate(5deg) scale(0.97);
+      }
+      80% {
+        transform: rotate(-3deg) scale(1.03);
+      }
+    }
+
+    /* 2. Sunlight Shimmer Cascading Across 9 Tiles Every 5s */
+    .wog-tile {
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), fill 0.3s ease;
+      animation: tileSunlight 6s ease-in-out infinite;
+    }
+    .wog-t1 { animation-delay: 0.0s; }
+    .wog-t2 { animation-delay: 0.12s; }
+    .wog-t3 { animation-delay: 0.24s; }
+    .wog-t4 { animation-delay: 0.18s; }
+    .wog-t5 { animation-delay: 0.30s; }
+    .wog-t6 { animation-delay: 0.42s; }
+    .wog-t7 { animation-delay: 0.36s; }
+    .wog-t8 { animation-delay: 0.48s; }
+    .wog-t9 { animation-delay: 0.60s; }
+
+    @keyframes tileSunlight {
+      0%, 80%, 100% {
+        fill: #F6F3EA;
+        filter: none;
+      }
+      85% {
+        fill: #FFFFFF;
+        filter: drop-shadow(0 0 4px rgba(255,255,255,0.7));
+      }
+      92% {
+        fill: #F9EED2;
+        filter: drop-shadow(0 0 6px rgba(200,165,91,0.6));
+      }
+      96% {
+        fill: #F6F3EA;
+        filter: none;
+      }
+    }
+
+    /* 3. Hover Magic: Modular Expansion + Leaf Pop */
+    .brand:hover .wog-animated-logo {
+      transform: scale(1.08);
+    }
+    .brand:hover .wog-leaf {
+      animation: leafExcited 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) infinite alternate;
+      fill: #19462A;
+    }
+    @keyframes leafExcited {
+      0% { transform: rotate(-12deg) scale(1.2); }
+      100% { transform: rotate(14deg) scale(1.15); }
+    }
+
+    /* Subtle outward bloom of corner tiles on hover */
+    .brand:hover .wog-t1 { transform: translate(-2px, -2px); }
+    .brand:hover .wog-t2 { transform: translate(0px, -2px); }
+    .brand:hover .wog-t3 { transform: translate(2px, -2px); }
+    .brand:hover .wog-t4 { transform: translate(-2px, 0px); }
+    .brand:hover .wog-t6 { transform: translate(2px, 0px); }
+    .brand:hover .wog-t7 { transform: translate(-2px, 2px); }
+    .brand:hover .wog-t8 { transform: translate(0px, 2px); }
+    .brand:hover .wog-t9 { transform: translate(2px, 2px); }
+
+    .brand:hover .wog-char {
+      stroke: #0d2817;
+    }
+    .brand:hover .wog-char-fill {
+      fill: #0d2817;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge">✨ Live Biophilic Animation</div>
+    <h1>Live Animated Logo Preview</h1>
+    <p class="intro">
+      Wall of Gardens ke philosophy <i>"Living Architecture, Engineered"</i> ko embody karne ke liye, humne isme ek <b>organic living animation</b> add kiya hai jo ultra-luxurious hai aur bilkul dynamic lagta hai:
+    </p>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Actual Navbar Simulation (Hover karke dekhiye!)</span>
+        <span class="card-tag">Living Garden Mode</span>
+      </div>
+      <div class="demo-bar">
+        <div class="brand">
+          <svg class="wog-animated-logo" viewBox="-91 -91 182 182">
+            <!-- 9 Tiles with staggered sunlight shimmer -->
+            <rect class="wog-tile wog-t1" x="-89" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t2" x="-28" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t3" x="33" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t4" x="-89" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t5" x="-28" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t6" x="33" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t7" x="-89" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t8" x="-28" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t9" x="33" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+
+            <!-- W -->
+            <g transform="translate(-89,-28)">
+              <clipPath id="wcl_demo"><rect x="11" y="13" width="34" height="31"/></clipPath>
+              <path class="wog-char" clip-path="url(#wcl_demo)" d="M11 9 L21 48 L28 27 L35 48 L45 9" fill="none" stroke="#101E17" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt"/>
+            </g>
+
+            <!-- O -->
+            <g transform="translate(-28,-28)">
+              <circle class="wog-char" cx="28" cy="28" r="15.5" fill="none" stroke="#101E17" stroke-width="6.5"/>
+            </g>
+
+            <!-- G with Animated Leaf -->
+            <g transform="translate(33,-28)">
+              <path class="wog-char" d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28" fill="none" stroke="#101E17" stroke-width="6.5"/>
+              <path class="wog-leaf" d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#101E17"/>
+            </g>
+          </svg>
+          <span class="brand-n">Wall <b>of</b> Gardens</span>
+        </div>
+        <div class="nav-links">
+          <span>Projects</span>
+          <span>Services</span>
+          <span>Studio</span>
+          <span>Contact</span>
+        </div>
+        <a class="nav-cta" href="#">Start a Project</a>
+      </div>
+
+      <div class="zoom-box">
+        <div class="zoom-item">
+          <svg class="wog-animated-logo large brand" viewBox="-91 -91 182 182">
+            <!-- 9 Tiles with staggered sunlight shimmer -->
+            <rect class="wog-tile wog-t1" x="-89" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t2" x="-28" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t3" x="33" y="-89" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t4" x="-89" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t5" x="-28" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t6" x="33" y="-28" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t7" x="-89" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t8" x="-28" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+            <rect class="wog-tile wog-t9" x="33" y="33" width="56" height="56" rx="5" fill="#F6F3EA"/>
+
+            <!-- W -->
+            <g transform="translate(-89,-28)">
+              <clipPath id="wcl_demo_lg"><rect x="11" y="13" width="34" height="31"/></clipPath>
+              <path class="wog-char" clip-path="url(#wcl_demo_lg)" d="M11 9 L21 48 L28 27 L35 48 L45 9" fill="none" stroke="#101E17" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt"/>
+            </g>
+
+            <!-- O -->
+            <g transform="translate(-28,-28)">
+              <circle class="wog-char" cx="28" cy="28" r="15.5" fill="none" stroke="#101E17" stroke-width="6.5"/>
+            </g>
+
+            <!-- G with Animated Leaf -->
+            <g transform="translate(33,-28)">
+              <path class="wog-char" d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28" fill="none" stroke="#101E17" stroke-width="6.5"/>
+              <path class="wog-leaf" d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#101E17"/>
+            </g>
+          </svg>
+          <p>ZOOMED DETAIL (Hover cursor over it!)</p>
+        </div>
+      </div>
+
+      <div class="demo-info">
+        <b>3 Layered Live Animations:</b>
+        <ol style="margin-left: 20px; margin-top: 8px;">
+          <li><b>Gentle Breeze on the Leaf (Idle):</b> 'G' ke upar ka leaf sprout hawa mein gently sway karta hai (organic breathing).</li>
+          <li><b>Sunlight Wave Across Tiles:</b> Har 6 seconds mein ek subtle natural golden-white sunlight shimmer 3×3 grid par diagonal flow karta hai (jaise suraj ki kiran vertical garden par padti hai).</li>
+          <li><b>Interactive Bloom (Hover):</b> Jab user mouse leke jaata hai, toh 9 tiles halki si expand hoti hain (living modular architecture bloom) aur leaf lively flutter karti hai!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
