@@ -5,187 +5,64 @@ interface BrandLogoProps {
   className?: string;
 }
 
-export default function BrandLogo({ size = 40, className = '' }: BrandLogoProps) {
+export default function BrandLogo({ size = 38, className = '' }: BrandLogoProps) {
   return (
     <svg
-      className={`wog-free-logo ${className}`.trim()}
-      viewBox="0 0 48 48"
+      className={`wog-animated-logo ${className}`.trim()}
+      viewBox="-91 -91 182 182"
       width={size}
       height={size}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Wall of Gardens - Living Architecture Logo"
+      aria-label="Wall of Gardens Logo"
       role="img"
     >
-      <defs>
-        {/* Luxury Brushed Champagne Gold Gradients */}
-        <linearGradient id="wogGoldPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FFF8E0" />
-          <stop offset="45%" stopColor="#E5C365" />
-          <stop offset="85%" stopColor="#A47D22" />
-          <stop offset="100%" stopColor="#E5C365" />
-        </linearGradient>
+      {/* 9 Rounded Architectural Tiles with Living Sunlight Shimmer */}
+      <rect className="wog-tile wog-t1" x="-89" y="-89" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t2" x="-28" y="-89" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t3" x="33" y="-89" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t4" x="-89" y="-28" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t5" x="-28" y="-28" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t6" x="33" y="-28" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t7" x="-89" y="33" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t8" x="-28" y="33" width="56" height="56" rx="5" fill="#F6F3EA" />
+      <rect className="wog-tile wog-t9" x="33" y="33" width="56" height="56" rx="5" fill="#F6F3EA" />
 
-        <linearGradient id="wogGoldSecondary" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#8A6827" />
-          <stop offset="50%" stopColor="#E2C382" />
-          <stop offset="100%" stopColor="#FFF9E6" />
-        </linearGradient>
-
-        {/* Lush Living Flora Gradients */}
-        <linearGradient id="wogLeafLeft" x1="0%" y1="100%" x2="20%" y2="0%">
-          <stop offset="0%" stopColor="#0E3D1D" />
-          <stop offset="55%" stopColor="#22C55E" />
-          <stop offset="100%" stopColor="#86EFAC" />
-        </linearGradient>
-
-        <linearGradient id="wogLeafRight" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#14532D" />
-          <stop offset="65%" stopColor="#4ADE80" />
-          <stop offset="100%" stopColor="#BBF7D0" />
-        </linearGradient>
-
-        {/* Ethereal Biophilic Respiration Aura (Borderless) */}
-        <radialGradient id="wogLivingAura" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#22C55E" stopOpacity="0.32" />
-          <stop offset="50%" stopColor="#C8A55B" stopOpacity="0.14" />
-          <stop offset="100%" stopColor="#22C55E" stopOpacity="0" />
-        </radialGradient>
-
-        {/* Golden Sun Glint Shimmer Filter */}
-        <filter id="wogGlow" x="-25%" y="-25%" width="150%" height="150%">
-          <feGaussianBlur stdDeviation="1.8" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-
-      {/* 1. LIVING BIOPHILIC RESPIRATION AURA (FREE-FLOATING, NO BOX) */}
-      <circle
-        className="wog-aura"
-        cx="24"
-        cy="24"
-        r="20"
-        fill="url(#wogLivingAura)"
-      />
-
-      {/* 2. CELESTIAL SUN / ORBITAL HARMONY RING ('O') */}
-      <circle
-        className="wog-orbit"
-        cx="24"
-        cy="24"
-        r="17.5"
-        stroke="url(#wogGoldPrimary)"
-        strokeWidth="0.9"
-        strokeDasharray="2.5 3.5"
-        opacity="0.6"
-      />
-      <circle
-        cx="24"
-        cy="24"
-        r="19"
-        stroke="url(#wogGoldSecondary)"
-        strokeWidth="0.5"
-        opacity="0.3"
-      />
-
-      {/* 3. ARCHITECTURAL LIVING TRELLIS STRUCTURE ('W') */}
-      {/* Left Outer Pillar & Slats */}
-      <path
-        className="wog-trellis-pillar"
-        d="M 8 35 L 14 13 L 18 35"
-        stroke="url(#wogGoldPrimary)"
-        strokeWidth="2.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line
-        x1="11"
-        y1="24"
-        x2="16"
-        y2="24"
-        stroke="url(#wogGoldSecondary)"
-        strokeWidth="1.2"
-        opacity="0.8"
-      />
-
-      {/* Right Outer Pillar & Slats */}
-      <path
-        className="wog-trellis-pillar"
-        d="M 30 35 L 34 13 L 40 35"
-        stroke="url(#wogGoldPrimary)"
-        strokeWidth="2.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line
-        x1="32"
-        y1="24"
-        x2="37"
-        y2="24"
-        stroke="url(#wogGoldSecondary)"
-        strokeWidth="1.2"
-        opacity="0.8"
-      />
-
-      {/* Central Keystone Chevron (The Heart of the W) */}
-      <path
-        className="wog-keystone"
-        d="M 18 35 L 24 21 L 30 35"
-        stroke="url(#wogGoldSecondary)"
-        strokeWidth="2.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* Architectural Ground Plinth Foundation */}
-      <line
-        className="wog-foundation"
-        x1="6"
-        y1="38"
-        x2="42"
-        y2="38"
-        stroke="url(#wogGoldPrimary)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        opacity="0.85"
-      />
-
-      {/* 4. LIVING BOTANICAL FLORA ('G' / GARDENS) WITH BREEZE MOTION */}
-      {/* Left Leaf Sprout */}
-      <g className="wog-leaf-left">
+      {/* 'W' in Middle-Left Tile */}
+      <g transform="translate(-89,-28)">
+        <clipPath id="wcl_nav">
+          <rect x="11" y="13" width="34" height="31" />
+        </clipPath>
         <path
-          d="M 24 19 C 18 15 15 8 21.5 4 C 25.5 7.5 25.5 14.5 24 19 Z"
-          fill="url(#wogLeafLeft)"
-          filter="url(#wogGlow)"
-        />
-        <path
-          d="M 24 19 C 21 15 19.5 9 22.5 5"
-          stroke="#FEF08A"
-          strokeWidth="0.8"
-          strokeLinecap="round"
-          opacity="0.85"
+          className="wog-char"
+          clipPath="url(#wcl_nav)"
+          d="M11 9 L21 48 L28 27 L35 48 L45 9"
+          fill="none"
+          stroke="#101E17"
+          strokeWidth="7"
+          strokeLinejoin="miter"
+          strokeLinecap="butt"
         />
       </g>
 
-      {/* Right Leaf Sprout */}
-      <g className="wog-leaf-right">
-        <path
-          d="M 24 19 C 30 15 33 8 26.5 4 C 22.5 7.5 22.5 14.5 24 19 Z"
-          fill="url(#wogLeafRight)"
-          filter="url(#wogGlow)"
-        />
-        <path
-          d="M 24 19 C 27 15 28.5 9 25.5 5"
-          stroke="#FEF08A"
-          strokeWidth="0.8"
-          strokeLinecap="round"
-          opacity="0.85"
-        />
+      {/* 'O' in Middle-Center Tile */}
+      <g transform="translate(-28,-28)">
+        <circle className="wog-char" cx="28" cy="28" r="15.5" fill="none" stroke="#101E17" strokeWidth="6.5" />
       </g>
 
-      {/* Living Dewdrop Seed Core */}
-      <circle cx="24" cy="19.5" r="1.8" fill="#FFF9E6" />
-      <circle cx="24" cy="19.5" r="2.8" stroke="#22C55E" strokeWidth="0.7" opacity="0.8" />
+      {/* 'G' in Middle-Right Tile with Animated Organic Leaf Sprout */}
+      <g transform="translate(33,-28)">
+        <path
+          className="wog-char"
+          d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28"
+          fill="none"
+          stroke="#101E17"
+          strokeWidth="6.5"
+        />
+        <path
+          className="wog-leaf"
+          d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z"
+          fill="#101E17"
+        />
+      </g>
     </svg>
   );
 }
