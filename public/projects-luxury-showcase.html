@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Gardens — Luxury Architectural Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0B130E;
+      --forest: #14241A;
+      --cream: #F4F3EC;
+      --gold: #C8A55B;
+      --gold-light: #F2E3BC;
+      --gold-glow: rgba(200, 165, 91, 0.4);
+      --card-bg: #101c14;
+      --card-border: rgba(200, 165, 91, 0.22);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #080f0a;
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(ellipse 900px 500px at 15% 10%, rgba(20, 45, 30, 0.5) 0%, transparent 60%),
+        radial-gradient(ellipse 700px 500px at 85% 60%, rgba(200, 165, 91, 0.08) 0%, transparent 55%);
+      padding-bottom: 100px;
+    }
+
+    /* HEADER */
+    .hero {
+      padding: 60px 24px 36px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      background: rgba(200, 165, 91, 0.12);
+      border: 1px solid rgba(200, 165, 91, 0.35);
+      color: var(--gold-light);
+      font-size: 11.5px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(32px, 4.5vw, 48px);
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+    .hero h1 em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .hero p {
+      font-size: 16px;
+      color: rgba(244, 243, 236, 0.72);
+      line-height: 1.65;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* FILTERS BAR */
+    .filter-wrap {
+      max-width: 1280px;
+      margin: 0 auto 36px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(244, 243, 236, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .filter-btn:hover {
+      background: rgba(200, 165, 91, 0.12);
+      color: var(--gold-light);
+      border-color: rgba(200, 165, 91, 0.35);
+    }
+    .filter-btn.active {
+      background: var(--gold);
+      color: #0B130E;
+      font-weight: 600;
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(200, 165, 91, 0.3);
+    }
+    .view-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: rgba(244, 243, 236, 0.45);
+    }
+    .view-count b {
+      color: var(--gold);
+    }
+
+    /* ------------------------------------------------------------- */
+    /* THE LUXURY PORTFOLIO GRID                                    */
+    /* ------------------------------------------------------------- */
+    .gallery {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    @media (max-width: 1100px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    }
+    @media (max-width: 680px) {
+      .gallery { grid-template-columns: 1fr; gap: 24px; }
+    }
+
+    /* Flagship / Feature Item (Spans 2 columns on desktop) */
+    .gallery-item.featured {
+      grid-column: span 2;
+    }
+    @media (max-width: 1100px) {
+      .gallery-item.featured { grid-column: span 2; }
+    }
+    @media (max-width: 680px) {
+      .gallery-item.featured { grid-column: span 1; }
+    }
+
+    /* CARD DESIGN */
+    .gallery-item {
+      position: relative;
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-item:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(200, 165, 91, 0.18);
+      border-color: rgba(200, 165, 91, 0.55);
+    }
+
+    /* IMAGE CONTAINER */
+    .img-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/11;
+      overflow: hidden;
+      background: #060c07;
+    }
+    .gallery-item.featured .img-box {
+      aspect-ratio: 16/9.5;
+    }
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.7s ease;
+    }
+    .gallery-item:hover .img-box img {
+      transform: scale(1.06);
+    }
+
+    /* TOP GLASS BADGES */
+    .top-badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .cat-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(11, 19, 14, 0.85);
+      backdrop-filter: blur(10px);
+      color: var(--gold-light);
+      border: 1px solid rgba(200, 165, 91, 0.35);
+    }
+    .num-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* BOTTOM OVERLAY GRADIENT */
+    .img-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(11,19,14,0.92) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* CONTENT / SPECS BOX */
+    .card-body {
+      padding: 20px 22px 22px;
+      background: #0f1c14;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .title-row {
+      margin-bottom: 8px;
+    }
+    .proj-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.3;
+      transition: color 0.3s ease;
+    }
+    .gallery-item:hover .proj-title {
+      color: var(--gold-light);
+    }
+    .gallery-item.featured .proj-title {
+      font-size: 24px;
+    }
+    .loc-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      color: rgba(244, 243, 236, 0.65);
+      margin-bottom: 12px;
+    }
+    .loc-row svg {
+      width: 13px;
+      height: 13px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .scope-text {
+      font-size: 13px;
+      color: rgba(244, 243, 236, 0.68);
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    /* FOOTER BAR OF CARD */
+    .card-foot {
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+    .foot-status {
+      color: rgba(244, 243, 236, 0.5);
+    }
+    .foot-status b {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .foot-btn {
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+    .gallery-item:hover .foot-btn {
+      transform: translateX(4px);
+      color: #fff;
+    }
+
+    /* ------------------------------------------------------------- */
+    /* INTERACTIVE MODAL / DETAIL DRAWER                             */
+    /* ------------------------------------------------------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.open {
+      display: flex;
+      opacity: 1;
+    }
+    .modal-card {
+      background: #0d1811;
+      border: 1px solid rgba(200, 165, 91, 0.4);
+      border-radius: 20px;
+      max-width: 960px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(200, 165, 91, 0.2);
+      position: relative;
+      animation: modalSlideUp 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px) scale(0.97); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 10;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .modal-close:hover {
+      background: var(--gold);
+      color: #0B130E;
+      transform: scale(1.08);
+    }
+    .modal-hero {
+      position: relative;
+      width: 100%;
+      max-height: 480px;
+      overflow: hidden;
+    }
+    .modal-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .modal-body {
+      padding: 32px 36px 40px;
+    }
+    .modal-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(200, 165, 91, 0.2);
+      margin: 24px 0 28px;
+    }
+    @media (max-width: 768px) {
+      .modal-meta-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .meta-item .k {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .meta-item .v {
+      font-size: 14.5px;
+      color: var(--cream);
+      font-weight: 500;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #0B130E;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-wa {
+      background: #25D366;
+      color: #07170c;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.25s;
+    }
+    .btn-wa:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">Sheet 09 — Architectural Index</div>
+    <h1>Curated <em>Living Works</em></h1>
+    <p>
+      Vertical gardens, corporate atriums, and engineered bio-facades. 
+      Click on any space to explore detailed technical specifications and installation engineering.
+    </p>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filter-wrap">
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterGallery('all')">All Works</button>
+      <button class="filter-btn" onclick="filterGallery('vertical')">Vertical Gardens</button>
+      <button class="filter-btn" onclick="filterGallery('terrace')">Terrace</button>
+      <button class="filter-btn" onclick="filterGallery('balcony')">Balcony</button>
+      <button class="filter-btn" onclick="filterGallery('moss')">Moss Walls</button>
+      <button class="filter-btn" onclick="filterGallery('amc')">Plant AMC</button>
+    </div>
+    <div class="view-count">Showing <b id="count">8</b> curated installations</div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery" id="gallery">
+
+    <!-- FLAGSHIP 1: Holiday Inn -->
+    <div class="gallery-item featured" data-cat="vertical" onclick="openModal(0)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Vertical Garden • Atrium</span>
+          <span class="num-tag">VG—01</span>
+        </div>
+        <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Holiday Inn Atrium" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Holiday Inn Multi-Story Living Wall</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Hospitality Atrium, Delhi NCR</span>
+        </div>
+        <p class="scope-text">
+          850 sq.ft expansive multi-story outdoor living wall integrated with illuminated corporate logo and automated multi-zone drip irrigation.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed &amp; Maintained</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2: Staircase -->
+    <div class="gallery-item" data-cat="vertical" onclick="openModal(1)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Vertical Garden</span>
+          <span class="num-tag">VG—02</span>
+        </div>
+        <img src="/projects/vertical-gardens/architectural-staircase.jpg" alt="Architectural Staircase" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Staircase Living Columns</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>CyberCity, Gurugram</span>
+        </div>
+        <p class="scope-text">
+          Double-height living wall columns alternating with black fluted architectural louvers &amp; industrial track lighting.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed 2024</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3: Courtyard Atrium -->
+    <div class="gallery-item" data-cat="vertical" onclick="openModal(2)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Vertical Garden</span>
+          <span class="num-tag">VG—03</span>
+        </div>
+        <img src="/projects/vertical-gardens/courtyard-atrium-skylight.jpg" alt="Courtyard Atrium" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Courtyard Skylight Wall</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>South Delhi Residence</span>
+        </div>
+        <p class="scope-text">
+          Double-height courtyard atrium living wall flanked by carved stone cladding and custom skylight daylighting.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed 2024</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 4: Resort Poolside -->
+    <div class="gallery-item" data-cat="vertical" onclick="openModal(3)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Vertical Garden</span>
+          <span class="num-tag">VG—04</span>
+        </div>
+        <img src="/projects/vertical-gardens/resort-poolside-pergola.jpg" alt="Resort Poolside" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Resort Poolside Pergola</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>NCR Luxury Wellness Spa</span>
+        </div>
+        <p class="scope-text">
+          600 sq.ft expansive poolside living wall with teak cabana pergolas, purple Tradescantia, and ribbon grass.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed 2024</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 5: Multi-species wave -->
+    <div class="gallery-item" data-cat="vertical" onclick="openModal(4)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Vertical Garden</span>
+          <span class="num-tag">VG—05</span>
+        </div>
+        <img src="/projects/vertical-gardens/multi-species-wave-wall.jpg" alt="Curved Wave" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Curved Wave Multi-Species Wall</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Greater Kailash, New Delhi</span>
+        </div>
+        <p class="scope-text">
+          Diagonal bands of golden Chlorophytum, Sedum, and purple Tradescantia integrated with poolside timber decking.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed 2024</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 6: Commercial Plaza -->
+    <div class="gallery-item" data-cat="vertical" onclick="openModal(5)">
+      <div class="img-box">
+        <div class="top-badges">
+          <span class="cat-pill">Commercial Wall</span>
+          <span class="num-tag">VG—06</span>
+        </div>
+        <img src="/projects/vertical-gardens/commercial-plaza-uplight.jpg" alt="Commercial Plaza" />
+        <div class="img-gradient"></div>
+      </div>
+      <div class="card-body">
+        <div class="title-row">
+          <h2 class="proj-title">Commercial Plaza Living Wall</h2>
+        </div>
+        <div class="loc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Aerocity, New Delhi</span>
+        </div>
+        <p class="scope-text">
+          Full-length plaza living wall with polished granite flooring, drainage channel, and integrated LED ground lighting.
+        </p>
+        <div class="card-foot">
+          <span class="foot-status">Status: <b>Completed 2024</b></span>
+          <span class="foot-btn">View Specs &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERACTIVE MODAL -->
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-hero">
+        <img id="m-img" src="" alt="" />
+      </div>
+      <div class="modal-body">
+        <div style="font-family:'JetBrains Mono',monospace; color:var(--gold); font-size:12px; margin-bottom:8px;" id="m-no"></div>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(24px, 3.5vw, 32px); color:var(--cream); margin-bottom:10px;" id="m-title"></h2>
+        <div style="color:rgba(244,243,236,0.65); font-size:14px; margin-bottom:20px;" id="m-loc"></div>
+        <p style="font-size:15px; line-height:1.7; color:rgba(244,243,236,0.85);" id="m-scope"></p>
+
+        <div class="modal-meta-grid">
+          <div class="meta-item">
+            <span class="k">System Type</span>
+            <span class="v" id="m-type">Automated Drip</span>
+          </div>
+          <div class="meta-item">
+            <span class="k">Species Density</span>
+            <span class="v">32 Plants / sq.m</span>
+          </div>
+          <div class="meta-item">
+            <span class="k">SLA Upkeep</span>
+            <span class="v">100% Replacement</span>
+          </div>
+          <div class="meta-item">
+            <span class="k">Status</span>
+            <span class="v" id="m-status">Verified</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a class="btn-wa" id="m-wa" href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.36 7.35 9.09 7.41 8.85 7.67C8.62 7.93 7.96 8.55 7.96 9.81C7.96 11.08 8.88 12.3 9.01 12.47C9.14 12.64 10.79 15.19 13.33 16.29C15.44 17.2 15.87 17.02 16.33 16.98C16.8 16.93 17.83 16.37 18.05 15.75C18.27 15.13 18.27 14.6 18.2 14.49C18.14 14.38 17.97 14.31 17.71 14.18C17.45 14.05 16.2 13.44 15.97 13.35C15.74 13.27 15.57 13.23 15.4 13.49C15.23 13.75 14.75 14.31 14.6 14.49C14.46 14.66 14.31 14.69 14.05 14.56C13.8 14.43 12.97 14.16 12 13.29C11.23 12.61 10.72 11.77 10.57 11.51C10.42 11.25 10.55 11.11 10.68 10.98C10.8 10.86 10.95 10.67 11.08 10.52C11.21 10.37 11.25 10.26 11.34 10.09C11.43 9.92 11.38 9.77 11.32 9.64C11.25 9.51 10.74 8.27 10.53 7.76C10.32 7.26 10.11 7.33 9.95 7.33C9.8 7.33 9.68 7.35 9.53 7.35Z"/></svg>
+            <span>WhatsApp Project Enquiry</span>
+          </a>
+          <a class="btn-gold" href="/contact">
+            <span>Book Site Consultation &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PROJECTS = [
+      {
+        no: "VG—01",
+        title: "Holiday Inn Multi-Story Living Wall",
+        loc: "Hospitality Atrium, Delhi NCR",
+        scope: "850 sq.ft multi-story outdoor living wall integrated with illuminated corporate logo and automated multi-zone drip irrigation.",
+        status: "Completed & Maintained",
+        img: "/projects/vertical-gardens/holiday-inn-atrium.jpg",
+        type: "Multi-Zone Drip System"
+      },
+      {
+        no: "VG—02",
+        title: "Architectural Staircase Living Columns",
+        loc: "CyberCity, Gurugram",
+        scope: "Double-height living wall columns alternating with black fluted architectural louvers & industrial track lighting.",
+        status: "Completed 2024",
+        img: "/projects/vertical-gardens/architectural-staircase.jpg",
+        type: "Automated Micro-Drip"
+      },
+      {
+        no: "VG—03",
+        title: "Courtyard Atrium Skylight Living Wall",
+        loc: "South Delhi Private Residence",
+        scope: "Double-height courtyard atrium living wall flanked by carved stone cladding & custom skylight daylighting.",
+        status: "Completed 2024",
+        img: "/projects/vertical-gardens/courtyard-atrium-skylight.jpg",
+        type: "Sub-Surface Irrigation"
+      },
+      {
+        no: "VG—04",
+        title: "Resort Poolside Pergola Living Wall",
+        loc: "NCR Luxury Wellness Spa",
+        scope: "600 sq.ft expansive poolside living wall with teak cabana pergolas, purple Tradescantia, and ribbon grass.",
+        status: "Completed 2024",
+        img: "/projects/vertical-gardens/resort-poolside-pergola.jpg",
+        type: "Automated Dual-Zone"
+      },
+      {
+        no: "VG—05",
+        title: "Curved Wave Multi-Species Living Wall",
+        loc: "Greater Kailash, New Delhi",
+        scope: "Diagonal bands of golden Chlorophytum, Sedum, and purple Tradescantia integrated with poolside timber decking.",
+        status: "Completed 2024",
+        img: "/projects/vertical-gardens/multi-species-wave-wall.jpg",
+        type: "Multi-Species Wave"
+      },
+      {
+        no: "VG—06",
+        title: "Commercial Plaza LED Living Wall",
+        loc: "Aerocity, New Delhi",
+        scope: "Full-length plaza living wall with polished granite flooring, drainage channel, and integrated LED ground lighting.",
+        status: "Completed 2024",
+        img: "/projects/vertical-gardens/commercial-plaza-uplight.jpg",
+        type: "Engineered Facade"
+      }
+    ];
+
+    function openModal(idx) {
+      const p = PROJECTS[idx];
+      document.getElementById('m-img').src = p.img;
+      document.getElementById('m-no').innerText = p.no;
+      document.getElementById('m-title').innerText = p.title;
+      document.getElementById('m-loc').innerText = "📍 " + p.loc;
+      document.getElementById('m-scope').innerText = p.scope;
+      document.getElementById('m-status').innerText = p.status;
+      document.getElementById('m-type').innerText = p.type;
+      document.getElementById('m-wa').href = `https://wa.me/919990960669?text=Hi%20Wall%20of%20Gardens,%20I%20am%20interested%20in%20a%20project%20like%20${encodeURIComponent(p.title)}%20(${p.no}).`;
+      
+      const modal = document.getElementById('modal');
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    function filterGallery(cat) {
+      const items = document.querySelectorAll('.gallery-item');
+      let visibleCount = 0;
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+          item.style.display = 'flex';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      document.getElementById('count').innerText = visibleCount;
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

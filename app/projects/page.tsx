@@ -158,9 +158,29 @@ const DEFAULT_PROJECT_ITEMS = [
   },
 ];
 
+interface ProjectItem {
+  cat: string;
+  no: string;
+  name: string;
+  client: string;
+  location: string;
+  scope: string;
+  year: string;
+  image: string;
+}
+
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [projects, setProjects] = useState(DEFAULT_PROJECT_ITEMS);
+  const [projects, setProjects] = useState<ProjectItem[]>(DEFAULT_PROJECT_ITEMS);
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedProject(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   useEffect(() => {
     const supabase = getSupabaseClient();
@@ -258,36 +278,56 @@ export default function ProjectsPage() {
             </button>
           </div>
 
-          <div className="prj-grid">
+          <div className="lux-gallery">
             {projects.map((prj, i) => {
               const isVisible = activeFilter === 'all' || activeFilter === prj.cat;
               if (!isVisible) return null;
+              const isFeatured = i === 0 && activeFilter === 'all';
               return (
-                <a key={i} className="prj rv" data-cat={prj.cat} href="#">
-                  <div className="prj-f">
-                    <div
-                      className="plate rvp has-img"
-                      data-n={`${prj.name} — ${prj.location}`}
-                      style={{ minHeight: '260px', width: '100%', position: 'relative', display: 'block' }}
-                    >
-                      <Image
-                        src={prj.image}
-                        alt={prj.name}
-                        fill
-                        sizes="(max-width: 900px) 100vw, 600px"
-                        unoptimized={!canOptimize(prj.image)}
-                      />
+                <div
+                  key={i}
+                  className={`lux-gallery-item rv ${isFeatured ? 'featured' : ''}`}
+                  data-cat={prj.cat}
+                  onClick={() => setSelectedProject(prj)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => { if (e.key === 'Enter') setSelectedProject(prj); }}
+                >
+                  <div className="lux-img-box">
+                    <div className="lux-top-badges">
+                      <span className="lux-cat-pill">
+                        {prj.cat === 'vertical' ? 'Vertical Garden' : prj.cat === 'terrace' ? 'Terrace Garden' : prj.cat === 'balcony' ? 'Balcony Garden' : prj.cat === 'moss' ? 'Moss Wall' : prj.cat === 'plantscaping' ? 'Plantscaping' : 'Plant AMC'}
+                      </span>
+                      <span className="lux-num-tag">{prj.no}</span>
+                    </div>
+                    <Image
+                      src={prj.image}
+                      alt={prj.name}
+                      fill
+                      sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 420px"
+                      unoptimized={!canOptimize(prj.image)}
+                      className="lux-img"
+                    />
+                    <div className="lux-img-gradient" />
+                  </div>
+                  <div className="lux-card-body">
+                    <div className="lux-title-row">
+                      <h2 className="lux-proj-title">{prj.name}</h2>
+                    </div>
+                    <div className="lux-loc-row">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span>{prj.location}</span>
+                    </div>
+                    <p className="lux-scope-text">{prj.scope}</p>
+                    <div className="lux-card-foot">
+                      <span className="lux-foot-status">Status: <b>{prj.year}</b></span>
+                      <span className="lux-foot-btn">View Specs &rarr;</span>
                     </div>
                   </div>
-                  <div className="tblock">
-                    <div className="tb"><span className="k">No.</span><span className="v big">{prj.no}</span></div>
-                    <div className="tb"><span className="k">Project</span><span className="v name">{prj.name}</span></div>
-                    <div className="tb"><span className="k">Client</span><span className={`v ${prj.client === 'To confirm' ? 'tbd' : ''}`}>{prj.client}</span></div>
-                    <div className="tb"><span className="k">Location</span><span className="v">{prj.location}</span></div>
-                    <div className="tb"><span className="k">Scope</span><span className="v">{prj.scope}</span></div>
-                    <div className="tb"><span className="k">Year</span><span className="v tbd">{prj.year}</span></div>
-                  </div>
-                </a>
+                </div>
               );
             })}
           </div>
@@ -401,6 +441,79 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
+
+      {/* LUXURY PROJECT MODAL */}
+      {selectedProject && (
+        <div
+          className="lux-modal-overlay open"
+          onClick={() => setSelectedProject(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="lux-modal-card" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="lux-modal-close"
+              onClick={() => setSelectedProject(null)}
+              aria-label="Close project modal"
+            >
+              &times;
+            </button>
+            <div className="lux-modal-hero">
+              <Image
+                src={selectedProject.image}
+                alt={selectedProject.name}
+                fill
+                unoptimized={!canOptimize(selectedProject.image)}
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="lux-modal-body">
+              <div className="lux-modal-no">
+                <span>{selectedProject.no}</span> &bull; <span>{selectedProject.year}</span>
+              </div>
+              <h2 className="lux-modal-title">{selectedProject.name}</h2>
+              <div className="lux-modal-loc">📍 {selectedProject.location}</div>
+              <p className="lux-modal-desc">{selectedProject.scope}</p>
+
+              <div className="lux-modal-meta-grid">
+                <div className="lux-meta-item">
+                  <span className="k">Client / Facility</span>
+                  <span className="v">{selectedProject.client}</span>
+                </div>
+                <div className="lux-meta-item">
+                  <span className="k">Category</span>
+                  <span className="v">{selectedProject.cat.toUpperCase()}</span>
+                </div>
+                <div className="lux-meta-item">
+                  <span className="k">Location</span>
+                  <span className="v">{selectedProject.location}</span>
+                </div>
+                <div className="lux-meta-item">
+                  <span className="k">Engineering Status</span>
+                  <span className="v">{selectedProject.year}</span>
+                </div>
+              </div>
+
+              <div className="lux-modal-actions">
+                <a
+                  className="lux-btn-wa"
+                  href={`https://wa.me/919990960669?text=${encodeURIComponent(`Hi Wall of Gardens, I saw the project "${selectedProject.name}" (${selectedProject.no}) and would like to enquire about something similar for my space.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.36 7.35 9.09 7.41 8.85 7.67C8.62 7.93 7.96 8.55 7.96 9.81C7.96 11.08 8.88 12.3 9.01 12.47C9.14 12.64 10.79 15.19 13.33 16.29C15.44 17.2 15.87 17.02 16.33 16.98C16.8 16.93 17.83 16.37 18.05 15.75C18.27 15.13 18.27 14.6 18.2 14.49C18.14 14.38 17.97 14.31 17.71 14.18C17.45 14.05 16.2 13.44 15.97 13.35C15.74 13.27 15.57 13.23 15.4 13.49C15.23 13.75 14.75 14.31 14.6 14.49C14.46 14.66 14.31 14.69 14.05 14.56C13.8 14.43 12.97 14.16 12 13.29C11.23 12.61 10.72 11.77 10.57 11.51C10.42 11.25 10.55 11.11 10.68 10.98C10.8 10.86 10.95 10.67 11.08 10.52C11.21 10.37 11.25 10.26 11.34 10.09C11.43 9.92 11.38 9.77 11.32 9.64C11.25 9.51 10.74 8.27 10.53 7.76C10.32 7.26 10.11 7.33 9.95 7.33C9.8 7.33 9.68 7.35 9.53 7.35Z" />
+                  </svg>
+                  <span>WhatsApp Enquiry</span>
+                </a>
+                <Link className="lux-btn-gold" href="/contact">
+                  <span>Book Site Consultation &rarr;</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
