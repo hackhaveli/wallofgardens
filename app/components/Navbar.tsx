@@ -21,11 +21,12 @@ export default function Navbar() {
           <Link className="brand" href="/" onClick={() => setOpen(false)}>
             <div className="brand-logo-wrap">
               <Image
-                src="/icon.jpg"
+                src="/icon.svg"
                 alt="Wall of Gardens Logo"
-                width={36}
-                height={36}
+                width={38}
+                height={38}
                 className="brand-logo-img"
+                unoptimized
                 priority
               />
             </div>

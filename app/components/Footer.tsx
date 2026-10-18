@@ -10,11 +10,12 @@ export default function Footer() {
             <div className="ft-brand-row">
               <div className="brand-logo-wrap">
                 <Image
-                  src="/icon.jpg"
+                  src="/icon.svg"
                   alt="Wall of Gardens"
-                  width={34}
-                  height={34}
+                  width={36}
+                  height={36}
                   className="brand-logo-img"
+                  unoptimized
                 />
               </div>
               <div className="ft-b">Wall <b>of</b> Gardens</div>
@@ -44,6 +45,9 @@ export default function Footer() {
             </a>
             <a href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
               WhatsApp Studio &rarr;
+            </a>
+            <a href="https://www.instagram.com/wallofgarden" target="_blank" rel="noopener noreferrer">
+              Instagram @wallofgarden &rarr;
             </a>
             <a href="mailto:founder@wallofgardens.com">founder@wallofgardens.com</a>
             <li>6th Floor, MERI, Janakpuri,<br />New Delhi – 110058</li>

@@ -1,0 +1,29 @@
+<svg viewBox="0 0 440 80" xmlns="http://www.w3.org/2000/svg" font-family="'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <!-- 3x3 Architectural Grid Symbol for Light Backgrounds -->
+  <g transform="translate(44, 40) scale(0.38)">
+    <rect x="-89" y="-89" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="-28" y="-89" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="33" y="-89" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="-89" y="-28" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="-28" y="-28" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="33" y="-28" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="-89" y="33" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="-28" y="33" width="56" height="56" rx="5" fill="#101E17"/>
+    <rect x="33" y="33" width="56" height="56" rx="5" fill="#101E17"/>
+    <g transform="translate(-89,-28)">
+      <clipPath id="hdr_wcl_dark"><rect x="11" y="13" width="34" height="31"/></clipPath>
+      <path clip-path="url(#hdr_wcl_dark)" d="M11 9 L21 48 L28 27 L35 48 L45 9" fill="none" stroke="#F6F3EA" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt"/>
+    </g>
+    <g transform="translate(33,-28)">
+      <path d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28" fill="none" stroke="#F6F3EA" stroke-width="6.5"/>
+      <path d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#F6F3EA"/>
+    </g>
+    <g transform="translate(-28,-28)">
+      <circle cx="28" cy="28" r="15.5" fill="none" stroke="#F6F3EA" stroke-width="6.5"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="96" y="38" font-size="20" font-weight="700" fill="#101E17" letter-spacing="2.2">WALL <tspan fill="#101E17" font-weight="400">OF</tspan> GARDENS</text>
+  <text x="97" y="56" font-size="7.6" font-weight="500" fill="#5E6B64" letter-spacing="2.2" text-anchor="start">ARCHITECTURAL GREEN FACADE SYSTEMS</text>
+</svg>

@@ -418,6 +418,7 @@ export default async function Home() {
           <ul className="hcta-card rv" style={{ '--d': 1 } as React.CSSProperties}>
             <li><span>Call</span><a href="tel:+919990960669">+91 99909 60669</a></li>
             <li><span>WhatsApp</span><a href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">Message the studio</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/wallofgarden" target="_blank" rel="noopener noreferrer">@wallofgarden &rarr;</a></li>
             <li><span>Studio</span><b>Janakpuri, New Delhi</b></li>
             <li><span>Coverage</span><b>Delhi NCR &amp; pan-India</b></li>
           </ul>

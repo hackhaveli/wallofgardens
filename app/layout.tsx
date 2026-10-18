@@ -7,8 +7,12 @@ export const metadata: Metadata = {
   title: "Wall of Gardens — Living Architecture, Engineered | Delhi NCR",
   description: "Vertical gardens, terraces and living walls engineered for corporate and premium residential spaces across Delhi NCR. Design, installation and maintenance under one team.",
   icons: {
-    icon: "/icon.jpg",
-    apple: "/icon.jpg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/icon.png",
   },
 };
 

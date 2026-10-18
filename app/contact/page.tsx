@@ -35,6 +35,11 @@ export default function ContactPage() {
               <div className="v">Message the studio</div>
               <div className="n">Fastest way to send photographs</div>
             </a>
+            <a className="chan-i" href="https://www.instagram.com/wallofgarden" target="_blank" rel="noopener noreferrer">
+              <span className="k">Instagram</span>
+              <div className="v">@wallofgarden</div>
+              <div className="n">180+ project reels &amp; live installs</div>
+            </a>
             <a className="chan-i" href="mailto:founder@wallofgardens.com">
               <span className="k">Email</span>
               <div className="v">founder@wallofgardens.com</div>
