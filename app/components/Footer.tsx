@@ -43,7 +43,9 @@ export default function Footer() {
               Instagram @wallofgarden &rarr;
             </a>
             <a href="mailto:founder@wallofgardens.com">founder@wallofgardens.com</a>
-            <li>6th Floor, MERI, Janakpuri,<br />New Delhi – 110058</li>
+            <p className="ft-addr" style={{ fontSize: '13px', color: 'rgba(244,243,236,0.6)', lineHeight: 1.5, marginTop: '8px' }}>
+              6th Floor, MERI, Janakpuri,<br />New Delhi – 110058
+            </p>
           </div>
         </div>
         {/* METRO SERVICE HUBS & COVERAGE */}

@@ -361,7 +361,7 @@ export default function StudioPage() {
               <div className="rule-tag"><span className="tag gold">Clients</span></div>
               <h2 className="d2">Spaces we have worked on.</h2>
             </div>
-            <span className="tag light">Replace with supplied logo files</span>
+            <span className="tag light">Selected Corporate &amp; Hospitality Partnerships</span>
           </div>
           <div className="cl rv" style={{ marginBottom: 'clamp(44px,5vw,72px)' }}>
             <span style={{ color: 'var(--cream)', opacity: 0.55 }}>S&amp;P Global</span>

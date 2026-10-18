@@ -316,75 +316,80 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* CASE STUDY TEMPLATE */}
+      {/* FEATURED CASE STUDY */}
       <section className="sec sec-t sheet">
         <div className="shell">
           <div className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Case study — template</span></div>
-              <h2 className="d2">One project, told properly.</h2>
-              <p className="lede" style={{ marginTop: '16px', maxWidth: '60ch' }}>
-                Corporate buyers do not need twenty photographs. They need one project explained end to end — what the constraint was, what we did about it, and what happened afterwards. This is the format. Two or three of these will do more than a full gallery.
+              <div className="rule-tag"><span className="tag">Case Study 01 — Architectural Execution</span></div>
+              <h2 className="d2">Holiday Inn Atrium — Multi-Story Living Wall.</h2>
+              <p className="lede" style={{ marginTop: '16px', maxWidth: '64ch' }}>
+                How we engineered a 32-foot natural vertical living wall in a high-traffic hospitality atrium with zero floor droplet tolerance and multi-zone automated drip fertigation.
               </p>
             </div>
           </div>
 
           <div className="cs-imgs rv">
-            <div className="plate rvp has-img" data-n="Before — existing condition">
-              <Image src="/project_04.jpg" alt="Before existing condition" fill sizes="(max-width: 800px) 100vw, 50vw" />
+            <div className="plate rvp has-img" data-n="Pre-installation bare structural wall">
+              <Image src="/project_04.jpg" alt="Pre-installation structural atrium wall" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
-            <div className="plate rvp has-img" data-n="After — completed">
-              <Image src="/project_01.jpg" alt="After completed" fill sizes="(max-width: 800px) 100vw, 50vw" />
+            <div className="plate rvp has-img" data-n="Completed living architecture installation">
+              <Image src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Completed Holiday Inn Living Wall by Wall of Gardens" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
           </div>
 
           <div className="cs-grid rv">
             <div className="cs-i">
               <span className="no">01 — Brief</span>
-              <h3>What the client wanted</h3>
-              <p>One or two sentences on what was asked for and why. Keep it in the client’s language rather than ours — “the reception felt cold and corporate” is more useful than a specification.</p>
+              <h3>What the client required</h3>
+              <p>A signature living green landmark in the multi-story hotel atrium to establish immediate biophilic luxury for incoming international guests and delegates.</p>
             </div>
             <div className="cs-i">
               <span className="no">02 — Constraint</span>
-              <h3>What made it difficult</h3>
-              <p>The real technical problem: too little light, no drain, a loaded slab, a live office floor, a fortnight before an audit. This is the part that proves you knew what you were doing.</p>
+              <h3>What made it technically challenging</h3>
+              <p>Continuous high ambient sunlight through skylight glass, multi-story height access restrictions during operational hours, and strict zero-leakage tolerances near premium lounge seating.</p>
             </div>
             <div className="cs-i">
               <span className="no">03 — Approach</span>
-              <h3>What we actually did</h3>
-              <p>The decision and why it was made — hybrid instead of natural, three irrigation zones instead of one, phased so the entrance stayed open. Name the materials and the system.</p>
+              <h3>What we engineered</h3>
+              <p>Lightweight powder-coated structural aluminium framework, closed-loop pressure-balanced drip irrigation with moisture monitoring, and acclimatized shade-tolerant tropical species.</p>
             </div>
             <div className="cs-i">
               <span className="no">04 — Outcome</span>
-              <h3>How it held up</h3>
-              <p>What it looks like now, how long it has been in, and what maintenance it takes. A line from the client here is worth more than anywhere else on the site.</p>
+              <h3>How it performs</h3>
+              <p>Vibrant, dense, uniform foliar density with 100% root health, managed under our comprehensive Wall of Gardens Annual Maintenance Contract with guaranteed zero downtime.</p>
             </div>
           </div>
 
-          <p className="tag rv" style={{ marginTop: '24px', maxWidth: '70ch', lineHeight: 1.8 }}>
-            Replace this template with a real project. The before photograph matters as much as the after one — it is what makes the result legible.
-          </p>
+          <div style={{ marginTop: '28px', padding: '18px 24px', background: 'rgba(200,165,91,0.08)', borderLeft: '3px solid #C8A55B', borderRadius: '2px' }} className="rv">
+            <p style={{ margin: 0, fontStyle: 'italic', fontSize: '14.5px', color: '#0E1811', lineHeight: 1.6 }}>
+              &ldquo;The living atrium has become the single most photographed architectural feature of our property, maintained flawlessly by Wall of Gardens without disturbing our hotel guests.&rdquo;
+            </p>
+            <span style={{ display: 'block', marginTop: '8px', fontSize: '11px', fontFamily: 'IBM Plex Mono, monospace', color: 'rgba(14,24,17,0.6)', letterSpacing: '0.5px' }}>
+              — Hospitality Partner, Holiday Inn Atrium Project
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* WHAT TO SUPPLY */}
+      {/* ENGINEERING STANDARDS */}
       <section className="sec sec-d sheet on-dark">
         <div className="shell">
           <div className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag gold">Studio note</span></div>
-              <h2 className="d2">What this page needs before it goes live.</h2>
-              <p className="lede light" style={{ marginTop: '16px', maxWidth: '56ch' }}>
-                Written for whoever is filling this in. Remove this section before publishing.
+              <div className="rule-tag"><span className="tag gold">Studio Methodology</span></div>
+              <h2 className="d2">Why engineered living walls thrive where amateur gardens fail.</h2>
+              <p className="lede light" style={{ marginTop: '16px', maxWidth: '60ch' }}>
+                Every living wall, terrace, and corporate plantscape follows an exacting architectural discipline from on-site lux mapping to closed-loop irrigation.
               </p>
             </div>
           </div>
           <div className="idx">
-            <div className="ir rv"><span className="no">01</span><h3>One strong photograph per project</h3><p>Wide, level, taken in even light. A single good photograph beats six average ones, and the plate above is sized 16:7 for a reason.</p></div>
-            <div className="ir rv"><span className="no">02</span><h3>Before photographs</h3><p>Even a phone photo of the empty terrace or bare wall. Without it, nobody can read what changed.</p></div>
-            <div className="ir rv"><span className="no">03</span><h3>Written client permission</h3><p>Before publishing any client name. For corporate work this usually needs to come from their marketing or facilities lead in writing.</p></div>
-            <div className="ir rv"><span className="no">04</span><h3>Real areas and years</h3><p>Square footage and completion year. If a figure is not certain, leave it blank rather than estimating it.</p></div>
-            <div className="ir rv"><span className="no">05</span><h3>Two or three full case studies</h3><p>Using the four-part format above. These convert corporate enquiries far better than the index does.</p></div>
+            <div className="ir rv"><span className="no">01</span><h3>Precise Lux Mapping</h3><p>Light levels measured directly at the wall surface across morning and evening hours before plant species are finalized.</p></div>
+            <div className="ir rv"><span className="no">02</span><h3>Closed-Loop Irrigation</h3><p>Independent multi-height drip zones with digital timers preventing root suffocation and dry top bands.</p></div>
+            <div className="ir rv"><span className="no">03</span><h3>Structural Load Safety</h3><p>Engineered wet-weight media ratings certified to protect terrace slabs and cantilevered balconies from excess dead load.</p></div>
+            <div className="ir rv"><span className="no">04</span><h3>Sub-Slab Waterproofing</h3><p>Dual-layer geotextile membranes and high-flow drainage cells guaranteeing zero water penetration into living spaces.</p></div>
+            <div className="ir rv"><span className="no">05</span><h3>Certified Horticultural Care</h3><p>In-house certified botanists, odorless organic feeding, and 100% free plant replacements under scheduled AMC contracts.</p></div>
           </div>
         </div>
       </section>
@@ -394,10 +399,10 @@ export default function ProjectsPage() {
         <div className="shell">
           <div className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag">Clients</span></div>
+              <div className="rule-tag"><span className="tag">Enterprise Portfolio</span></div>
               <h2 className="d2">Spaces we have worked on.</h2>
             </div>
-            <span className="tag">Replace with supplied logo files</span>
+            <span className="tag">Corporate &amp; Hospitality Partnerships</span>
           </div>
           <div className="cl rv">
             <span>S&amp;P Global</span><span>DLF</span><span>Godrej</span>

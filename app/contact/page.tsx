@@ -339,6 +339,7 @@ function ContactForm() {
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [submissionResult, setSubmissionResult] = useState<{ id?: string; whatsappUrl?: string } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -355,6 +356,12 @@ function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.name.trim() || !formData.phone.trim()) {
+      setErrorMsg('Please provide your name and contact phone number.');
+      setStatus('error');
+      return;
+    }
+
     setStatus('submitting');
     setErrorMsg('');
 
@@ -373,33 +380,65 @@ function ContactForm() {
       if (!res.ok || data.error) {
         throw new Error(data.error || 'Failed to submit enquiry');
       }
+      setSubmissionResult(data);
       setStatus('success');
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Something went wrong. Please call or WhatsApp us.';
+      const msg = err instanceof Error ? err.message : 'Something went wrong. Please message us on WhatsApp directly.';
       setErrorMsg(msg);
       setStatus('error');
     }
   };
 
+  // Build dynamic pre-filled WhatsApp link based on current input
+  const dynamicWaText = encodeURIComponent(
+    `Hi Wall of Gardens, I would like to inquire about ${formData.service} in ${formData.location}.${formData.name ? ` My name is ${formData.name}.` : ''}${formData.area ? ` Space size: ${formData.area}.` : ''}`
+  );
+  const directWaUrl = `https://wa.me/919990960669?text=${dynamicWaText}`;
+
   if (status === 'success') {
+    const waUrl = submissionResult?.whatsappUrl || directWaUrl;
     return (
-      <div className="form rv dl1 in" style={{ padding: '36px 32px', textAlign: 'center' }}>
-        <div style={{ width: '52px', height: '52px', borderRadius: '50%', background: 'rgba(127,166,92,0.18)', color: '#3E6B4A', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: '24px', fontWeight: 700 }}>
+      <div className="form rv dl1 in" style={{ padding: 'clamp(28px, 4vw, 44px) clamp(20px, 3vw, 36px)', textAlign: 'center' }}>
+        <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(127,166,92,0.18)', color: '#3E6B4A', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 18px', fontSize: '26px', fontWeight: 700 }}>
           ✓
         </div>
-        <h3 style={{ fontSize: '22px', fontWeight: 600, color: '#0E1811', marginBottom: '12px' }}>
-          Enquiry Received
+        <div style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(200,165,91,0.12)', border: '1px solid rgba(200,165,91,0.25)', borderRadius: '2px', fontSize: '11px', fontFamily: 'IBM Plex Mono, monospace', color: '#8A6D2B', marginBottom: '14px', letterSpacing: '0.5px' }}>
+          REF: #{submissionResult?.id?.slice(-8).toUpperCase() || 'WOG-SITE'} · LOGGED IN STUDIO QUEUE
+        </div>
+        <h3 style={{ fontSize: 'clamp(20px, 2.4vw, 26px)', fontWeight: 600, color: '#0E1811', marginBottom: '12px' }}>
+          Enquiry Received Successfully
         </h3>
-        <p className="bd" style={{ maxWidth: '44ch', margin: '0 auto 24px', fontSize: '13px', lineHeight: 1.6 }}>
-          Thank you, <strong>{formData.name}</strong>. Your enquiry has been received and logged in our studio queue. We will review your space details and reply within <strong>one working day</strong>.
+        <p className="bd" style={{ maxWidth: '46ch', margin: '0 auto 20px', fontSize: '14px', lineHeight: 1.65 }}>
+          Thank you, <strong>{formData.name}</strong>. Your project details have been logged in our studio queue. We will review your space requirements and reply within <strong>one working day</strong>.
         </p>
+
+        {/* PROMINENT WHATSAPP DISPATCH */}
+        <div style={{ background: '#F9F8F5', border: '1px solid rgba(14,24,17,0.08)', borderRadius: '4px', padding: '18px 20px', margin: '0 auto 24px', maxWidth: '440px', textAlign: 'left' }}>
+          <div style={{ fontSize: '11px', fontWeight: 700, color: '#1F3D2B', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: 'IBM Plex Mono, monospace', marginBottom: '6px' }}>
+            ⚡ Want an immediate response?
+          </div>
+          <p style={{ fontSize: '13px', color: 'rgba(14,24,17,0.7)', margin: '0 0 14px 0', lineHeight: 1.5 }}>
+            Send these details directly to the principal designer on WhatsApp to share site photos or architectural drawings now:
+          </p>
+          <a
+            className="btn btn-g"
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ width: '100%', justifyContent: 'center', display: 'flex', textAlign: 'center', padding: '14px 20px', boxSizing: 'border-box' }}
+          >
+            <span>💬 Send Details to Studio on WhatsApp &rarr;</span>
+          </a>
+        </div>
+
         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a className="btn btn-g" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp Us</span>
+          <a className="btn btn-d" href="tel:+919990960669" style={{ fontSize: '11px' }}>
+            <span>Call +91 99909 60669</span>
           </a>
           <button
             type="button"
             className="btn btn-o"
+            style={{ color: '#0E1811', borderColor: 'rgba(14,24,17,0.25)', fontSize: '11px' }}
             onClick={() => {
               setFormData({
                 name: '',
@@ -413,10 +452,11 @@ function ContactForm() {
                 budget: 'Not sure yet',
                 message: '',
               });
+              setSubmissionResult(null);
               setStatus('idle');
             }}
           >
-            <span>Submit Another</span>
+            <span>Submit Another Enquiry</span>
           </button>
         </div>
       </div>
@@ -546,12 +586,23 @@ function ContactForm() {
         <span>Free on-site inspection across Delhi NCR with zero obligation.</span>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '12px' }}>
-        <button className="btn btn-g" style={{ width: '100%', cursor: status === 'submitting' ? 'wait' : 'pointer', opacity: status === 'submitting' ? 0.7 : 1 }} type="submit" disabled={status === 'submitting'}>
-          <span>{status === 'submitting' ? 'Submitting...' : 'Request Free Site Visit'}</span>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+        <button
+          className="btn btn-g"
+          style={{ width: '100%', cursor: status === 'submitting' ? 'wait' : 'pointer', opacity: status === 'submitting' ? 0.7 : 1, justifyContent: 'center' }}
+          type="submit"
+          disabled={status === 'submitting'}
+        >
+          <span>{status === 'submitting' ? 'Logging Enquiry...' : 'Request Free Site Visit'}</span>
         </button>
-        <a className="btn btn-o" href="https://wa.me/919990960669?text=Hi%20Wall%20of%20Gardens,%20I%20am%20inquiring%20about%20a%20project%20and%20would%20like%20to%20send%20photos." target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center' }}>
-          <span>WhatsApp Us &rarr;</span>
+        <a
+          className="btn btn-d"
+          href={directWaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textAlign: 'center', justifyContent: 'center' }}
+        >
+          <span>Direct WhatsApp &rarr;</span>
         </a>
       </div>
 

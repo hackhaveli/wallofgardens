@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '../../../lib/supabase';
+import { saveInquiry } from '../../../lib/inquiries';
 
 export async function POST(req: NextRequest) {
   try {
@@ -7,37 +7,36 @@ export async function POST(req: NextRequest) {
     const { name, org, phone, email, service, location, area, timeline, budget, message } = body;
 
     if (!name || !phone) {
-      return NextResponse.json({ error: 'Name and mobile number are required.' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Name and phone number are required.' },
+        { status: 400 }
+      );
     }
 
-    const metadataParts = [
-      message ? `Notes: ${message}` : null,
-      area ? `Approx Area: ${area}` : null,
-      timeline ? `Timeline: ${timeline}` : null,
-      budget ? `Indicative Budget: ${budget}` : null,
-    ].filter(Boolean);
-
-    const formattedMessage = metadataParts.length > 0 ? metadataParts.join('\n') : 'Direct website inquiry';
-
-    const { data, error } = await supabase.from('inquiries').insert({
+    const { inquiry, whatsappUrl } = await saveInquiry({
       name,
-      org: org || null,
+      org,
       phone,
-      email: email || null,
-      service: service || null,
-      location: location || null,
-      message: formattedMessage,
-      status: 'new',
-    }).select().single();
+      email,
+      service,
+      location,
+      area,
+      timeline,
+      budget,
+      message,
+    });
 
-    if (error) {
-      console.error('Inquiry insert error:', error);
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true, id: data?.id });
+    return NextResponse.json({
+      success: true,
+      id: inquiry.id,
+      whatsappUrl,
+      message: 'Inquiry received successfully and logged in studio queue.',
+    });
   } catch (err) {
-    console.error('Inquiry submission error:', err);
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    console.error('Contact API error:', err);
+    return NextResponse.json(
+      { error: 'Could not process inquiry. Please message us on WhatsApp directly.' },
+      { status: 500 }
+    );
   }
 }

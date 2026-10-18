@@ -205,7 +205,7 @@ export default async function Home() {
                   </li>
                 </ul>
                 <div className="dual-actions">
-                  <Link className="hx-cta" href="/services/terrace-garden" style={{ background: '#1c3022' }}>
+                  <Link className="hx-cta" href="/services/terrace-garden">
                     Terrace &amp; Villa Gardens &rarr;
                   </Link>
                   <a className="hx-link" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
@@ -410,7 +410,7 @@ export default async function Home() {
       {/* CLOSING */}
       <section className="hcta on-dark" id="contact">
         <div className="hcta-bg rv" aria-hidden="true">
-          <Image src="/cta_bg.jpg" alt="" fill sizes="100vw" />
+          <Image src="/cta_bg.jpg" alt="Wall of Gardens living architecture consultation background" fill sizes="100vw" />
         </div>
         <div className="shell hcta-in">
           <div className="hcta-copy rv">

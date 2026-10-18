@@ -37,40 +37,64 @@ export default function InquiriesInbox() {
   const [savingNotes, setSavingNotes] = useState(false);
 
   const load = useCallback(async () => {
-    const supabase = getSupabaseClient();
-    const { data } = await supabase
-      .from('inquiries')
-      .select('*')
-      .order('created_at', { ascending: false });
-    setInquiries(data || []);
-    setLoaded(true);
+    try {
+      const res = await fetch('/api/admin/inquiries');
+      if (res.ok) {
+        const json = await res.json();
+        setInquiries(json.inquiries || []);
+      }
+    } catch (e) {
+      console.error('Failed to load inquiries:', e);
+    } finally {
+      setLoaded(true);
+    }
   }, []);
 
   useEffect(() => { load(); }, [load]);
 
   const updateStatus = async (id: string, status: string) => {
-    const supabase = getSupabaseClient();
-    await supabase.from('inquiries').update({ status, updated_at: new Date().toISOString() }).eq('id', id);
-    setInquiries(prev => prev.map(i => i.id === id ? { ...i, status } : i));
-    if (selected?.id === id) setSelected(prev => prev ? { ...prev, status } : prev);
+    try {
+      await fetch('/api/admin/inquiries', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status }),
+      });
+      setInquiries(prev => prev.map(i => i.id === id ? { ...i, status } : i));
+      if (selected?.id === id) setSelected(prev => prev ? { ...prev, status } : prev);
+    } catch (e) {
+      console.error('Failed to update status:', e);
+    }
   };
 
   const saveNotes = async () => {
     if (!selected) return;
     setSavingNotes(true);
-    const supabase = getSupabaseClient();
-    await supabase.from('inquiries').update({ admin_notes: notes, updated_at: new Date().toISOString() }).eq('id', selected.id);
-    setSavingNotes(false);
-    setInquiries(prev => prev.map(i => i.id === selected.id ? { ...i, admin_notes: notes } : i));
-    setSelected(prev => prev ? { ...prev, admin_notes: notes } : prev);
+    try {
+      await fetch('/api/admin/inquiries', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: selected.id, admin_notes: notes }),
+      });
+      setInquiries(prev => prev.map(i => i.id === selected.id ? { ...i, admin_notes: notes } : i));
+      setSelected(prev => prev ? { ...prev, admin_notes: notes } : prev);
+    } catch (e) {
+      console.error('Failed to save notes:', e);
+    } finally {
+      setSavingNotes(false);
+    }
   };
 
   const deleteInquiry = async (id: string) => {
     if (!confirm('Delete this inquiry? This cannot be undone.')) return;
-    const supabase = getSupabaseClient();
-    await supabase.from('inquiries').delete().eq('id', id);
-    setSelected(null);
-    await load();
+    try {
+      await fetch(`/api/admin/inquiries?id=${encodeURIComponent(id)}`, {
+        method: 'DELETE',
+      });
+      setSelected(null);
+      await load();
+    } catch (e) {
+      console.error('Failed to delete inquiry:', e);
+    }
   };
 
   const filtered = filter === 'all' ? inquiries : inquiries.filter(i => i.status === filter);
@@ -266,18 +290,28 @@ export default function InquiriesInbox() {
             {/* Actions */}
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', borderTop: '1px solid rgba(14,24,17,0.08)', paddingTop: '14px' }}>
               {selected.phone && (
-                <a href={`tel:${selected.phone}`} style={{ fontSize: '11px', color: '#7FA65C', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid rgba(127,166,92,0.3)', borderRadius: '2px' }}>
-                  ☏ Call
+                <a href={`tel:${selected.phone}`} style={{ fontSize: '11px', color: '#7FA65C', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid rgba(127,166,92,0.3)', borderRadius: '2px', fontWeight: 600 }}>
+                  ☏ Call Customer
                 </a>
               )}
-              {selected.phone && (
-                <a href={`https://wa.me/${selected.phone.replace(/[^0-9]/g, '')}`} target="_blank" style={{ fontSize: '11px', color: '#7FA65C', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid rgba(127,166,92,0.3)', borderRadius: '2px' }}>
-                  WhatsApp
-                </a>
-              )}
+              {selected.phone && (() => {
+                const digits = selected.phone.replace(/[^0-9]/g, '');
+                const waPhone = digits.length === 10 ? `91${digits}` : digits;
+                const waText = encodeURIComponent(`Hi ${selected.name || 'there'}, thank you for contacting Wall of Gardens Studio regarding your enquiry for ${selected.service || 'living architecture services'}. How may we assist with your space?`);
+                return (
+                  <a
+                    href={`https://wa.me/${waPhone}?text=${waText}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '11px', color: '#fff', background: '#3E6B4A', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid #3E6B4A', borderRadius: '2px', fontWeight: 600 }}
+                  >
+                    💬 Chat on WhatsApp
+                  </a>
+                );
+              })()}
               {selected.email && (
-                <a href={`mailto:${selected.email}`} style={{ fontSize: '11px', color: '#7FA65C', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid rgba(127,166,92,0.3)', borderRadius: '2px' }}>
-                  Email
+                <a href={`mailto:${selected.email}`} style={{ fontSize: '11px', color: '#25506F', fontFamily: 'IBM Plex Mono, monospace', textDecoration: 'none', padding: '6px 12px', border: '1px solid rgba(37,80,111,0.3)', borderRadius: '2px' }}>
+                  ✉ Email
                 </a>
               )}
               <button

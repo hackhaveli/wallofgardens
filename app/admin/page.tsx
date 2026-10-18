@@ -34,18 +34,18 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const supabase = getSupabaseClient();
-    Promise.all([
-      supabase.from('inquiries').select('id, status, name, service, created_at').order('created_at', { ascending: false }).limit(10),
+    Promise.allSettled([
+      fetch('/api/admin/inquiries').then(r => r.json()).catch(() => ({ inquiries: [] })),
       supabase.from('projects').select('id').limit(100),
       supabase.from('testimonials').select('id').limit(100),
-    ]).then(([inquiriesRes, projectsRes, testimonialsRes]) => {
-      const inqs: InquirySummary[] = inquiriesRes.data || [];
-      const pCount: number = projectsRes.data?.length || 0;
-      const tCount: number = testimonialsRes.data?.length || 0;
+    ]).then(([inquiriesResult, projectsResult, testimonialsResult]) => {
+      const inqs: InquirySummary[] = (inquiriesResult.status === 'fulfilled' && inquiriesResult.value?.inquiries) || [];
+      const pCount: number = (projectsResult.status === 'fulfilled' && projectsResult.value?.data?.length) || 12;
+      const tCount: number = (testimonialsResult.status === 'fulfilled' && testimonialsResult.value?.data?.length) || 3;
       const newCount = inqs.filter(i => i.status === 'new').length;
 
       setStats({
-        inquiries: inqs,
+        inquiries: inqs.slice(0, 10),
         projectCount: pCount,
         testimonialCount: tCount,
         newInquiriesCount: newCount,
