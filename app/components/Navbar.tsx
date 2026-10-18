@@ -22,7 +22,10 @@ export default function Navbar() {
             <div className="brand-logo-wrap">
               <BrandLogo size={38} />
             </div>
-            <span className="brand-n">Wall <b>of</b> Gardens</span>
+            <div className="brand-text-block">
+              <span className="brand-n">Wall <b>of</b> Gardens</span>
+              <span className="brand-sub">Living Architecture</span>
+            </div>
           </Link>
           <nav className="nav-l">
             <Link href="/projects" className={isProjects ? 'on' : ''}>Projects</Link>
@@ -37,7 +40,10 @@ export default function Navbar() {
               </svg>
               <span>+91&nbsp;99909&nbsp;60669</span>
             </a>
-            <Link className="btn btn-g nav-cta-btn" href="/contact"><span>Start a Project</span></Link>
+            <Link className="btn btn-g nav-cta-btn" href="/contact">
+              <span className="cta-full">Book Site Visit</span>
+              <span className="cta-compact">Site Visit</span>
+            </Link>
           </div>
           <button
             className="burger"
@@ -56,10 +62,10 @@ export default function Navbar() {
           <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
           <div className="mob-cta-box">
             <Link className="btn btn-g" href="/contact" onClick={() => setOpen(false)}>
-              <span>Start a Project &rarr;</span>
+              <span>Book Site Visit &rarr;</span>
             </Link>
             <a
-              href="https://wa.me/919990960669?text=Hi%20Wall%20of%20Gardens,%20I%20would%20like%20to%20inquire%20about%20a%20project."
+              href="https://wa.me/919990960669?text=Hi%20Wall%20of%20Gardens,%20I%20would%20like%20to%20inquire%20about%20a%20site%20visit."
               target="_blank"
               rel="noopener noreferrer"
               className="mob-wa-link"

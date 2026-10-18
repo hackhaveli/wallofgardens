@@ -583,7 +583,7 @@ function ContactForm() {
 
       <div style={{ marginTop: '14px', marginBottom: '18px', fontSize: '12px', color: 'rgba(14,24,17,0.7)', display: 'flex', alignItems: 'center', gap: '8px' }}>
         <span style={{ color: '#56823c', fontSize: '14px' }}>🛡️</span>
-        <span>Free on-site inspection across Delhi NCR with zero obligation.</span>
+        <span>On-site architectural inspection across Delhi NCR with professional consultation.</span>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
@@ -593,7 +593,7 @@ function ContactForm() {
           type="submit"
           disabled={status === 'submitting'}
         >
-          <span>{status === 'submitting' ? 'Logging Enquiry...' : 'Request Free Site Visit'}</span>
+          <span>{status === 'submitting' ? 'Logging Enquiry...' : 'Schedule Site Visit'}</span>
         </button>
         <a
           className="btn btn-d"

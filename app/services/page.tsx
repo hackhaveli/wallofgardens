@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const STATS = [
   { n: '06', l: 'Dedicated Disciplines', s: 'Designed & maintained in-house' },
   { n: '100%', l: 'In-House Crew', s: 'Zero sub-contracting' },
-  { n: '0₹', l: 'Free Site Visit', s: 'Delhi NCR · No obligation' },
+  { n: 'On-Site', l: 'Studio Site Visit', s: 'Delhi NCR · Architectural Evaluation' },
   { n: '17 Oct 2021', l: 'Company Registered', s: 'Corporate & luxury residential' },
 ];
 
@@ -95,7 +95,7 @@ export default function ServicesPage() {
           </p>
           <div className="sv-hero-actions">
             <Link className="hx-cta" href="/contact">
-              Book a Free Site Visit <span aria-hidden="true">&rarr;</span>
+              Book a Site Visit <span aria-hidden="true">&rarr;</span>
             </Link>
             <a className="hx-link" href="tel:+919990960669">
               Call studio: +91 99909 60669 <span aria-hidden="true">&rarr;</span>

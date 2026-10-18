@@ -220,8 +220,23 @@ em.g { font-style: italic; color: var(--gold); }
 .brand:hover .wog-t8 { transform: translate(0px, 2px); }
 .brand:hover .wog-t9 { transform: translate(2px, 2px); }
 .brand:hover .wog-char { stroke: #0d2817; }
-.brand-n { font-family: var(--serif); font-size: 19px; letter-spacing: -.01em; white-space: nowrap; }
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.1;
+}
+.brand-n { font-family: var(--serif); font-size: 19px; letter-spacing: -.01em; white-space: nowrap; line-height: 1.1; }
 .brand-n b { color: var(--gold); font-weight: 400; font-style: italic; }
+.brand-sub {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(200, 165, 91, 0.78);
+  white-space: nowrap;
+  line-height: 1;
+}
 .nav-l { display: flex; gap: clamp(16px, 2vw, 30px); flex-shrink: 1; align-items: center; }
 .nav-l a {
   font-family: var(--mono);
@@ -272,9 +287,13 @@ em.g { font-style: italic; color: var(--gold); }
 .nav-phone:hover svg {
   transform: rotate(12deg) scale(1.1);
 }
+.cta-compact { display: none; }
+.cta-full { display: inline; }
 .nav-cta-btn {
   white-space: nowrap;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
 }
 .burger { display: none; width: 24px; height: 13px; position: relative; }
 .burger i { position: absolute; left: 0; right: 0; height: 1.5px; background: var(--cream); transition: transform .35s; }
@@ -342,14 +361,23 @@ em.g { font-style: italic; color: var(--gold); }
   .nav-in { height: 66px; gap: 8px; }
   .brand-logo-wrap { width: 34px; height: 34px; }
   .brand-n { font-size: 16px; }
+  .brand-sub { font-size: 7.5px; }
   .nav-phone { display: none !important; }
-}
-@media(max-width:480px) {
-  .nav-cta-btn { display: none; }
+  .cta-full { display: none; }
+  .cta-compact { display: inline; }
+  .nav-cta-btn {
+    display: inline-flex !important;
+    padding: 7px 12px;
+    font-size: 10px;
+    letter-spacing: .08em;
+    border-radius: 999px;
+  }
 }
 @media(max-width:380px) {
   .brand-n { font-size: 14.5px; }
   .brand { gap: 8px; }
+  .brand-sub { font-size: 7px; }
+  .nav-cta-btn { padding: 6px 9px; font-size: 9.5px; }
 }
 
 /* ---------- banner ---------- */
