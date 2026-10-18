@@ -5,8 +5,15 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About — Landscape & Living Wall Studio, Delhi NCR | Wall of Gardens',
-  description: 'Wall of Gardens is a Delhi NCR landscape and living wall studio registered on 17 October 2021. Design, procurement, installation and maintenance held by one team.',
+  title: 'About the Studio — Living Architecture Practice | Wall of Gardens',
+  description: 'Wall of Gardens is India’s premier living architecture and vertical garden engineering practice registered on 17 October 2021. In-house design, procurement, fabrication, and maintenance across Delhi NCR, Bengaluru, and Mumbai.',
+  alternates: { canonical: '/studio' },
+  openGraph: {
+    title: 'About Wall of Gardens — Living Architecture Practice',
+    description: 'In-house landscape architects and horticulturists engineering living walls and corporate landscapes across India.',
+    url: 'https://wallofgardens.com/studio',
+    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Studio' }],
+  },
 };
 
 export default function StudioPage() {

@@ -95,7 +95,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  category: "Landscape Architecture & Living Architecture",
+  manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/favicon.ico" },

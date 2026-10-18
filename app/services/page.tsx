@@ -6,8 +6,15 @@ import Footer from '../components/Footer';
 import ServicesExplorer from '../components/ServicesExplorer';
 
 export const metadata: Metadata = {
-  title: 'Services — Engineered Living Walls, Terraces & Landscapes | Wall of Gardens',
-  description: 'Six living architecture disciplines engineered by one studio across Delhi NCR. Corporate landscaping, vertical gardens, terrace landscapes, balcony gardens, preserved moss walls, and workplace plantscaping.',
+  title: 'Living Architecture Services — Vertical Gardens, Plant AMC, Moss Walls | Wall of Gardens',
+  description: 'Six living architecture disciplines engineered by one studio across Delhi NCR, Bengaluru, Mumbai, Pune, and Hyderabad. Vertical living walls, corporate plant AMC, terrace landscapes, preserved moss walls, and workplace plantscaping.',
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Living Architecture Services | Wall of Gardens',
+    description: 'Engineered vertical gardens, corporate plant maintenance AMC, terrace gardens, and preserved moss art across India.',
+    url: 'https://wallofgardens.com/services',
+    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Living Architecture Services' }],
+  },
 };
 
 const STATS = [

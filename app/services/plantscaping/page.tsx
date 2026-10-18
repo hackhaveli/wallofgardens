@@ -4,8 +4,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Corporate Plantscaping & Office Indoor Planting — Delhi NCR | Wall of Gardens',
-  description: 'Indoor plant hire and purchase with scheduled maintenance for offices and workplaces across Delhi NCR. Specified against measured daylight zones.',
+  title: 'Corporate Plantscaping & Office Indoor Plants — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'Indoor office plant hire, biophilic workspace design, and scheduled plant AMC maintenance across Delhi NCR, Gurugram Cyber City, Bengaluru, Mumbai, and Pune. Mapped against indoor daylight lux zones.',
+  alternates: { canonical: '/services/plantscaping' },
+  openGraph: {
+    title: 'Corporate Plantscaping & Workplace Biophilic Design | Wall of Gardens',
+    description: 'Indoor plant hire and purchase with scheduled maintenance for offices and workplaces across Delhi NCR, Bengaluru, and Mumbai.',
+    url: 'https://wallofgardens.com/services/plantscaping',
+    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Corporate Plantscaping by Wall of Gardens' }],
+  },
 };
 
 export default function PlantscapingPage() {

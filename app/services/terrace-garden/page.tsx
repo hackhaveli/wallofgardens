@@ -4,8 +4,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Terrace Gardens — Rooftop Landscaping in Delhi NCR | Wall of Gardens',
-  description: 'Terrace and rooftop garden design and installation across Delhi NCR. Build-up, load and drainage planned before planting, over your existing waterproofing.',
+  title: 'Terrace Gardens & Rooftop Landscape Engineering — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'Structural rooftop and terrace garden engineering across Delhi NCR, Bengaluru, Mumbai, and Pune. Slab load calculation, root barrier waterproofing, and high-flow drainage cells.',
+  alternates: { canonical: '/services/terrace-garden' },
+  openGraph: {
+    title: 'Terrace Gardens & Rooftop Landscape Engineering | Wall of Gardens',
+    description: 'Rooftop landscapes engineered for slab load, waterproofing protection, and automated irrigation.',
+    url: 'https://wallofgardens.com/services/terrace-garden',
+    images: [{ url: '/project_04.jpg', width: 1200, height: 630, alt: 'Terrace Garden Engineering by Wall of Gardens' }],
+  },
 };
 
 export default function TerraceGardenPage() {

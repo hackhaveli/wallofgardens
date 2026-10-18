@@ -4,8 +4,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Balcony Gardens & Compact Green Spaces — Delhi NCR | Wall of Gardens',
-  description: 'Balcony garden design, modular planters, vertical greening and drainage containment across Delhi NCR. Planned around orientation and usable space.',
+  title: 'Luxury Balcony Gardens & Compact Green Spaces — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'Custom balcony garden design, vertical greening, lightweight modular planters, and zero-runoff drainage systems across Delhi NCR, Bengaluru, Mumbai, and Pune.',
+  alternates: { canonical: '/services/balcony-gardens' },
+  openGraph: {
+    title: 'Luxury Balcony Gardens & Compact Green Spaces | Wall of Gardens',
+    description: 'Space-optimized balcony landscaping engineered for orientation, micro-climate, and clean drainage.',
+    url: 'https://wallofgardens.com/services/balcony-gardens',
+    images: [{ url: '/project_05.jpg', width: 1200, height: 630, alt: 'Balcony Gardens by Wall of Gardens' }],
+  },
 };
 
 export default function BalconyGardensPage() {
