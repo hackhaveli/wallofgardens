@@ -395,7 +395,7 @@ function ContactForm() {
         </p>
         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a className="btn btn-g" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer">
-            <span>WhatsApp Photos Now</span>
+            <span>WhatsApp Us</span>
           </a>
           <button
             type="button"

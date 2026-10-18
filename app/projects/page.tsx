@@ -258,37 +258,39 @@ export default function ProjectsPage() {
             </button>
           </div>
 
-          {projects.map((prj, i) => {
-            const isVisible = activeFilter === 'all' || activeFilter === prj.cat;
-            if (!isVisible) return null;
-            return (
-              <a key={i} className="prj rv" data-cat={prj.cat} href="#">
-                <div className="prj-f">
-                  <div
-                    className="plate rvp has-img"
-                    data-n={`${prj.name} — ${prj.location}`}
-                    style={{ minHeight: '260px', width: '100%', position: 'relative', display: 'block' }}
-                  >
-                    <Image
-                      src={prj.image}
-                      alt={prj.name}
-                      fill
-                      sizes="(max-width: 1340px) 100vw, 1220px"
-                      unoptimized={!canOptimize(prj.image)}
-                    />
+          <div className="prj-grid">
+            {projects.map((prj, i) => {
+              const isVisible = activeFilter === 'all' || activeFilter === prj.cat;
+              if (!isVisible) return null;
+              return (
+                <a key={i} className="prj rv" data-cat={prj.cat} href="#">
+                  <div className="prj-f">
+                    <div
+                      className="plate rvp has-img"
+                      data-n={`${prj.name} — ${prj.location}`}
+                      style={{ minHeight: '260px', width: '100%', position: 'relative', display: 'block' }}
+                    >
+                      <Image
+                        src={prj.image}
+                        alt={prj.name}
+                        fill
+                        sizes="(max-width: 900px) 100vw, 600px"
+                        unoptimized={!canOptimize(prj.image)}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="tblock">
-                  <div className="tb"><span className="k">No.</span><span className="v big">{prj.no}</span></div>
-                  <div className="tb"><span className="k">Project</span><span className="v name">{prj.name}</span></div>
-                  <div className="tb"><span className="k">Client</span><span className={`v ${prj.client === 'To confirm' ? 'tbd' : ''}`}>{prj.client}</span></div>
-                  <div className="tb"><span className="k">Location</span><span className="v">{prj.location}</span></div>
-                  <div className="tb"><span className="k">Scope</span><span className="v">{prj.scope}</span></div>
-                  <div className="tb"><span className="k">Year</span><span className="v tbd">{prj.year}</span></div>
-                </div>
-              </a>
-            );
-          })}
+                  <div className="tblock">
+                    <div className="tb"><span className="k">No.</span><span className="v big">{prj.no}</span></div>
+                    <div className="tb"><span className="k">Project</span><span className="v name">{prj.name}</span></div>
+                    <div className="tb"><span className="k">Client</span><span className={`v ${prj.client === 'To confirm' ? 'tbd' : ''}`}>{prj.client}</span></div>
+                    <div className="tb"><span className="k">Location</span><span className="v">{prj.location}</span></div>
+                    <div className="tb"><span className="k">Scope</span><span className="v">{prj.scope}</span></div>
+                    <div className="tb"><span className="k">Year</span><span className="v tbd">{prj.year}</span></div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Page — Laptop Layout Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0B130E;
+      --forest: #14241A;
+      --cream: #F4F3EC;
+      --gold: #C8A55B;
+      --ink: #101E17;
+      --ink-2: #2C3E32;
+      --ink-3: #5C6E62;
+      --rule: rgba(16,30,23,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f7f6f0;
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 30px 20px 80px;
+    }
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .header-box {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(24px, 3.5vw, 32px);
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    p.sub {
+      color: var(--ink-3);
+      font-size: 14.5px;
+    }
+    .opt-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--forest);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 4px 10px;
+      background: rgba(200,165,91,0.15);
+      color: #8c6d23;
+      border-radius: 4px;
+    }
+
+    /* ------------------------------------------------------------- */
+    /* OPTION A: 2-COLUMN ARCHITECTURAL GRID ON LAPTOP               */
+    /* ------------------------------------------------------------- */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 50px;
+    }
+    .card-2col {
+      background: #fff;
+      border: 1px solid var(--rule);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .card-2col:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .card-2col .img-wrap {
+      aspect-ratio: 16/10;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-2col .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .card-2col:hover .img-wrap img {
+      transform: scale(1.04);
+    }
+    .card-2col .meta {
+      padding: 16px 20px;
+      background: #faf9f5;
+      border-top: 1px solid var(--rule);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .meta-no {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .meta-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-3);
+    }
+    .meta-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .meta-scope {
+      font-size: 13px;
+      color: var(--ink-3);
+      line-height: 1.5;
+    }
+    .meta-loc {
+      font-size: 12px;
+      color: var(--forest);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ------------------------------------------------------------- */
+    /* OPTION B: HORIZONTAL SPLIT CARD (Photo 56%, Table 44%)       */
+    /* ------------------------------------------------------------- */
+    .card-split {
+      display: grid;
+      grid-template-columns: 56% 44%;
+      background: #fff;
+      border: 1px solid var(--rule);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      margin-bottom: 28px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-split:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+    }
+    .card-split .img-side {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+    }
+    .card-split .img-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .card-split:hover .img-side img {
+      transform: scale(1.03);
+    }
+    .card-split .info-side {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--rule);
+      background: #fdfcf9;
+    }
+    .info-row {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--rule);
+      font-size: 13.5px;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    .info-row .k {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-3);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .info-row .v {
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .info-row .v.name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--forest);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header-box">
+      <h1>Laptop Display Comparison for Projects Page</h1>
+      <p class="sub">Pehle 1 photo 1300px wide aur 560px tall ho kar screen ko dominate karti thi. Neeche 2 clean solutions hain:</p>
+    </div>
+
+    <!-- OPTION A -->
+    <div class="opt-title">
+      <span>Option A: 2-Column Architectural Portfolio Grid (Recommended)</span>
+      <span class="badge">2 Projects Per Row on Laptop</span>
+    </div>
+    <p style="font-size:13.5px; color:#555; margin-bottom:16px;">
+      Laptop screen par ek row mein 2 projects aate hain. Photo ~300px height par perfect proportion mein rehti hai aur ek scroll mein 4 projects aram se dikhte hain. Mobile par 1 column rehta hai.
+    </p>
+
+    <div class="grid-2col">
+      <!-- Card 1 -->
+      <div class="card-2col">
+        <div class="img-wrap">
+          <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Holiday Inn" />
+        </div>
+        <div class="meta">
+          <div class="meta-top">
+            <span class="meta-no">VG—01</span>
+            <span class="meta-year">Completed &amp; Maintained</span>
+          </div>
+          <div class="meta-name">Holiday Inn Multi-Story Living Wall</div>
+          <div class="meta-loc">📍 Hospitality Atrium, Delhi NCR</div>
+          <div class="meta-scope">850 sq.ft multi-story outdoor living wall integrated with illuminated corporate logo and multi-zone automated drip irrigation.</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-2col">
+        <div class="img-wrap">
+          <img src="/projects/vertical-gardens/architectural-staircase.jpg" alt="Architectural Staircase" />
+        </div>
+        <div class="meta">
+          <div class="meta-top">
+            <span class="meta-no">VG—02</span>
+            <span class="meta-year">Completed 2024</span>
+          </div>
+          <div class="meta-name">Architectural Staircase Living Columns</div>
+          <div class="meta-loc">📍 CyberCity, Gurugram</div>
+          <div class="meta-scope">Double-height living wall columns alternating with black fluted architectural louvers &amp; industrial track lighting.</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-2col">
+        <div class="img-wrap">
+          <img src="/projects/vertical-gardens/courtyard-atrium-skylight.jpg" alt="Courtyard Atrium" />
+        </div>
+        <div class="meta">
+          <div class="meta-top">
+            <span class="meta-no">VG—03</span>
+            <span class="meta-year">Completed 2024</span>
+          </div>
+          <div class="meta-name">Courtyard Atrium Skylight Living Wall</div>
+          <div class="meta-loc">📍 South Delhi</div>
+          <div class="meta-scope">Double-height courtyard atrium living wall flanked by carved stone cladding &amp; skylight daylighting.</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card-2col">
+        <div class="img-wrap">
+          <img src="/projects/vertical-gardens/resort-poolside-pergola.jpg" alt="Resort Poolside" />
+        </div>
+        <div class="meta">
+          <div class="meta-top">
+            <span class="meta-no">VG—04</span>
+            <span class="meta-year">Completed 2024</span>
+          </div>
+          <div class="meta-name">Resort Poolside Pergola Living Wall</div>
+          <div class="meta-loc">📍 NCR Resort &amp; Spa</div>
+          <div class="meta-scope">600 sq.ft expansive poolside living wall with teak cabana pergolas, purple Tradescantia, and ribbon grass.</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- OPTION B -->
+    <div class="opt-title">
+      <span>Option B: Horizontal Split Card (Image Left 56%, Specs Right 44%)</span>
+      <span class="badge">Compact Full-Width Card</span>
+    </div>
+    <p style="font-size:13.5px; color:#555; margin-bottom:16px;">
+      Card screen ki poori width leta hai lekin height sirf 320px rehti hai. Left side par image aur Right side par poori specifications sheet aati hai.
+    </p>
+
+    <!-- Split Card 1 -->
+    <div class="card-split">
+      <div class="img-side">
+        <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Holiday Inn" />
+      </div>
+      <div class="info-side">
+        <div class="info-row">
+          <span class="k">No. &amp; Status</span>
+          <span class="v" style="font-family:'JetBrains Mono',monospace; color:var(--gold); font-weight:600;">VG—01 &nbsp;•&nbsp; Completed &amp; Maintained</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Project</span>
+          <span class="v name">Holiday Inn Multi-Story Living Wall</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Location</span>
+          <span class="v">Hospitality Atrium, Delhi NCR</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Technical Scope</span>
+          <span class="v" style="font-size:13px; color:var(--ink-2);">850 sq.ft multi-story outdoor living wall integrated with illuminated corporate logo and multi-zone drip.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split Card 2 -->
+    <div class="card-split">
+      <div class="img-side">
+        <img src="/projects/vertical-gardens/architectural-staircase.jpg" alt="Architectural Staircase" />
+      </div>
+      <div class="info-side">
+        <div class="info-row">
+          <span class="k">No. &amp; Status</span>
+          <span class="v" style="font-family:'JetBrains Mono',monospace; color:var(--gold); font-weight:600;">VG—02 &nbsp;•&nbsp; Completed 2024</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Project</span>
+          <span class="v name">Architectural Staircase Living Columns</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Location</span>
+          <span class="v">CyberCity, Gurugram</span>
+        </div>
+        <div class="info-row">
+          <span class="k">Technical Scope</span>
+          <span class="v" style="font-size:13px; color:var(--ink-2);">Double-height living wall columns alternating with black fluted architectural louvers &amp; industrial track lighting.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
