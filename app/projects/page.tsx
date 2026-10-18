@@ -187,7 +187,7 @@ export default function ProjectsPage() {
     supabase.from('projects').select('*').order('order_index', { ascending: true })
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then((res: { data: any[] | null }) => {
-        if (res.data && res.data.length > 0) {
+        if (res.data && res.data.length >= 6) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           setProjects(res.data.map((p: any) => ({
             cat: TYPE_TO_CAT[String(p.type || '').toLowerCase()] || 'amc',
@@ -203,6 +203,25 @@ export default function ProjectsPage() {
       })
       .catch(() => {});
   }, []);
+
+  const CATEGORIES = [
+    { id: 'all', label: 'All Projects' },
+    { id: 'vertical', label: 'Vertical Gardens' },
+    { id: 'amc', label: 'Plant AMC' },
+    { id: 'terrace', label: 'Terrace' },
+    { id: 'balcony', label: 'Balcony' },
+    { id: 'moss', label: 'Moss Walls' },
+    { id: 'plantscaping', label: 'Plantscaping' },
+  ];
+
+  const getCount = (catId: string) => {
+    if (catId === 'all') return projects.length;
+    return projects.filter((p) => p.cat === catId).length;
+  };
+
+  const filteredProjects = projects.filter(
+    (prj) => activeFilter === 'all' || activeFilter === prj.cat
+  );
 
   return (
     <>
@@ -222,114 +241,77 @@ export default function ProjectsPage() {
       {/* INDEX */}
       <section className="sec sheet">
         <div className="shell">
-          <div className="notice rv" style={{ background: 'rgba(200,165,91,0.08)', borderColor: 'rgba(200,165,91,0.3)', color: 'var(--deep)' }}>
+          <div className="notice" style={{ background: 'rgba(200,165,91,0.08)', borderColor: 'rgba(200,165,91,0.3)', color: 'var(--deep)' }}>
             <strong>Execution standards across Delhi NCR.</strong> Every installation below is engineered, fabricated, and maintained by our own in-house teams. Site visits for corporate facilities and private residences are free of charge.
           </div>
 
-          <div className="filters rv" id="filters">
-            <button
-              data-filter="all"
-              className={activeFilter === 'all' ? 'on' : ''}
-              onClick={() => setActiveFilter('all')}
-            >
-              All
-            </button>
-            <button
-              data-filter="amc"
-              className={activeFilter === 'amc' ? 'on' : ''}
-              onClick={() => setActiveFilter('amc')}
-            >
-              Plant AMC
-            </button>
-            <button
-              data-filter="vertical"
-              className={activeFilter === 'vertical' ? 'on' : ''}
-              onClick={() => setActiveFilter('vertical')}
-            >
-              Vertical Gardens
-            </button>
-            <button
-              data-filter="terrace"
-              className={activeFilter === 'terrace' ? 'on' : ''}
-              onClick={() => setActiveFilter('terrace')}
-            >
-              Terrace
-            </button>
-            <button
-              data-filter="balcony"
-              className={activeFilter === 'balcony' ? 'on' : ''}
-              onClick={() => setActiveFilter('balcony')}
-            >
-              Balcony
-            </button>
-            <button
-              data-filter="moss"
-              className={activeFilter === 'moss' ? 'on' : ''}
-              onClick={() => setActiveFilter('moss')}
-            >
-              Moss Walls
-            </button>
-            <button
-              data-filter="plantscaping"
-              className={activeFilter === 'plantscaping' ? 'on' : ''}
-              onClick={() => setActiveFilter('plantscaping')}
-            >
-              Plantscaping
-            </button>
+          <div className="filters" id="filters">
+            {CATEGORIES.map((cat) => {
+              const count = getCount(cat.id);
+              if (count === 0 && cat.id !== 'all') return null;
+              return (
+                <button
+                  key={cat.id}
+                  data-filter={cat.id}
+                  className={activeFilter === cat.id ? 'on' : ''}
+                  onClick={() => setActiveFilter(cat.id)}
+                >
+                  <span>{cat.label}</span>
+                  <span className="filter-count">{count}</span>
+                </button>
+              );
+            })}
           </div>
 
           <div className="lux-gallery">
-            {projects.map((prj, i) => {
-              const isVisible = activeFilter === 'all' || activeFilter === prj.cat;
-              if (!isVisible) return null;
-              const isFeatured = i === 0 && activeFilter === 'all';
-              return (
-                <div
-                  key={i}
-                  className={`lux-gallery-item rv ${isFeatured ? 'featured' : ''}`}
-                  data-cat={prj.cat}
-                  onClick={() => setSelectedProject(prj)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => { if (e.key === 'Enter') setSelectedProject(prj); }}
-                >
-                  <div className="lux-img-box">
-                    <div className="lux-top-badges">
-                      <span className="lux-cat-pill">
-                        {prj.cat === 'vertical' ? 'Vertical Garden' : prj.cat === 'terrace' ? 'Terrace Garden' : prj.cat === 'balcony' ? 'Balcony Garden' : prj.cat === 'moss' ? 'Moss Wall' : prj.cat === 'plantscaping' ? 'Plantscaping' : 'Plant AMC'}
-                      </span>
-                      <span className="lux-num-tag">{prj.no}</span>
-                    </div>
-                    <Image
-                      src={prj.image}
-                      alt={prj.name}
-                      fill
-                      sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 420px"
-                      unoptimized={!canOptimize(prj.image)}
-                      className="lux-img"
-                    />
-                    <div className="lux-img-gradient" />
+            {filteredProjects.map((prj, idx) => (
+              <div
+                key={`${activeFilter}-${prj.no}-${idx}`}
+                className="lux-gallery-item"
+                style={{ animationDelay: `${Math.min(idx * 0.04, 0.32)}s` }}
+                onClick={() => setSelectedProject(prj)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter') setSelectedProject(prj); }}
+              >
+                <div className="lux-img-box">
+                  <div className="lux-top-badges">
+                    <span className="lux-cat-pill">
+                      {prj.cat === 'vertical' ? 'Vertical Garden' : prj.cat === 'terrace' ? 'Terrace Garden' : prj.cat === 'balcony' ? 'Balcony Garden' : prj.cat === 'moss' ? 'Moss Wall' : prj.cat === 'plantscaping' ? 'Plantscaping' : 'Plant AMC'}
+                    </span>
+                    <span className="lux-num-tag">{prj.no}</span>
                   </div>
-                  <div className="lux-card-body">
-                    <div className="lux-title-row">
-                      <h2 className="lux-proj-title">{prj.name}</h2>
-                    </div>
-                    <div className="lux-loc-row">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
-                      <span>{prj.location}</span>
-                    </div>
-                    <p className="lux-scope-text">{prj.scope}</p>
-                    <div className="lux-card-foot">
-                      <span className="lux-foot-status">Status: <b>{prj.year}</b></span>
-                      <span className="lux-foot-btn">View Specs &rarr;</span>
-                    </div>
+                  <Image
+                    src={prj.image}
+                    alt={prj.name}
+                    fill
+                    sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 420px"
+                    priority={idx < 4}
+                    loading={idx < 4 ? undefined : 'lazy'}
+                    unoptimized={!canOptimize(prj.image)}
+                    className="lux-img"
+                  />
+                  <div className="lux-img-gradient" />
+                </div>
+                <div className="lux-card-body">
+                  <div className="lux-title-row">
+                    <h2 className="lux-proj-title">{prj.name}</h2>
+                  </div>
+                  <div className="lux-loc-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>{prj.location}</span>
+                  </div>
+                  <p className="lux-scope-text">{prj.scope}</p>
+                  <div className="lux-card-foot">
+                    <span className="lux-foot-status">Status: <b>{prj.year}</b></span>
+                    <span className="lux-foot-btn">View Specs &rarr;</span>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
