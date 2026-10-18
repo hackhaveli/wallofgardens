@@ -1,0 +1,178 @@
+[
+  {
+    "id": "federal-bank-moss-wall",
+    "title": "Federal Bank Executive Boardroom",
+    "client": "Federal Bank",
+    "category": "Corporate Boardroom",
+    "angle": "Frontal Architectural Symmetrical Angle",
+    "technique": "Multi-Tone Rolling Waves of Scandinavian Reindeer Moss with 3D Backlit Lettering",
+    "imageJpg": "/projects/moss-walls/federal-bank-moss-wall.jpg",
+    "imageWebp": "/projects/moss-walls/federal-bank-moss-wall.webp",
+    "thumbWebp": "/projects/moss-walls/federal-bank-moss-wall-thumb.webp"
+  },
+  {
+    "id": "hul-unilever-curved-wall",
+    "title": "Hindustan Unilever Atrium Feature Wall",
+    "client": "Hindustan Unilever Limited (HUL)",
+    "category": "Enterprise Reception",
+    "angle": "Curved Architectural Panorama",
+    "technique": "Seamless Reindeer Moss Field with Embedded Unilever U-Monogram & Terracotta Jali Screens",
+    "imageJpg": "/projects/moss-walls/hul-unilever-curved-wall.jpg",
+    "imageWebp": "/projects/moss-walls/hul-unilever-curved-wall.webp",
+    "thumbWebp": "/projects/moss-walls/hul-unilever-curved-wall-thumb.webp"
+  },
+  {
+    "id": "wipro-revantage-reception",
+    "title": "Wipro & Revantage Executive Lounge",
+    "client": "Wipro & Revantage",
+    "category": "Corporate Reception",
+    "angle": "Wide Lounge Environmental Perspective",
+    "technique": "High-Density Forest Green Moss Acoustic Wall with Precision Matte Acrylic Corporate Logos",
+    "imageJpg": "/projects/moss-walls/wipro-revantage-reception.jpg",
+    "imageWebp": "/projects/moss-walls/wipro-revantage-reception.webp",
+    "thumbWebp": "/projects/moss-walls/wipro-revantage-reception-thumb.webp"
+  },
+  {
+    "id": "wipro-revantage-close",
+    "title": "Wipro & Revantage Logo Acoustic Field",
+    "client": "Wipro & Revantage",
+    "category": "Corporate Reception",
+    "angle": "Frontal Medium Telephoto Framing",
+    "technique": "Seamless Preserved Moss Wall Dampening Ambient Echo in High-Traffic Reception",
+    "imageJpg": "/projects/moss-walls/wipro-revantage-close.jpg",
+    "imageWebp": "/projects/moss-walls/wipro-revantage-close.webp",
+    "thumbWebp": "/projects/moss-walls/wipro-revantage-close-thumb.webp"
+  },
+  {
+    "id": "puma-brand-moss-icon",
+    "title": "Puma Leaping Cat Brand Silhouette",
+    "client": "Puma",
+    "category": "Brand Logo Inlay",
+    "angle": "Dramatic Oblique Floating Silhouette",
+    "technique": "Precision CNC-Contoured Moss Topiary Suspended Against Smoked Glass Partition",
+    "imageJpg": "/projects/moss-walls/puma-brand-moss-icon.jpg",
+    "imageWebp": "/projects/moss-walls/puma-brand-moss-icon.webp",
+    "thumbWebp": "/projects/moss-walls/puma-brand-moss-icon-thumb.webp"
+  },
+  {
+    "id": "syngenta-illuminated-crest",
+    "title": "Syngenta Botanical Wall & Golden Leaf",
+    "client": "Syngenta",
+    "category": "Brand Logo Inlay",
+    "angle": "Direct Frontal Illuminated Framing",
+    "technique": "Preserved Moss Wall with Custom Gilded Leaf Outline and Warm White Grazing Glow",
+    "imageJpg": "/projects/moss-walls/syngenta-illuminated-crest.jpg",
+    "imageWebp": "/projects/moss-walls/syngenta-illuminated-crest.webp",
+    "thumbWebp": "/projects/moss-walls/syngenta-illuminated-crest-thumb.webp"
+  },
+  {
+    "id": "genpact-timber-slat-column",
+    "title": "Genpact Fluted Timber & Moss Inset",
+    "client": "Genpact",
+    "category": "Architectural Feature",
+    "angle": "Vertical Architectural Grazing Light",
+    "technique": "Recessed Full-Height Reindeer Moss Column Interlocked with White Oak Acoustic Battens",
+    "imageJpg": "/projects/moss-walls/genpact-timber-slat-column.jpg",
+    "imageWebp": "/projects/moss-walls/genpact-timber-slat-column.webp",
+    "thumbWebp": "/projects/moss-walls/genpact-timber-slat-column-thumb.webp"
+  },
+  {
+    "id": "exl-chennai-heritage-reception",
+    "title": "EXL Services Panoramic Heritage Mural",
+    "client": "EXL Services",
+    "category": "Enterprise Reception",
+    "angle": "Wide Angle Full-Wall Architectural Perspective",
+    "technique": "100% Scandinavian Preserved Greenery with Custom Architectural Inlays & Modern Halo Pendants",
+    "imageJpg": "/projects/moss-walls/exl-chennai-heritage-reception.jpg",
+    "imageWebp": "/projects/moss-walls/exl-chennai-heritage-reception.webp",
+    "thumbWebp": "/projects/moss-walls/exl-chennai-heritage-reception-thumb.webp"
+  },
+  {
+    "id": "exl-chennai-reception-grazing",
+    "title": "EXL Services Grazing Light Perspective",
+    "client": "EXL Services",
+    "category": "Enterprise Reception",
+    "angle": "3/4 Grazing Lighting Architectural Angle",
+    "technique": "High-Density Textured Moss Surface Highlighting Sound-Absorbing Depth Under Linear Luminaires",
+    "imageJpg": "/projects/moss-walls/exl-chennai-reception-grazing.jpg",
+    "imageWebp": "/projects/moss-walls/exl-chennai-reception-grazing.webp",
+    "thumbWebp": "/projects/moss-walls/exl-chennai-reception-grazing-thumb.webp"
+  },
+  {
+    "id": "exl-crimson-inlaid-logo",
+    "title": "EXL Crimson Moss Inlaid Monogram",
+    "client": "EXL Services",
+    "category": "Brand Logo Inlay",
+    "angle": "Vertical Architectural Portrait Angle",
+    "technique": "Hand-Dyed Crimson Reindeer Moss Monogram Embedded in Emerald Moss with White Marble Pebble Base",
+    "imageJpg": "/projects/moss-walls/exl-crimson-inlaid-logo.jpg",
+    "imageWebp": "/projects/moss-walls/exl-crimson-inlaid-logo.webp",
+    "thumbWebp": "/projects/moss-walls/exl-crimson-inlaid-logo-thumb.webp"
+  },
+  {
+    "id": "exl-global-moss-world-map",
+    "title": "EXL Global Sculpted Continental World Map",
+    "client": "EXL Global",
+    "category": "3D Art & Sculpture",
+    "angle": "Perspective Corridor View of Complete Installation",
+    "technique": "High-Relief 3D Preserved Moss Cartography Depicting Global Office Networks Across Continents",
+    "imageJpg": "/projects/moss-walls/exl-global-moss-world-map.jpg",
+    "imageWebp": "/projects/moss-walls/exl-global-moss-world-map.webp",
+    "thumbWebp": "/projects/moss-walls/exl-global-moss-world-map-thumb.webp"
+  },
+  {
+    "id": "exl-world-map-craftsmanship",
+    "title": "Artisan Hand-Tufting EXL World Map",
+    "client": "EXL Global / Studio Craft",
+    "category": "Studio Craftsmanship",
+    "angle": "Behind-The-Scenes Artisan Detail Angle",
+    "technique": "Our In-House Horticultural Artisans Hand-Tufting Individual Bun & Reindeer Moss Clusters On-Site",
+    "imageJpg": "/projects/moss-walls/exl-world-map-craftsmanship.jpg",
+    "imageWebp": "/projects/moss-walls/exl-world-map-craftsmanship.webp",
+    "thumbWebp": "/projects/moss-walls/exl-world-map-craftsmanship-thumb.webp"
+  },
+  {
+    "id": "geometric-rhythm-corridor",
+    "title": "Executive Corridor Geometric Rhythm Wall",
+    "client": "Corporate Campus Gurugram",
+    "category": "Architectural Feature",
+    "angle": "Dynamic Corridor Linear Perspective",
+    "technique": "Alternating Fluted Timber Mullions, Glass Vision Panels, and Preserved Moss Acoustic Spandrels",
+    "imageJpg": "/projects/moss-walls/geometric-rhythm-corridor.jpg",
+    "imageWebp": "/projects/moss-walls/geometric-rhythm-corridor.webp",
+    "thumbWebp": "/projects/moss-walls/geometric-rhythm-corridor-thumb.webp"
+  },
+  {
+    "id": "outdoor-architectural-courtyard-facade",
+    "title": "Multi-Tone Bun Moss & Ivy Feature Facade",
+    "client": "Luxury Estate Courtyard",
+    "category": "Multi-Texture Living Facade",
+    "angle": "Dramatic Architectural Night Uplighting Angle",
+    "technique": "3D Relief Bun Moss Nodules with Ground-Recessed Grazing Lights and Cascading English Ivy Canopy",
+    "imageJpg": "/projects/moss-walls/outdoor-architectural-courtyard-facade.jpg",
+    "imageWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade.webp",
+    "thumbWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade-thumb.webp"
+  },
+  {
+    "id": "vertical-fluted-moss-panel",
+    "title": "Architectural Stone & Multi-Texture Moss Column",
+    "client": "Private Residence & Studio",
+    "category": "Multi-Texture Living Facade",
+    "angle": "Full Vertical Architectural Symmetrical Frame",
+    "technique": "Precision Alternating Bands of Flat, Reindeer, and Cushion Bun Moss Flanked by Fluted Wall Cladding",
+    "imageJpg": "/projects/moss-walls/vertical-fluted-moss-panel.jpg",
+    "imageWebp": "/projects/moss-walls/vertical-fluted-moss-panel.webp",
+    "thumbWebp": "/projects/moss-walls/vertical-fluted-moss-panel-thumb.webp"
+  },
+  {
+    "id": "exl-camouflage-moss-wall",
+    "title": "Organic Earth Camouflage Moss Wall",
+    "client": "EXL Tech Hub",
+    "category": "Acoustic Wall Art",
+    "angle": "Diagonal Perspective Framing",
+    "technique": "Multi-Colored Scandinavian Reindeer Moss in Forest, Terracotta, Olive, and Chartreuse Accents",
+    "imageJpg": "/projects/moss-walls/exl-camouflage-moss-wall.jpg",
+    "imageWebp": "/projects/moss-walls/exl-camouflage-moss-wall.webp",
+    "thumbWebp": "/projects/moss-walls/exl-camouflage-moss-wall-thumb.webp"
+  }
+]

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import MossGallery from './MossGallery';
 
 export const metadata: Metadata = {
   title: 'Preserved Moss Walls & Moss Art — Cost, Design & Decor',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Preserved Moss Walls & Moss Art — Acoustic Biophilic Art | Wall of Gardens',
     description: 'No water, no sunlight, zero maintenance. Acoustic sound-dampening preserved moss walls for luxury offices and residences.',
     url: 'https://wallofgardens.com/services/moss-wall',
-    images: [{ url: '/project_02.jpg', width: 1200, height: 630, alt: 'Preserved Moss Wall by Wall of Gardens' }],
+    images: [{ url: '/projects/moss-walls/federal-bank-moss-wall.jpg', width: 1200, height: 630, alt: 'Preserved Moss Wall by Wall of Gardens' }],
   },
 };
 
@@ -217,6 +218,9 @@ export default function MossWallPage() {
         </div>
       </section>
 
+      {/* ARCHITECTURAL MOSS WALL PORTFOLIO GALLERY */}
+      <MossGallery />
+
       {/* MOSS TYPES */}
       <section className="sec sec-t sheet">
         <div className="shell">
@@ -396,13 +400,13 @@ export default function MossWallPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Preserved Moss Wall — Wall of Gardens">
-          <img src="/project_02.jpg" alt="Preserved Moss Wall" />
+          <img src="/projects/moss-walls/federal-bank-moss-wall.jpg" alt="Preserved Moss Wall" />
         </div>
         <div className="shell">
           <div className="close-in rv">
             <div className="rule-tag"><span className="tag gold">Contact</span></div>
             <h2 className="d2">Have a reception wall in mind?</h2>
-            <p className="lede light">Send us the wall dimensions and your logo artwork. Site visits within Delhi NCR are free.</p>
+            <p className="lede light">Send us your wall dimensions and corporate logo artwork. Architectural evaluations and site inspections are arranged across Delhi NCR &amp; pan-India.</p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '28px', alignItems: 'center' }}>
               <Link className="btn btn-g" href="/contact"><span>Request a Design</span></Link>
               <a className="btn btn-o" href="https://wa.me/919990960669" target="_blank" rel="noopener noreferrer"><span>WhatsApp Us</span></a>

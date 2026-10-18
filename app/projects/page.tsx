@@ -190,6 +190,24 @@ const ENTERPRISE_CLIENTS = [
     scope: 'Preserved Moss Wall Art Installations & Biophilic Interiors',
   },
   {
+    name: 'Federal Bank',
+    city: 'Regional Headquarters',
+    category: 'Banking & Financial',
+    scope: 'Executive Undulating Preserved Moss Wave Wall & 3D Backlit Lettering',
+  },
+  {
+    name: 'Hindustan Unilever Limited',
+    city: 'Corporate Atrium',
+    category: 'Enterprise FMCG',
+    scope: 'Curved Scandinavian Moss Wall with Embedded U-Monogram & Jali Detailing',
+  },
+  {
+    name: 'Wipro & Revantage',
+    city: 'Technology Campus',
+    category: 'Global Enterprise IT',
+    scope: 'High-Density Acoustic Moss Wall with Precision Acrylic Typography',
+  },
+  {
     name: 'Hira Group',
     city: 'Industrial Campus',
     category: 'Enterprise Infrastructure',

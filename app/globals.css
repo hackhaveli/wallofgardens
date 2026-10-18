@@ -3092,4 +3092,507 @@ a.chan-i:hover { background: #16241A; }
   }
 }
 
+/* ============================================================
+   PRESERVED MOSS WALL ARCHITECTURAL PORTFOLIO GALLERY
+   ============================================================ */
+.moss-portfolio-section {
+  position: relative;
+  padding: clamp(60px, 7vw, 100px) 0;
+  background: #FAF9F5;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.moss-portfolio-head {
+  margin-bottom: clamp(32px, 4vw, 52px);
+}
+.moss-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+.moss-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 24, 17, 0.12);
+  color: rgba(14, 24, 17, 0.72);
+  font-family: var(--mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.moss-filter-btn:hover {
+  border-color: rgba(200, 165, 91, 0.6);
+  color: #0E1811;
+  background: #FFFDF9;
+}
+.moss-filter-btn.active {
+  background: #1F3D2B;
+  color: #FFFFFF;
+  border-color: #1F3D2B;
+}
+.moss-cat-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9.5px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.moss-filter-btn.active .moss-cat-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+/* Spotlight Card */
+.moss-spotlight-card {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 24, 17, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -8px rgba(14, 24, 17, 0.07);
+  margin-bottom: 40px;
+}
+.moss-spotlight-media {
+  position: relative;
+  min-height: 420px;
+  background: #0E1811;
+  cursor: pointer;
+  overflow: hidden;
+}
+.moss-spotlight-img {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.moss-spotlight-media:hover .moss-spotlight-img {
+  transform: scale(1.03);
+}
+.moss-spotlight-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: rgba(14, 24, 17, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(200, 165, 91, 0.5);
+  color: #C8A55B;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
+.moss-zoom-indicator {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 24, 17, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0.9;
+  transition: all 0.2s;
+}
+.moss-spotlight-media:hover .moss-zoom-indicator {
+  opacity: 1;
+  background: #1F3D2B;
+  border-color: #C8A55B;
+  color: #C8A55B;
+}
+.moss-spotlight-info {
+  padding: clamp(24px, 3.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.moss-meta-client {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.moss-client-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #8A6D2B;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.moss-angle-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(14, 24, 17, 0.5);
+  background: rgba(14, 24, 17, 0.04);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.moss-spotlight-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0E1811;
+  margin-bottom: 12px;
+}
+.moss-spotlight-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(14, 24, 17, 0.75);
+  margin-bottom: 22px;
+}
+.moss-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 16px;
+  background: #F7F6F1;
+  border: 1px solid rgba(14, 24, 17, 0.06);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.moss-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.spec-k {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(14, 24, 17, 0.45);
+}
+.spec-v {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0E1811;
+}
+
+/* Gallery Grid */
+.moss-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.moss-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 24, 17, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(14, 24, 17, 0.04);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.moss-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 165, 91, 0.55);
+  box-shadow: 0 16px 36px -10px rgba(14, 24, 17, 0.12);
+}
+.moss-card-media {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #0E1811;
+  overflow: hidden;
+}
+.moss-card-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.moss-card:hover .moss-card-img {
+  transform: scale(1.05);
+}
+.moss-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 24, 17, 0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+.moss-card:hover .moss-card-overlay {
+  opacity: 1;
+}
+.moss-overlay-btn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0E1811;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.moss-angle-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(14, 24, 17, 0.82);
+  backdrop-filter: blur(4px);
+  color: rgba(244, 243, 236, 0.9);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.moss-card-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.moss-card-client-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.moss-card-client {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8A6D2B;
+  font-weight: 700;
+}
+.moss-card-cat {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: rgba(14, 24, 17, 0.4);
+}
+.moss-card-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0E1811;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.moss-card-technique {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(14, 24, 17, 0.65);
+  margin-top: auto;
+}
+
+/* Craftsmanship Banner */
+.moss-craft-banner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  background: #132418;
+  border: 1px solid rgba(200, 165, 91, 0.25);
+  border-radius: 12px;
+  padding: clamp(28px, 4vw, 44px);
+  margin-top: 50px;
+  color: #F4F3EC;
+  align-items: center;
+}
+.moss-craft-h {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #F4F3EC;
+  margin: 14px 0;
+}
+.moss-craft-p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(244, 243, 236, 0.8);
+  margin-bottom: 20px;
+}
+.moss-craft-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: #C8A55B;
+}
+.moss-craft-media {
+  position: relative;
+  min-height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 165, 91, 0.3);
+  cursor: pointer;
+}
+.moss-craft-img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.moss-craft-media:hover .moss-craft-img {
+  transform: scale(1.04);
+}
+.moss-craft-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(14, 24, 17, 0.85);
+  backdrop-filter: blur(6px);
+  color: #C8A55B;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+/* Modal Lightbox */
+.moss-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(10, 16, 12, 0.92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 32px);
+  animation: fadeIn 0.2s ease-out;
+}
+.moss-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  max-height: 94vh;
+  background: #142219;
+  border: 1px solid rgba(200, 165, 91, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+.moss-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(14, 24, 17, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s;
+}
+.moss-modal-close:hover {
+  background: #C8A55B;
+  color: #0E1811;
+  border-color: #C8A55B;
+}
+.moss-modal-media-wrap {
+  position: relative;
+  width: 100%;
+  height: clamp(340px, 58vh, 640px);
+  background: #0A120D;
+}
+.moss-modal-img {
+  object-fit: contain;
+}
+.moss-modal-bar {
+  padding: 18px 24px;
+  background: rgba(14, 24, 17, 0.95);
+  border-top: 1px solid rgba(200, 165, 91, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.moss-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  margin-bottom: 4px;
+}
+.moss-modal-client {
+  color: #C8A55B;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.moss-modal-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
+.moss-modal-angle {
+  color: rgba(244, 243, 236, 0.65);
+}
+.moss-modal-cat {
+  color: rgba(244, 243, 236, 0.5);
+}
+.moss-modal-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: #F4F3EC;
+  margin: 0 0 4px 0;
+}
+.moss-modal-desc {
+  font-size: 12.5px;
+  color: rgba(244, 243, 236, 0.7);
+  margin: 0;
+  max-width: 60ch;
+}
+.moss-modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .moss-spotlight-card {
+    grid-template-columns: 1fr;
+  }
+  .moss-spotlight-media {
+    min-height: 300px;
+  }
+  .moss-craft-banner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .moss-craft-media {
+    min-height: 220px;
+  }
+  .moss-modal-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 
