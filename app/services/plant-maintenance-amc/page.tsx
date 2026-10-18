@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Corporate Plant Maintenance AMC — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  title: 'Corporate Plant Maintenance AMC — Delhi NCR, Bangalore, Mumbai',
   description: 'India’s leading Annual Maintenance Contracts (AMC) for corporate office plants, living walls, and commercial campuses. Scheduled visits, organic nutrition, and 100% free plant replacement SLA guarantee.',
   alternates: { canonical: '/services/plant-maintenance-amc' },
   openGraph: {

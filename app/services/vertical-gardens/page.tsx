@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Vertical Gardens & Living Walls — Cost, Installation & Design | Wall of Gardens',
+  title: 'Vertical Gardens & Living Walls — Cost, Installation & Design',
   description: 'India’s #1 engineered vertical gardens and living walls. Cost per sq ft, multi-zone automated drip irrigation, structural load engineering, and in-house AMC maintenance across Delhi NCR, Gurugram, Bengaluru, Mumbai, Pune, and Hyderabad.',
   alternates: { canonical: '/services/vertical-gardens' },
   openGraph: {

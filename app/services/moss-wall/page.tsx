@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Preserved Moss Walls & Moss Art — Cost, Design & Decor | Wall of Gardens',
+  title: 'Preserved Moss Walls & Moss Art — Cost, Design & Decor',
   description: 'India’s #1 preserved moss walls, acoustic green panels, and branded corporate moss logos. 100% natural Scandinavian moss with zero irrigation and zero maintenance across Delhi NCR, Bengaluru, Mumbai, and Pune.',
   alternates: { canonical: '/services/moss-wall' },
   openGraph: {

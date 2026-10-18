@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Office Plantation & Corporate Plantscaping Services — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  title: 'Office Plantation & Corporate Plantscaping Services — Delhi NCR, Bangalore, Mumbai',
   description: 'India’s #1 office plantation and corporate indoor plantscaping services. Indoor office plants, sub-irrigation desktop planters, floor cultivars, and scheduled plant maintenance AMC across Delhi NCR, Gurugram Cyber City, Noida, Bengaluru, and Mumbai.',
   alternates: { canonical: '/services/plantscaping' },
   openGraph: {
