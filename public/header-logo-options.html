@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Header — Wall of Gardens (No Back Cover)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0B130E;
+      --forest: #14241A;
+      --cream: #F4F3EC;
+      --gold: #C8A55B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #070d09;
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px 20px 80px;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #4ade80;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 10px #4ade80; }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(24px, 4vw, 34px);
+      margin-bottom: 12px;
+      color: var(--cream);
+    }
+    p.sub {
+      color: rgba(244,243,236,0.72);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .card {
+      background: #0f1c14;
+      border: 1px solid rgba(200,165,91,0.3);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+    }
+    .card-head {
+      padding: 16px 24px;
+      background: rgba(200,165,91,0.08);
+      border-bottom: 1px solid rgba(200,165,91,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    /* Real Website Header Simulation */
+    .mock-header {
+      background: rgba(11, 19, 14, 0.98);
+      border-bottom: 1px solid rgba(244,243,236,0.08);
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    /* NO BACK COVER: transparent, no border, no card */
+    .brand-logo-wrap {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      flex-shrink: 0;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+    .brand:hover .brand-logo-wrap {
+      transform: scale(1.06);
+      filter: drop-shadow(0 2px 8px rgba(200,165,91,0.35));
+    }
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+    .brand-n b {
+      color: var(--gold);
+      font-weight: 400;
+      font-style: italic;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(244,243,236,0.68);
+    }
+    .nav-cta {
+      background: var(--gold);
+      color: #0B130E;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 9px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .specs-box {
+      padding: 20px 24px;
+      background: rgba(0,0,0,0.25);
+      font-size: 13.5px;
+      color: rgba(244,243,236,0.8);
+      line-height: 1.7;
+    }
+    .specs-box ul {
+      margin-left: 20px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="status-badge">
+      <span class="dot"></span> Applied Live on Website
+    </div>
+    <h1>No Back Cover — Only 9 Visible Squares & W-O-G</h1>
+    <p class="sub">
+      Aapki requirement ke mutabik: Koi background card/cover nahi hai. Header ke dark green background ke upar direct <b>9 individual floating tiles</b> visible hain, aur middle row mein <b>W, O, G (leaf ke sath)</b> clean dikh raha hai:
+    </p>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Live Preview (Navbar Dark Green Background)</span>
+        <span style="font-size:12px; color:var(--gold); font-family:'JetBrains Mono',monospace;">Zero Back Cover</span>
+      </div>
+      <div class="mock-header">
+        <a class="brand" href="/">
+          <div class="brand-logo-wrap">
+            <img src="/icon.svg" alt="Wall of Gardens Logo" class="brand-logo-img" />
+          </div>
+          <span class="brand-n">Wall <b>of</b> Gardens</span>
+        </a>
+        <div class="nav-links">
+          <span>Projects</span>
+          <span>Services</span>
+          <span>Studio</span>
+          <span>Contact</span>
+        </div>
+        <a class="nav-cta" href="#">Start a Project</a>
+      </div>
+      <div class="specs-box">
+        <b>What Changed:</b>
+        <ul>
+          <li><b>Back Cover Removed:</b> Logo container ka square background (`#11281c`), border aur box-shadow 100% hata diya gaya hai.</li>
+          <li><b>9 Squares Fully Visible:</b> Sabhi 9 tiles individual cream squircle tiles hain jo dark green background par float kar rahi hain.</li>
+          <li><b>Gaps Transparent:</b> Tiles ke beech ka 5px gap transparent hai, jahan se website ka green background natural dikhta hai.</li>
+          <li><b>W, O, G Crisp:</b> Middle 3 tiles mein W, O, G deep green vector crisp legible hain.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

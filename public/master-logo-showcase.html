@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Gardens — Master Brand Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070D09;
+      --card-bg: rgba(13, 24, 17, 0.85);
+      --gold: #D4AF37;
+      --gold-light: #F7E7B4;
+      --gold-deep: #A07C1C;
+      --green-accent: #38A169;
+      --white: #F7F7F2;
+      --text-muted: #8E9E93;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      padding: 60px 24px 100px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, #ffffff 40%, var(--gold-light) 75%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    p.manifesto {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    /* Masterpiece Cards */
+    .master-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .concept-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 24px;
+      padding: 44px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .concept-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .concept-title {
+      font-family: 'Cinzel', serif;
+      font-size: 26px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .concept-title span.number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      color: var(--gold);
+      background: rgba(212, 175, 55, 0.15);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .aha-box {
+      background: rgba(56, 161, 105, 0.1);
+      border-left: 3px solid #38A169;
+      padding: 12px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: #B2D8C0;
+      margin-bottom: 28px;
+    }
+    .aha-box b { color: #fff; }
+
+    .canvas-box {
+      background: radial-gradient(circle at center, #0B1910 0%, #030805 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 60px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+      min-height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .canvas-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    /* Scaling / Usability test */
+    .scale-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 18px 24px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+    }
+
+    .scale-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .scale-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6));
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">Master Brand Identity System</div>
+      <h1>WALL OF GARDENS</h1>
+      <p class="manifesto">
+        A true world-class logo is not decoration. It is a single, inescapable visual idea. <br>
+        Here are 3 masterstroke identities combining <b>Architectural Engineering</b> with <b>Living Nature</b>.
+      </p>
+    </header>
+
+    <div class="master-grid">
+
+      <!-- ================= CONCEPT 1: THE NEGATIVE SPACE MASTERPIECE ================= -->
+      <div class="concept-card">
+        <div class="concept-header">
+          <h2 class="concept-title">
+            <span class="number">DIRECTION 01</span>
+            The Negative-Space Living Wall
+          </h2>
+        </div>
+
+        <div class="aha-box">
+          <b>The "Aha!" Discovery (Negative Space):</b> 
+          Look closely at the 4 golden architectural columns that form the engineered 'Wall'. The negative space cut out between them reveals a graceful, ascending botanical leaf curling upwards towards the light. <b>Solid = The Engineered Wall. Void = The Living Garden.</b>
+        </div>
+
+        <div class="canvas-box">
+          <svg viewBox="0 0 580 140" width="540" height="130" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldArch1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF2CA"/>
+                <stop offset="35%" stop-color="#E2BD48"/>
+                <stop offset="70%" stop-color="#B28923"/>
+                <stop offset="100%" stop-color="#F2DF99"/>
+              </linearGradient>
+              <linearGradient id="leafGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#1B4D2E"/>
+                <stop offset="100%" stop-color="#4EAF6A"/>
+              </linearGradient>
+              <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D4AF37" flood-opacity="0.3"/>
+              </filter>
+            </defs>
+
+            <!-- ICON MARK -->
+            <g transform="translate(30, 16)" filter="url(#goldGlow)">
+              <!-- Slat 1 (Left Wing) -->
+              <path d="M 10 108 L 10 36 C 10 24, 22 24, 22 36 L 22 108 Z" fill="url(#goldArch1)"/>
+              
+              <!-- Slat 2 (Mid-Left, sculpted to form left curve of leaf) -->
+              <path d="M 32 108 L 32 64 C 32 46, 40 38, 44 26 C 44 20, 36 14, 34 14 C 42 12, 44 22, 44 26 L 44 108 Z" fill="url(#goldArch1)"/>
+              
+              <!-- Center Leaf Sprout (Revealed through negative space & emerald accent) -->
+              <path d="M 54 108 L 54 48 C 50 38, 46 32, 54 12 C 62 32, 58 38, 54 48 Z" fill="url(#leafGlow)"/>
+              <path d="M 54 108 L 54 48 C 50 38, 46 32, 54 12 C 62 32, 58 38, 54 48 Z" fill="none" stroke="url(#goldArch1)" stroke-width="1.2"/>
+
+              <!-- Slat 3 (Mid-Right, sculpted to form right curve of leaf) -->
+              <path d="M 64 108 L 64 26 C 64 22, 66 12, 74 14 C 72 14, 64 20, 64 26 C 68 38, 76 46, 76 64 L 76 108 Z" fill="url(#goldArch1)"/>
+
+              <!-- Slat 4 (Right Wing) -->
+              <path d="M 86 108 L 86 36 C 86 24, 98 24, 98 36 L 98 108 Z" fill="url(#goldArch1)"/>
+
+              <!-- Bottom architectural plinth beam -->
+              <rect x="6" y="108" width="96" height="4" rx="2" fill="url(#goldArch1)"/>
+            </g>
+
+            <!-- TYPOGRAPHY -->
+            <g transform="translate(170, 0)">
+              <!-- Primary Title -->
+              <text x="0" y="65" font-family="'Cinzel', serif" font-size="32" font-weight="700" letter-spacing="0.14em" fill="#FFFFFF">
+                WALL <tspan fill="url(#goldArch1)" font-style="italic" font-weight="400">of</tspan> GARDENS
+              </text>
+              
+              <!-- Subtle Hairline Divider -->
+              <line x1="2" y1="84" x2="370" y2="84" stroke="url(#goldArch1)" stroke-width="0.8" stroke-opacity="0.4"/>
+              
+              <!-- Engineered Tagline -->
+              <text x="2" y="106" font-family="'Space Grotesk', sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.32em" fill="#D4AF37">
+                LIVING ARCHITECTURE · ENGINEERED
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="scale-row">
+          <span class="scale-label">Versatility Test:</span>
+          <div class="scale-item">
+            <svg viewBox="0 0 108 116" width="36" height="38">
+              <use href="#goldArch1"/>
+              <!-- Mini Icon -->
+              <g transform="scale(0.35)">
+                <path d="M 10 108 L 10 36 C 10 24, 22 24, 22 36 L 22 108 Z" fill="#D4AF37"/>
+                <path d="M 32 108 L 32 64 C 32 46, 40 38, 44 26 L 44 108 Z" fill="#D4AF37"/>
+                <path d="M 54 108 L 54 48 C 50 38, 46 32, 54 12 C 62 32, 58 38, 54 48 Z" fill="#4EAF6A"/>
+                <path d="M 64 108 L 64 26 C 68 38, 76 46, 76 64 L 76 108 Z" fill="#D4AF37"/>
+                <path d="M 86 108 L 86 36 C 86 24, 98 24, 98 36 L 98 108 Z" fill="#D4AF37"/>
+                <rect x="6" y="108" width="96" height="4" fill="#D4AF37"/>
+              </g>
+            </svg>
+            <span>Favicon (32px Sharpness)</span>
+          </div>
+          <div class="scale-item">
+            <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#D4AF37;"></span>
+            <span>Laser-cut Brass Facade Ready</span>
+          </div>
+          <div class="scale-item">
+            <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#4EAF6A;"></span>
+            <span>Biophilic Natural Hue</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CONCEPT 2: THE INTERLOCKING "W + G" MONOGRAM ================= -->
+      <div class="concept-card">
+        <div class="concept-header">
+          <h2 class="concept-title">
+            <span class="number">DIRECTION 02</span>
+            The Interlocking 'W + G' Monogram
+          </h2>
+        </div>
+
+        <div class="aha-box">
+          <b>Haute Couture Architecture (Interlocking Monogram):</b> 
+          Like the world's most revered luxury houses (Cartier, Yves Saint Laurent, Audemars Piguet), this creates a timeless monogram where the structured architectural <b>'W' (Wall)</b> seamlessly weaves with the flowing biophilic loop of <b>'G' (Garden)</b>.
+        </div>
+
+        <div class="canvas-box">
+          <svg viewBox="0 0 580 140" width="540" height="130" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldMono" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF5D6"/>
+                <stop offset="50%" stop-color="#D4AF37"/>
+                <stop offset="100%" stop-color="#9C771B"/>
+              </linearGradient>
+            </defs>
+
+            <!-- ICON MARK -->
+            <g transform="translate(35, 14)">
+              <!-- Outer circular precision guide ring -->
+              <circle cx="55" cy="55" r="54" fill="none" stroke="url(#goldMono)" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.35"/>
+              <circle cx="55" cy="55" r="50" fill="none" stroke="url(#goldMono)" stroke-width="0.8" opacity="0.2"/>
+
+              <!-- The 'W' Architecture -->
+              <path d="M 22 28 L 38 88 L 55 46 L 72 88 L 88 28" 
+                    fill="none" stroke="url(#goldMono)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 22 28 L 38 88 L 55 46 L 72 88 L 88 28" 
+                    fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+              <!-- The 'G' Living Botanical Ribbon weaving through the W -->
+              <path d="M 78 38 A 36 36 0 1 0 55 91 L 68 91 L 68 64 L 52 64" 
+                    fill="none" stroke="#38A169" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              
+              <!-- Leaf bud at tip of G -->
+              <path d="M 78 38 C 84 32, 92 34, 94 40 C 88 42, 82 44, 78 38 Z" fill="#4EAF6A" stroke="url(#goldMono)" stroke-width="0.8"/>
+            </g>
+
+            <!-- TYPOGRAPHY -->
+            <g transform="translate(170, 0)">
+              <text x="0" y="65" font-family="'Cinzel', serif" font-size="31" font-weight="700" letter-spacing="0.12em" fill="#FFFFFF">
+                WALL <tspan font-style="italic" font-weight="400" fill="url(#goldMono)">of</tspan> GARDENS
+              </text>
+              <line x1="0" y1="84" x2="360" y2="84" stroke="url(#goldMono)" stroke-width="0.8" stroke-opacity="0.35"/>
+              <text x="0" y="106" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" letter-spacing="0.3em" fill="#D4AF37">
+                BIOPHILIC ARCHITECTURE &amp; ESTATES
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="scale-row">
+          <span class="scale-label">Versatility Test:</span>
+          <div class="scale-item">
+            <span>Stamp / Wax Seal Compatible</span>
+          </div>
+          <div class="scale-item">
+            <span>Embroidered Uniform Monogram</span>
+          </div>
+          <div class="scale-item">
+            <span>Watermark on Architectural Blueprints</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CONCEPT 3: THE GOLDEN RATIO LIVING CUBE ================= -->
+      <div class="concept-card">
+        <div class="concept-header">
+          <h2 class="concept-title">
+            <span class="number">DIRECTION 03</span>
+            The Isometric Living Facade (3D Spatial)
+          </h2>
+        </div>
+
+        <div class="aha-box">
+          <b>The Spatial Dimension (Isometric Perspective):</b> 
+          A minimalist geometric isometric cube showing an architectural room. The left facet is rigid architectural slats; the top is open skylight space; and the right facet bursts with living green flora. This literally depicts a <b>Wall transformed into a Garden</b>.
+        </div>
+
+        <div class="canvas-box">
+          <svg viewBox="0 0 580 140" width="540" height="130" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldCube" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF2CA"/>
+                <stop offset="50%" stop-color="#D4AF37"/>
+                <stop offset="100%" stop-color="#8C6A18"/>
+              </linearGradient>
+            </defs>
+
+            <!-- ICON MARK -->
+            <g transform="translate(45, 14)">
+              <!-- Isometric Cube Outline -->
+              <!-- Top Rhombus (Sky / Light) -->
+              <polygon points="50,15 85,35 50,55 15,35" fill="none" stroke="url(#goldCube)" stroke-width="1.8"/>
+              
+              <!-- Left Facet (The Architectural Wall Slats) -->
+              <polygon points="15,35 50,55 50,95 15,75" fill="none" stroke="url(#goldCube)" stroke-width="1.8"/>
+              <line x1="24" y1="40" x2="24" y2="80" stroke="url(#goldCube)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <line x1="33" y1="45" x2="33" y2="85" stroke="url(#goldCube)" stroke-width="1.2" stroke-opacity="0.5"/>
+              <line x1="42" y1="50" x2="42" y2="90" stroke="url(#goldCube)" stroke-width="1.2" stroke-opacity="0.5"/>
+
+              <!-- Right Facet (The Living Garden Facet) -->
+              <polygon points="50,55 85,35 85,75 50,95" fill="rgba(56, 161, 105, 0.15)" stroke="url(#goldCube)" stroke-width="1.8"/>
+              <!-- Organic Growth inside right facet -->
+              <path d="M 50 95 Q 68 70 85 45" stroke="#38A169" stroke-width="2.5" fill="none"/>
+              <path d="M 60 78 C 55 72, 60 66, 68 68 C 66 74, 62 76, 60 78 Z" fill="#4EAF6A"/>
+              <path d="M 72 62 C 68 56, 74 50, 80 54 C 78 60, 74 61, 72 62 Z" fill="#4EAF6A"/>
+              <path d="M 50 15 L 50 55" stroke="url(#goldCube)" stroke-width="1.8"/>
+            </g>
+
+            <!-- TYPOGRAPHY -->
+            <g transform="translate(170, 0)">
+              <text x="0" y="65" font-family="'Cinzel', serif" font-size="31" font-weight="700" letter-spacing="0.12em" fill="#FFFFFF">
+                WALL OF GARDENS
+              </text>
+              <line x1="0" y1="84" x2="360" y2="84" stroke="url(#goldCube)" stroke-width="0.8" stroke-opacity="0.35"/>
+              <text x="0" y="106" font-family="'Space Grotesk', sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.28em" fill="#D4AF37">
+                ENGINEERED VERTICAL SANCTUARIES
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="scale-row">
+          <span class="scale-label">Versatility Test:</span>
+          <div class="scale-item">
+            <span>3D Architectural Isometric</span>
+          </div>
+          <div class="scale-item">
+            <span>Direct representation of 'Wall' &rarr; 'Garden'</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -13,11 +13,11 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  */
 
 const SLIDES = [
-  { src: '/project_03.jpg', no: 'P—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
-  { src: '/project_01.jpg', no: 'P—02', name: 'Corporate Plant Maintenance (AMC)', place: 'CyberCity, Gurugram', alt: 'Biophilic executive office plantscaping and regular maintenance' },
-  { src: '/project_04.jpg', no: 'P—03', name: 'Penthouse Rooftop Terrace Lounge', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with pergola, bougainvillea, and deck lighting' },
-  { src: '/project_05.jpg', no: 'P—04', name: 'Bespoke Balcony Garden Sanctuary', place: 'Golf Course Road, Gurugram', alt: 'Luxury apartment balcony with modular living wall and golf course view' },
-  { src: '/project_02.jpg', no: 'P—05', name: 'Executive Boardroom Moss Feature', place: 'Barakhamba Road, New Delhi', alt: 'Preserved moss feature wall with fluted walnut acoustic panels' },
+  { src: '/projects/vertical-gardens/holiday-inn-atrium.webp', no: 'VG—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
+  { src: '/projects/moss-walls/federal-bank-moss-wall.webp', no: 'MW—01', name: 'Federal Bank Executive Moss Wall', place: 'Connaught Place, New Delhi', alt: 'Multi-tone wave preserved Scandinavian reindeer moss wall' },
+  { src: '/projects/vertical-gardens/rooftop-pool-sunset.webp', no: 'TG—01', name: 'Penthouse Rooftop Terrace Lounge', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with infinity pool and deck lighting' },
+  { src: '/projects/moss-walls/wipro-revantage-reception.webp', no: 'MW—04', name: 'Wipro & Revantage Executive Lounge', place: 'CyberCity, Gurugram', alt: 'High-density acoustic preserved moss wall with acrylic corporate branding' },
+  { src: '/projects/moss-walls/hul-unilever-curved-wall.webp', no: 'MW—02', name: 'Hindustan Unilever Atrium Feature', place: 'Corporate Campus, Delhi NCR', alt: 'Curved Scandinavian moss wall with embedded U-monogram and terracotta jali' },
 ];
 
 const HOLD_MS = 7000;

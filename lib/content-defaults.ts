@@ -108,7 +108,7 @@ export const DEFAULT_HOME_CONTENT = {
   closing: {
     badge: 'Sheet 07 — Contact',
     heading: 'Have a space that needs a greener direction?',
-    lede: 'Site visits within Delhi NCR are free and carry no obligation. Tell us about the space and we will come and look at it.',
+    lede: 'Site visits and technical consultations are arranged across Delhi NCR. Tell us about the space and we will inspect it.',
     cta_primary_label: 'Start a Project',
     cta_primary_href: 'mailto:founder@wallofgardens.com',
     cta_secondary_label: 'WhatsApp Us',
@@ -118,15 +118,18 @@ export const DEFAULT_HOME_CONTENT = {
 };
 
 export const DEFAULT_PROJECTS = [
-  { id: 'P-01', name: 'Corporate Headquarters Plant AMC', location: 'Cyber City, Gurugram', type: 'Plant Maintenance (AMC)', area: '650+ plants', status: 'Ongoing AMC', img: '/project_01.jpg', alt: 'Corporate office plantscaping and plant maintenance AMC, Gurugram', order_index: 1, featured: true, description: 'Comprehensive weekly horticultural servicing, soil enrichment, and zero-mortality replacement SLA.' },
-  { id: 'P-02', name: 'Executive Boardroom Moss Art Wall', location: 'Barakhamba Road, Delhi', type: 'Moss Wall', area: '380 sq ft', status: 'Completed', img: '/project_02.jpg', alt: 'Preserved moss wall feature with fluted walnut panels, Delhi', order_index: 2, featured: true, description: 'Zero-irrigation preserved Scandinavian bun and sheet moss with fluted walnut acoustic surround.' },
-  { id: 'P-03', name: 'Holiday Inn Multi-Story Living Wall', location: 'Hospitality Atrium, Delhi NCR (Client details pending)', type: 'Vertical Garden', area: '850 sq ft', status: 'Completed & Maintained', img: '/projects/vertical-gardens/holiday-inn-atrium.jpg', alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens', order_index: 3, featured: true, description: 'Multi-story outdoor living wall integrated with illuminated corporate logo and automated multi-zone drip.' },
-  { id: 'VG-02', name: 'Architectural Staircase Living Columns', location: 'Corporate HQ, Gurugram (Client details pending)', type: 'Vertical Garden', area: '420 sq ft', status: 'Completed', img: '/projects/vertical-gardens/architectural-staircase.jpg', alt: 'Double-height living columns with black fluted architectural louvers', order_index: 7, featured: false, description: 'Double-height vertical living columns alternating with custom black fluted architectural louvers & industrial track lighting.' },
-  { id: 'VG-03', name: 'Courtyard Atrium Skylight Living Wall', location: 'South Delhi (Client details pending)', type: 'Vertical Garden', area: '520 sq ft', status: 'Completed', img: '/projects/vertical-gardens/courtyard-atrium-skylight.jpg', alt: 'Courtyard atrium skylight living wall with carved stone cladding', order_index: 8, featured: false, description: 'Double-height courtyard atrium living wall flanked by carved stone cladding & skylight daylighting.' },
-  { id: 'VG-04', name: 'Resort Poolside Pergola Living Wall', location: 'NCR Resort & Spa (Client details pending)', type: 'Vertical Garden', area: '600 sq ft', status: 'Completed', img: '/projects/vertical-gardens/resort-poolside-pergola.jpg', alt: 'Expansive poolside living wall with teak cabana pergolas', order_index: 9, featured: false, description: 'Expansive poolside living wall with teak cabana pergolas, purple Tradescantia, and ribbon grass.' },
-  { id: 'P-04', name: 'Penthouse Rooftop Terrace Lounge', location: 'Greater Kailash, Delhi', type: 'Terrace Garden', area: '1,200 sq ft', status: 'Completed', img: '/project_04.jpg', alt: 'Rooftop terrace garden at twilight with pergola and bougainvillea', order_index: 4, featured: false, description: 'High-altitude rooftop landscape with slab load calculations, teak decking, pergola, and ambient lighting.' },
-  { id: 'P-05', name: 'High-Rise Balcony Garden Sanctuary', location: 'Golf Course Road, Gurugram', type: 'Balcony Garden', area: '180 sq ft', status: 'Completed', img: '/project_05.jpg', alt: 'Luxury apartment balcony garden with modular living wall, Gurugram', order_index: 5, featured: false, description: 'Zero-runoff drainage containment, modular living wall, and custom planters overlooking golf course.' },
-  { id: 'P-06', name: 'Corporate Campus Living Infrastructure', location: 'Noida Expressway', type: 'Plant Maintenance (AMC)', area: '3 floors', status: 'Ongoing AMC', img: '/project_06.jpg', alt: 'Corporate office plantscaping across multi-floor commercial facility', order_index: 6, featured: false, description: 'Strategic biophilic plant placement mapped to measured lux levels, maintained under corporate SLA.' },
+  { id: 'MW-01', name: 'Federal Bank Executive Boardroom Moss Wall', location: 'Barakhamba Road, Delhi', type: 'Moss Wall', area: '380 sq ft', status: 'Completed', img: '/projects/moss-walls/federal-bank-moss-wall.webp', alt: 'Federal Bank preserved moss wall feature with 3D backlit lettering', order_index: 1, featured: true, description: 'Multi-tone rolling waves of Scandinavian reindeer moss with 3D backlit lettering & slatted wood soffit.' },
+  { id: 'MW-02', name: 'Hindustan Unilever Atrium Feature Wall', location: 'Corporate Atrium, Delhi NCR', type: 'Moss Wall', area: '420 sq ft', status: 'Completed', img: '/projects/moss-walls/hul-unilever-curved-wall.webp', alt: 'Hindustan Unilever curved preserved moss wall', order_index: 2, featured: true, description: 'Curved preserved reindeer moss wall with embedded U-monogram and terracotta jali detailing.' },
+  { id: 'P-03', name: 'Holiday Inn Multi-Story Living Wall', location: 'Hospitality Atrium, Delhi NCR', type: 'Vertical Garden', area: '850 sq ft', status: 'Completed & Maintained', img: '/projects/vertical-gardens/holiday-inn-atrium.webp', alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens', order_index: 3, featured: true, description: 'Multi-story outdoor living wall integrated with illuminated corporate logo and automated multi-zone drip.' },
+  { id: 'MW-04', name: 'Wipro & Revantage Executive Lounge', location: 'Cyber City, Gurugram', type: 'Moss Wall', area: '320 sq ft', status: 'Completed', img: '/projects/moss-walls/wipro-revantage-reception.webp', alt: 'Wipro Revantage executive acoustic moss wall', order_index: 4, featured: true, description: 'High-density forest green acoustic moss wall with precision matte acrylic corporate logos & marble pebble planter.' },
+  { id: 'MW-05', name: 'Puma Leaping Cat Brand Silhouette', location: 'South Delhi Regional Studio', type: 'Moss Wall', area: '240 sq ft', status: 'Completed', img: '/projects/moss-walls/puma-brand-moss-icon.webp', alt: 'Puma leaping cat silhouette preserved moss wall', order_index: 5, featured: true, description: 'Precision CNC-contoured reindeer moss leaping cat suspended on acoustic smoked glass partition.' },
+  { id: 'MW-06', name: 'EXL Global Sculpted Continental World Map', location: 'Noida Expressway Tech Tower', type: 'Moss Wall', area: '460 sq ft', status: 'Completed', img: '/projects/moss-walls/exl-global-moss-world-map.webp', alt: 'EXL Global 3D continental moss world map', order_index: 6, featured: true, description: 'High-relief 3D preserved moss cartography depicting global office networks across continents.' },
+  { id: 'VG-02', name: 'Architectural Staircase Living Columns', location: 'Corporate HQ, Gurugram', type: 'Vertical Garden', area: '420 sq ft', status: 'Completed', img: '/projects/vertical-gardens/architectural-staircase.webp', alt: 'Double-height living columns with black fluted architectural louvers', order_index: 7, featured: false, description: 'Double-height vertical living columns alternating with custom black fluted architectural louvers & industrial track lighting.' },
+  { id: 'VG-03', name: 'Courtyard Atrium Skylight Living Wall', location: 'South Delhi', type: 'Vertical Garden', area: '520 sq ft', status: 'Completed', img: '/projects/vertical-gardens/courtyard-atrium-skylight.webp', alt: 'Courtyard atrium skylight living wall with carved stone cladding', order_index: 8, featured: false, description: 'Double-height courtyard atrium living wall flanked by carved stone cladding & skylight daylighting.' },
+  { id: 'VG-04', name: 'Resort Poolside Pergola Living Wall', location: 'NCR Resort & Spa', type: 'Vertical Garden', area: '600 sq ft', status: 'Completed', img: '/projects/vertical-gardens/resort-poolside-pergola.webp', alt: 'Expansive poolside living wall with teak cabana pergolas', order_index: 9, featured: false, description: 'Expansive poolside living wall with teak cabana pergolas, purple Tradescantia, and ribbon grass.' },
+  { id: 'TG-01', name: 'Penthouse Rooftop Terrace Lounge', location: 'Greater Kailash, Delhi', type: 'Terrace Garden', area: '1,200 sq ft', status: 'Completed', img: '/projects/vertical-gardens/rooftop-pool-sunset.webp', alt: 'Rooftop terrace garden at twilight with infinity pool and pergola', order_index: 10, featured: false, description: 'High-altitude rooftop landscape with slab load calculations, teak decking, pergola, and ambient lighting.' },
+  { id: 'BG-01', name: 'High-Rise Balcony Garden Sanctuary', location: 'Golf Course Road, Gurugram', type: 'Balcony Garden', area: '180 sq ft', status: 'Completed', img: '/projects/modular_system.webp', alt: 'Luxury apartment balcony garden with modular living wall, Gurugram', order_index: 11, featured: false, description: 'Zero-runoff drainage containment, modular living wall, and custom planters overlooking golf course.' },
+  { id: 'AMC-01', name: 'Corporate Campus Living Infrastructure & AMC', location: 'Noida Expressway', type: 'Plant Maintenance (AMC)', area: '3 floors', status: 'Ongoing AMC', img: '/projects/crew_install.webp', alt: 'Corporate office plantscaping across multi-floor commercial facility', order_index: 12, featured: false, description: 'Strategic biophilic plant placement mapped to measured lux levels, maintained under corporate SLA.' },
 ];
 
 export const DEFAULT_TESTIMONIALS = [
@@ -562,7 +565,7 @@ export const DEFAULT_STUDIO_CONTENT = {
   closing: {
     badge: 'Contact',
     heading: 'Come and see the studio, or let us come and see the space.',
-    lede: 'Site visits within Delhi NCR are free and carry no obligation.',
+    lede: 'Site visits and technical consultations are arranged across Delhi NCR.',
     cta_primary_label: 'Book a Site Visit',
     cta_primary_href: 'mailto:founder@wallofgardens.com',
     cta_secondary_label: 'WhatsApp Us',
@@ -574,7 +577,7 @@ export const DEFAULT_CONTACT_CONTENT = {
   banner: {
     badge: 'Sheet 08 — Contact',
     heading: 'Start a conversation.',
-    lede: 'Site visits within Delhi NCR are free and carry no obligation. The fastest way to get an accurate quote is to let us see the space.',
+    lede: 'Site visits and technical consultations are arranged across Delhi NCR. The fastest way to get an accurate quote is to let us see the space.',
     breadcrumb: 'Home / Contact',
   },
   channels: [
@@ -590,7 +593,7 @@ export const DEFAULT_CONTACT_CONTENT = {
     { no: '04', title: 'A photograph, if you have one', desc: 'The single most useful thing to send. Send it by WhatsApp if the form does not suit — a phone photograph is sufficient.' },
   ],
   form: {
-    banner_text: 'Site visits are free within Delhi NCR and carry no obligation. The fastest way to get an accurate scope is to let us see the space.',
+    banner_text: 'Site visits and consultations are arranged within Delhi NCR. The fastest way to get an accurate scope is to let us see the space.',
     submit_label: 'Send Enquiry',
     success_heading: 'Thank you — we will be in touch shortly.',
     success_body: 'We aim to respond within one working day. For anything urgent, call or WhatsApp +91 99909 60669.',
@@ -598,7 +601,7 @@ export const DEFAULT_CONTACT_CONTENT = {
   },
   faqs: [
     { q: 'How quickly can you visit?', a: 'For projects in central Delhi, Gurugram and Noida, usually within a week of enquiry. For peripheral locations or busy periods, allow ten days to two weeks.' },
-    { q: 'Is the site visit really free?', a: 'Yes. Within Delhi NCR, site visits carry no charge and no obligation. We do not tie a visit to a quote acceptance.' },
+    { q: 'How do you conduct site evaluations?', a: 'Within Delhi NCR, our engineering team inspects site conditions, structural load, light and water access to provide an accurate technical scope.' },
     { q: 'How long does a quote take?', a: 'Simple enquiries typically get a scope within three to five working days of the visit. More complex projects take a week to ten days.' },
     { q: 'Do you have a minimum project size?', a: 'Not a formal one. Some of the most interesting spaces we have worked on were small.' },
     { q: 'Can you work with our interior designer or architect?', a: 'Yes. We work from supplied drawings, or we develop the green scope and coordinate with the design team.' },

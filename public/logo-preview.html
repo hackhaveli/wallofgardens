@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Gardens — World-Class Brand Identity Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b140e;
+      --card-bg: rgba(18, 32, 23, 0.7);
+      --card-border: rgba(212, 175, 55, 0.25);
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #997a15;
+      --text-white: #f5f5f0;
+      --text-dim: #9aa89d;
+      --emerald-dark: #07100a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-white);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(34, 73, 49, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 40%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #fff 40%, var(--gold-light) 75%, var(--gold-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    p.subtitle {
+      color: var(--text-dim);
+      font-size: 16px;
+      max-width: 650px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .theme-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .btn-toggle {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.25s ease;
+    }
+
+    .btn-toggle.active, .btn-toggle:hover {
+      background: var(--gold-primary);
+      color: #000;
+      border-color: var(--gold-primary);
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(212, 175, 55, 0.15);
+    }
+
+    .card-tag {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.15);
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .concept-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .concept-desc {
+      font-size: 13.5px;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .logo-canvas {
+      background: #060e08;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      min-height: 260px;
+      transition: background 0.3s ease;
+      position: relative;
+    }
+
+    .logo-canvas.light-mode {
+      background: #ffffff;
+      border-color: #e5e5e5;
+    }
+
+    .palette {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .palette-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 4px;
+    }
+
+    .swatch {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* SVG styling helpers */
+    svg {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">Bespoke Brand Identity Presentation</div>
+      <h1>WALL OF GARDENS</h1>
+      <p class="subtitle">World-class architectural & biophilic logo directions engineered specifically for luxury vertical gardens, high-end terraces, and corporate landscapes.</p>
+      
+      <div class="theme-switch">
+        <button class="btn-toggle active" onclick="setMode('dark')">🌙 Luxury Dark Aesthetic</button>
+        <button class="btn-toggle" onclick="setMode('light')">☀️ Clean Architectural White</button>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- CONCEPT 1 -->
+      <div class="card">
+        <div class="card-tag">Concept 01 · Flagship</div>
+        <h2 class="concept-title">The Engineered Trellis Monogram</h2>
+        <p class="concept-desc">Architectural vertical slats forming a bold 'W', crowned with sculpted biophilic foliage. Represents precision engineering married with living flora.</p>
+        
+        <div class="logo-canvas" id="canvas-1">
+          <svg viewBox="0 0 540 140" width="480" height="124" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gGold1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF2BE"/>
+                <stop offset="45%" stop-color="#D4AF37"/>
+                <stop offset="80%" stop-color="#9A7B1C"/>
+                <stop offset="100%" stop-color="#E9D386"/>
+              </linearGradient>
+              <linearGradient id="gEmerald1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6BB066"/>
+                <stop offset="100%" stop-color="#2D5A2E"/>
+              </linearGradient>
+            </defs>
+            
+            <!-- Emblem Icon -->
+            <g transform="translate(20, 10)">
+              <!-- Slat frame -->
+              <rect x="0" y="0" width="120" height="120" rx="24" fill="none" stroke="url(#gGold1)" stroke-width="1.5" stroke-opacity="0.3"/>
+              <rect x="6" y="6" width="108" height="108" rx="20" fill="none" stroke="url(#gGold1)" stroke-width="0.8" stroke-opacity="0.2"/>
+              
+              <!-- Trellis vertical gridlines -->
+              <line x1="36" y1="20" x2="36" y2="100" stroke="url(#gGold1)" stroke-width="1" stroke-opacity="0.25"/>
+              <line x1="60" y1="16" x2="60" y2="104" stroke="url(#gGold1)" stroke-width="1" stroke-opacity="0.25"/>
+              <line x1="84" y1="20" x2="84" y2="100" stroke="url(#gGold1)" stroke-width="1" stroke-opacity="0.25"/>
+              
+              <!-- Monogram W -->
+              <path d="M 30 40 L 46 95 L 60 62 L 74 95 L 90 40" 
+                    fill="none" stroke="url(#gGold1)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 30 40 L 46 95 L 60 62 L 74 95 L 90 40" 
+                    fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                    
+              <!-- Central Crown Leaf -->
+              <path d="M 60 22 C 53 32, 55 45, 60 52 C 65 45, 67 32, 60 22 Z" fill="url(#gEmerald1)" stroke="url(#gGold1)" stroke-width="1"/>
+              <!-- Wing Leaves -->
+              <path d="M 46 30 C 40 37, 42 47, 48 51 C 51 45, 50 36, 46 30 Z" fill="url(#gEmerald1)" stroke="url(#gGold1)" stroke-width="0.8"/>
+              <path d="M 74 30 C 80 37, 78 47, 72 51 C 69 45, 70 36, 74 30 Z" fill="url(#gEmerald1)" stroke="url(#gGold1)" stroke-width="0.8"/>
+            </g>
+
+            <!-- Wordmark Typography -->
+            <g transform="translate(165, 0)">
+              <text x="0" y="65" font-family="'Cinzel', serif" font-size="30" font-weight="700" letter-spacing="0.12em" fill="currentColor" class="theme-text">
+                WALL <tspan fill="url(#gGold1)" font-style="italic" font-weight="500">of</tspan> GARDENS
+              </text>
+              <line x1="2" y1="82" x2="335" y2="82" stroke="url(#gGold1)" stroke-width="1" stroke-opacity="0.35"/>
+              <text x="2" y="103" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" letter-spacing="0.32em" fill="#d4af37">
+                LIVING ARCHITECTURE · ENGINEERED
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="palette">
+          <span class="palette-label">Palette:</span>
+          <div class="swatch" style="background: #0A140E;" title="Imperial Forest Noir"></div>
+          <div class="swatch" style="background: #D4AF37;" title="Brushed Champagne Gold"></div>
+          <div class="swatch" style="background: #4A8545;" title="Biophilic Leaf Green"></div>
+          <div class="swatch" style="background: #F4F3EC;" title="Architectural Bone"></div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 2 -->
+      <div class="card">
+        <div class="card-tag">Concept 02 · Heritage</div>
+        <h2 class="concept-title">The Royal Sanctuary Arch</h2>
+        <p class="concept-desc">An iconic architectural arch symbolizing an oasis gateway. Ideal for luxury 5-star hospitality, premium penthouses, and prestige estates.</p>
+        
+        <div class="logo-canvas" id="canvas-2">
+          <svg viewBox="0 0 540 140" width="480" height="124" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gGold2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FCEAB3"/>
+                <stop offset="50%" stop-color="#C5A028"/>
+                <stop offset="100%" stop-color="#E8D184"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Emblem Icon -->
+            <g transform="translate(30, 8)">
+              <!-- Arch Outer & Inner -->
+              <path d="M 20 100 L 20 50 A 35 35 0 0 1 90 50 L 90 100 Z" 
+                    fill="none" stroke="url(#gGold2)" stroke-width="1.8" stroke-opacity="0.8"/>
+              <path d="M 28 100 L 28 52 A 27 27 0 0 1 82 52 L 82 100 Z" 
+                    fill="none" stroke="url(#gGold2)" stroke-width="1" stroke-opacity="0.35"/>
+              
+              <!-- Sunburst / Living Radiance -->
+              <line x1="55" y1="20" x2="55" y2="34" stroke="url(#gGold2)" stroke-width="1.5"/>
+              <line x1="38" y1="26" x2="44" y2="38" stroke="url(#gGold2)" stroke-width="1.2"/>
+              <line x1="72" y1="26" x2="66" y2="38" stroke="url(#gGold2)" stroke-width="1.2"/>
+
+              <!-- Symmetrical Foliage Growth -->
+              <path d="M 55 96 L 55 52" stroke="url(#gGold2)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 55 82 C 43 78, 40 68, 42 62 C 48 66, 52 74, 55 82 Z" fill="url(#gGold2)" opacity="0.9"/>
+              <path d="M 55 82 C 67 78, 70 68, 68 62 C 62 66, 58 74, 55 82 Z" fill="url(#gGold2)" opacity="0.9"/>
+              <path d="M 55 64 C 47 60, 45 52, 47 47 C 51 50, 53 57, 55 64 Z" fill="url(#gGold2)" opacity="0.9"/>
+              <path d="M 55 64 C 63 60, 65 52, 63 47 C 59 50, 57 57, 55 64 Z" fill="url(#gGold2)" opacity="0.9"/>
+              <circle cx="55" cy="46" r="3" fill="#FFF2C6"/>
+            </g>
+
+            <!-- Wordmark Typography -->
+            <g transform="translate(165, 0)">
+              <text x="0" y="65" font-family="'Playfair Display', serif" font-size="28" font-weight="600" letter-spacing="0.08em" fill="currentColor" class="theme-text">
+                WALL <tspan font-style="italic" font-weight="400" fill="url(#gGold2)">of</tspan> GARDENS
+              </text>
+              <line x1="0" y1="82" x2="330" y2="82" stroke="url(#gGold2)" stroke-width="0.8" stroke-opacity="0.3"/>
+              <text x="0" y="103" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="600" letter-spacing="0.26em" fill="#c5a028">
+                VERTICAL ECOSYSTEMS &amp; LANDSCAPES
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="palette">
+          <span class="palette-label">Palette:</span>
+          <div class="swatch" style="background: #0E1B13;" title="Crest Emerald"></div>
+          <div class="swatch" style="background: #C5A028;" title="Imperial Gold"></div>
+          <div class="swatch" style="background: #E8D184;" title="Warm Highlight"></div>
+          <div class="swatch" style="background: #FFFFFF;" title="Pristine"></div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 3 -->
+      <div class="card">
+        <div class="card-tag">Concept 03 · Modernist</div>
+        <h2 class="concept-title">The Biophilic Slats (Swiss Modern)</h2>
+        <p class="concept-desc">Ultra-clean geometric minimalism. Five structural wall modules seamlessly blooming into an organic living canopy. Highly scalable down to a 16px favicon.</p>
+        
+        <div class="logo-canvas" id="canvas-3">
+          <svg viewBox="0 0 540 140" width="480" height="124" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gGreen3" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#1B3E25"/>
+                <stop offset="60%" stop-color="#347C49"/>
+                <stop offset="100%" stop-color="#6DC880"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Emblem Icon -->
+            <g transform="translate(30, 20)">
+              <!-- Slat 1 -->
+              <path d="M 12 85 L 12 55 C 12 45, 20 40, 20 40 C 20 40, 20 50, 20 85 Z" fill="#D4AF37"/>
+              <!-- Slat 2 -->
+              <path d="M 28 85 L 28 35 C 28 22, 40 15, 40 15 C 40 15, 40 30, 40 85 Z" fill="#E6C65A"/>
+              <!-- Slat 3 (Center Pinnacle) -->
+              <path d="M 48 85 L 48 20 C 48 5, 60 0, 60 0 C 60 0, 60 18, 60 85 Z" fill="#FFFFFF"/>
+              <!-- Slat 4 -->
+              <path d="M 68 85 L 68 30 C 68 15, 80 22, 80 22 C 80 22, 80 35, 80 85 Z" fill="#E6C65A"/>
+              <!-- Slat 5 -->
+              <path d="M 88 85 L 88 50 C 88 40, 96 45, 96 45 C 96 45, 96 55, 96 85 Z" fill="#D4AF37"/>
+              <!-- Base structural foundation line -->
+              <line x1="8" y1="92" x2="100" y2="92" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Wordmark Typography -->
+            <g transform="translate(165, 0)">
+              <text x="0" y="65" font-family="'Space Grotesk', sans-serif" font-size="29" font-weight="700" letter-spacing="0.08em" fill="currentColor" class="theme-text">
+                WALL <span style="font-weight:300; opacity:0.8;">OF</span> GARDENS
+              </text>
+              <line x1="0" y1="82" x2="330" y2="82" stroke="#D4AF37" stroke-width="1" stroke-opacity="0.4"/>
+              <text x="0" y="103" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" letter-spacing="0.28em" fill="#6DC880">
+                BIOPHILIC ARCHITECTURE &amp; DESIGN
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="palette">
+          <span class="palette-label">Palette:</span>
+          <div class="swatch" style="background: #111A14;" title="Modern Basalt"></div>
+          <div class="swatch" style="background: #6DC880;" title="Vibrant Flora"></div>
+          <div class="swatch" style="background: #D4AF37;" title="Brushed Gold"></div>
+          <div class="swatch" style="background: #FFFFFF;" title="Pure White"></div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 4 -->
+      <div class="card">
+        <div class="card-tag">Concept 04 · Pure Luxury</div>
+        <h2 class="concept-title">The Sovereign Shield Crest</h2>
+        <p class="concept-desc">An elite geometric seal uniting a living wall cross-section with intertwining vines. Tailor-made for executive boardrooms and government / corporate certifications.</p>
+        
+        <div class="logo-canvas" id="canvas-4">
+          <svg viewBox="0 0 540 140" width="480" height="124" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gShield" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F5E3A9"/>
+                <stop offset="50%" stop-color="#C29D38"/>
+                <stop offset="100%" stop-color="#8E6C15"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Emblem Icon -->
+            <g transform="translate(30, 10)">
+              <!-- Diamond Shield Outer -->
+              <polygon points="55,8 98,52 55,96 12,52" fill="none" stroke="url(#gShield)" stroke-width="2"/>
+              <polygon points="55,16 90,52 55,88 20,52" fill="none" stroke="url(#gShield)" stroke-width="0.8" stroke-opacity="0.4"/>
+              
+              <!-- Internal W Lattice -->
+              <path d="M 28 42 L 42 74 L 55 50 L 68 74 L 82 42" fill="none" stroke="url(#gShield)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="55" cy="34" r="4" fill="url(#gShield)"/>
+              <path d="M 55 34 C 50 24, 52 18, 55 18 C 58 18, 60 24, 55 34 Z" fill="#6BB066"/>
+            </g>
+
+            <!-- Wordmark Typography -->
+            <g transform="translate(165, 0)">
+              <text x="0" y="65" font-family="'Cinzel', serif" font-size="28" font-weight="700" letter-spacing="0.14em" fill="currentColor" class="theme-text">
+                WALL OF GARDENS
+              </text>
+              <line x1="0" y1="82" x2="330" y2="82" stroke="url(#gShield)" stroke-width="0.8" stroke-opacity="0.35"/>
+              <text x="0" y="103" font-family="'Cinzel', serif" font-size="10.5" font-weight="600" letter-spacing="0.35em" fill="#C29D38">
+                EST. 2021 · NEW DELHI
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="palette">
+          <span class="palette-label">Palette:</span>
+          <div class="swatch" style="background: #09130D;" title="Deep Jade"></div>
+          <div class="swatch" style="background: #C29D38;" title="Antique Gold"></div>
+          <div class="swatch" style="background: #F5E3A9;" title="Warm Sunlight"></div>
+          <div class="swatch" style="background: #6BB066;" title="Botanical Accents"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Live Interactive Mockup Switcher -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 32px; text-align: center;">
+      <h3 style="font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold-light); margin-bottom: 8px;">Direct Side-by-Side Comparison</h3>
+      <p style="color: var(--text-dim); font-size: 14px; max-width: 600px; margin: 0 auto 20px;">
+        All 4 concepts are 100% vector-based, responsive, and ready to be exported for web (SVG/PNG/Favicon), print (Business cards, Brochures), or architectural brass signage.
+      </p>
+      <div style="display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+        <span style="color: var(--gold-light); font-weight: 600; font-size: 14px; align-self: center;">Which direction do you prefer?</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setMode(mode) {
+      const canvases = document.querySelectorAll('.logo-canvas');
+      const texts = document.querySelectorAll('.theme-text');
+      const buttons = document.querySelectorAll('.btn-toggle');
+      
+      buttons.forEach(b => b.classList.remove('active'));
+      
+      if (mode === 'light') {
+        buttons[1].classList.add('active');
+        canvases.forEach(c => c.classList.add('light-mode'));
+        texts.forEach(t => t.setAttribute('fill', '#0c1810'));
+      } else {
+        buttons[0].classList.add('active');
+        canvases.forEach(c => c.classList.remove('light-mode'));
+        texts.forEach(t => t.setAttribute('fill', '#f5f5f0'));
+      }
+    }
+  </script>
+</body>
+</html>

@@ -17,13 +17,13 @@ interface MossProject {
 }
 
 const CATEGORIES = [
-  { key: 'all', label: 'All Studio Projects', count: 16 },
-  { key: 'Corporate Boardroom', label: 'Executive Boardrooms', count: 3 },
-  { key: 'Brand Logo Inlay', label: 'Brand Logos & Inlays', count: 4 },
-  { key: 'Enterprise Reception', label: 'Corporate Atriums', count: 3 },
-  { key: '3D Art & Sculpture', label: '3D Maps & Sculpture', count: 2 },
-  { key: 'Multi-Texture Living Facade', label: 'Multi-Texture Facades', count: 2 },
-  { key: 'Architectural Feature', label: 'Timber & Acoustic Insets', count: 2 },
+  { key: 'all', label: 'All Studio Projects' },
+  { key: 'Brand Logo Inlay', label: 'Brand Logos & Inlays' },
+  { key: 'Enterprise Reception', label: 'Corporate Atriums & Lounges' },
+  { key: 'Corporate Boardroom', label: 'Executive Boardrooms' },
+  { key: '3D Art & Sculpture', label: '3D Maps & Cartography' },
+  { key: 'Architectural Feature', label: 'Timber & Acoustic Insets' },
+  { key: 'Multi-Texture Living Facade', label: 'Multi-Texture Facades' },
 ];
 
 export default function MossGallery() {

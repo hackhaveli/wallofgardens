@@ -377,19 +377,19 @@ export default function MossWallPage() {
           <div className="oth">
             <Link className="rv" href="/services/vertical-gardens">
               <div className="plate rvp has-img" data-n="Living Wall — Lobby Feature">
-                <img src="/project_03.jpg" alt="Vertical living wall" />
+                <img src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Vertical living wall" />
               </div>
               <h3>Vertical Gardens</h3>
             </Link>
             <Link className="rv dl1" href="/services/plantscaping">
               <div className="plate rvp has-img" data-n="Office Indoor Planting — Workspace">
-                <img src="/project_06.jpg" alt="Office Indoor Planting" />
+                <img src="/projects/grow_lights.webp" alt="Office Indoor Planting" />
               </div>
               <h3>Corporate Plantscaping</h3>
             </Link>
             <Link className="rv dl2" href="/services/corporate-landscaping">
               <div className="plate rvp has-img" data-n="Corporate Landscape — Gurugram Campus">
-                <img src="/project_01.jpg" alt="Corporate landscape" />
+                <img src="/projects/vertical-gardens/commercial-plaza-uplight.webp" alt="Corporate landscape" />
               </div>
               <h3>Corporate Landscaping</h3>
             </Link>
