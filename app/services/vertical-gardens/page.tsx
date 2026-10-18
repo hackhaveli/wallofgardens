@@ -4,8 +4,8 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Vertical Gardens & Living Walls — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
-  description: 'India’s #1 engineered living walls and vertical gardens. Multi-zone automated drip irrigation, structural fabrication, and in-house horticultural maintenance across Delhi NCR, Gurugram, Bengaluru, Mumbai, Pune, and Hyderabad.',
+  title: 'Vertical Gardens & Living Walls — Cost, Installation & Design | Wall of Gardens',
+  description: 'India’s #1 engineered vertical gardens and living walls. Cost per sq ft, multi-zone automated drip irrigation, structural load engineering, and in-house AMC maintenance across Delhi NCR, Gurugram, Bengaluru, Mumbai, Pune, and Hyderabad.',
   alternates: { canonical: '/services/vertical-gardens' },
   openGraph: {
     title: 'Vertical Gardens & Living Walls — Engineered Architecture | Wall of Gardens',
@@ -15,18 +15,96 @@ export const metadata: Metadata = {
   },
 };
 
+const VERTICAL_GARDEN_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://wallofgardens.com/services/vertical-gardens/#service',
+      name: 'Vertical Garden Installation & Living Wall Engineering',
+      serviceType: 'Vertical Garden Installation',
+      provider: {
+        '@type': 'Organization',
+        name: 'Wall of Gardens',
+        url: 'https://wallofgardens.com',
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Delhi NCR' },
+        { '@type': 'City', name: 'New Delhi' },
+        { '@type': 'City', name: 'Gurugram' },
+        { '@type': 'City', name: 'Noida' },
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Mumbai' },
+        { '@type': 'City', name: 'Pune' },
+        { '@type': 'City', name: 'Hyderabad' },
+      ],
+      description: 'Engineered natural, hybrid, and artificial vertical living walls with 3-zone pressure-compensated automated drip irrigation and root-barrier containment.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'INR',
+        lowPrice: '950',
+        highPrice: '1850',
+        offerCount: '8',
+        description: 'Vertical garden installation cost typically ranges from ₹950 to ₹1,850+ per square foot depending on irrigation automation and plant density.',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://wallofgardens.com/services/vertical-gardens/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much does a vertical garden cost per square foot in India?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Professional vertical garden installation in India typically costs between ₹950 and ₹1,850 per sq. ft. This includes galvanized steel sub-framing, modular geotextile or cassette holders, automated multi-zone drip irrigation plumbing, digital timer controllers, drainage trays, and premium acclimatized plant species.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does automated irrigation work on a vertical garden?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Wall of Gardens engineers multi-zone pressure-compensating drip irrigation lines zoned by height. Independent solenoid valves deliver calibrated water volumes to upper, middle, and lower sections so upper bands do not dry out while bottom bands avoid root saturation.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What plants are best for outdoor and indoor vertical gardens in Delhi NCR and India?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'For outdoor living walls, hardy cultivars like Chlorophytum (Spider Plant), Syngonium, Tradescantia, Asparagus Fern, and Ophiopogon thrive in Indian climates. For indoor vertical gardens, Philodendron, Epipremnum (Money Plant), Aglaonema, and Sansevieria provide lush greenery with minimal daylight.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What maintenance is required for a living wall?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Living walls require bi-weekly or monthly inspections to prune excess growth, check dripper flow rates, administer organic liquid bio-nutrients, and clean drainage channels. Wall of Gardens provides full Annual Maintenance Contracts (AMC) with guaranteed plant replacements.',
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function VerticalGardensPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(VERTICAL_GARDEN_SCHEMA) }}
+      />
       <Navbar />
 
       <section className="bnr sheet on-dark">
         <div className="shell">
-          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Vertical Gardens</div>
-          <div className="rule-tag"><span className="tag gold">Sheet 02 — Scope of works</span></div>
-          <h1 className="d1">Vertical Gardens</h1>
+          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Vertical Gardens &amp; Living Walls</div>
+          <div className="rule-tag"><span className="tag gold">Sheet 02 — Living Wall Engineering</span></div>
+          <h1 className="d1">Vertical Gardens &amp; Living Walls</h1>
           <p className="lede light">
-            Natural, hybrid and artificial living walls for offices, lobbies, façades and homes. <em className="g">The structure, irrigation and drainage are designed before a single plant is specified.</em>
+            Natural, hybrid and artificial living walls for offices, lobbies, façades and luxury residences across Delhi NCR, Bengaluru, and Mumbai. <em className="g">The structure, irrigation and drainage are designed before a single plant is specified.</em>
           </p>
         </div>
       </section>

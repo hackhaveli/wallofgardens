@@ -4,29 +4,107 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Preserved Scandinavian Moss Walls — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
-  description: 'Zero-irrigation preserved moss walls, acoustic green panels, and branded corporate moss art. 100% natural Scandinavian moss with zero maintenance across Delhi NCR, Bengaluru, Mumbai, and Pune.',
+  title: 'Preserved Moss Walls & Moss Art — Cost, Design & Decor | Wall of Gardens',
+  description: 'India’s #1 preserved moss walls, acoustic green panels, and branded corporate moss logos. 100% natural Scandinavian moss with zero irrigation and zero maintenance across Delhi NCR, Bengaluru, Mumbai, and Pune.',
   alternates: { canonical: '/services/moss-wall' },
   openGraph: {
-    title: 'Preserved Moss Walls — Acoustic Biophilic Art | Wall of Gardens',
-    description: 'No water, no sunlight, no maintenance. Acoustic sound-dampening preserved moss walls for luxury offices and residences.',
+    title: 'Preserved Moss Walls & Moss Art — Acoustic Biophilic Art | Wall of Gardens',
+    description: 'No water, no sunlight, zero maintenance. Acoustic sound-dampening preserved moss walls for luxury offices and residences.',
     url: 'https://wallofgardens.com/services/moss-wall',
     images: [{ url: '/project_02.jpg', width: 1200, height: 630, alt: 'Preserved Moss Wall by Wall of Gardens' }],
   },
 };
 
+const MOSS_WALL_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://wallofgardens.com/services/moss-wall/#service',
+      name: 'Preserved Moss Wall Design & Installation',
+      serviceType: 'Moss Wall Installation',
+      provider: {
+        '@type': 'Organization',
+        name: 'Wall of Gardens',
+        url: 'https://wallofgardens.com',
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Delhi NCR' },
+        { '@type': 'City', name: 'New Delhi' },
+        { '@type': 'City', name: 'Gurugram' },
+        { '@type': 'City', name: 'Noida' },
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Mumbai' },
+        { '@type': 'City', name: 'Pune' },
+        { '@type': 'City', name: 'Hyderabad' },
+      ],
+      description: 'Zero-irrigation preserved Scandinavian moss walls, acoustic sound-absorbing green panels, and custom corporate brand logo inlays.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'INR',
+        lowPrice: '1400',
+        highPrice: '2800',
+        offerCount: '6',
+        description: 'Preserved moss walls typically range from ₹1,400 to ₹2,800 per square foot depending on moss varieties (Reindeer, Bun, Flat) and custom brand inlays.',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://wallofgardens.com/services/moss-wall/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much does a preserved moss wall cost in India?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Preserved moss walls in India typically cost between ₹1,400 and ₹2,800 per square foot depending on the blend of imported Scandinavian Bun, Flat, and Reindeer moss, frame finishing, and illuminated corporate logo integration.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does a preserved moss wall require water or sunlight?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Preserved moss walls require zero water, zero sunlight, zero soil, and zero irrigation plumbing. The moss is preserved using natural glycerin and organic plant dyes, making it completely maintenance-free.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does a preserved moss wall last indoors?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'When installed indoors away from direct outdoor UV sunlight and high humidity swings, preserved moss walls retain their vibrant color, soft texture, and acoustic dampening properties for 5 to 10+ years.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do moss walls improve room acoustics in corporate offices?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The dense three-dimensional cellular structure of preserved Scandinavian moss absorbs high and mid-frequency sound waves, delivering a Noise Reduction Coefficient (NRC) rating of up to 0.75, ideal for executive boardrooms, video conference halls, and lively reception lobbies.',
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function MossWallPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(MOSS_WALL_SCHEMA) }}
+      />
       <Navbar />
 
       <section className="bnr sheet on-dark">
         <div className="shell">
-          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Moss Walls</div>
-          <div className="rule-tag"><span className="tag gold">Sheet 05 — Scope of works</span></div>
-          <h1 className="d1">Moss Walls</h1>
+          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Preserved Moss Walls &amp; Moss Art</div>
+          <div className="rule-tag"><span className="tag gold">Sheet 05 — Preserved Moss Art &amp; Acoustics</span></div>
+          <h1 className="d1">Preserved Moss Walls &amp; Moss Art</h1>
           <p className="lede light">
-            Preserved moss for interiors. No irrigation, no sunlight, no watering schedule for anyone to forget — <em className="g">and no plastic, either.</em>
+            Zero-irrigation preserved Scandinavian moss walls for luxury offices, executive boardrooms, and modern residences. No irrigation, no sunlight, no watering schedule — <em className="g">and 100% natural certified acoustic greenery.</em>
           </p>
         </div>
       </section>

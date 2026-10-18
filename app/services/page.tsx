@@ -175,8 +175,8 @@ export default function ServicesPage() {
                 <span>Regular scheduled visits, organic feeding, pest control &amp; replacement guarantee for offices &amp; residences.</span>
               </Link>
               <Link href="/services/plantscaping" className="sv-space-item">
-                <strong>Corporate Plantscaping</strong>
-                <span>Indoor office planting installed and routinely serviced under SLA maintenance.</span>
+                <strong>Office Plantation &amp; Corporate Plantscaping</strong>
+                <span>Indoor office plants installed and routinely serviced under SLA maintenance.</span>
               </Link>
               <Link href="/services/balcony-gardens" className="sv-space-item">
                 <strong>Balcony Gardens</strong>

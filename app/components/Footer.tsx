@@ -22,7 +22,7 @@ export default function Footer() {
             <Link href="/services/terrace-garden">Terrace Gardens</Link>
             <Link href="/services/balcony-gardens">Balcony Gardens</Link>
             <Link href="/services/moss-wall">Moss Walls</Link>
-            <Link href="/services/plantscaping">Corporate Plantscaping</Link>
+            <Link href="/services/plantscaping">Office Plantation &amp; Plantscaping</Link>
           </div>
           <div>
             <h4>Studio</h4>

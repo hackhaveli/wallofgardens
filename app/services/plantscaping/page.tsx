@@ -4,29 +4,105 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Corporate Plantscaping & Office Indoor Plants — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
-  description: 'Indoor office plant hire, biophilic workspace design, and scheduled plant AMC maintenance across Delhi NCR, Gurugram Cyber City, Bengaluru, Mumbai, and Pune. Mapped against indoor daylight lux zones.',
+  title: 'Office Plantation & Corporate Plantscaping Services — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'India’s #1 office plantation and corporate indoor plantscaping services. Indoor office plants, sub-irrigation desktop planters, floor cultivars, and scheduled plant maintenance AMC across Delhi NCR, Gurugram Cyber City, Noida, Bengaluru, and Mumbai.',
   alternates: { canonical: '/services/plantscaping' },
   openGraph: {
-    title: 'Corporate Plantscaping & Workplace Biophilic Design | Wall of Gardens',
-    description: 'Indoor plant hire and purchase with scheduled maintenance for offices and workplaces across Delhi NCR, Bengaluru, and Mumbai.',
+    title: 'Office Plantation & Corporate Plantscaping Services | Wall of Gardens',
+    description: 'Indoor office plant hire, installation, and scheduled maintenance for corporate workplaces across Delhi NCR, Bengaluru, and Mumbai.',
     url: 'https://wallofgardens.com/services/plantscaping',
-    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Corporate Plantscaping by Wall of Gardens' }],
+    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Office Plantation by Wall of Gardens' }],
   },
+};
+
+const OFFICE_PLANTATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://wallofgardens.com/services/plantscaping/#service',
+      name: 'Office Plantation & Corporate Plantscaping Services',
+      serviceType: 'Office Plantation',
+      provider: {
+        '@type': 'Organization',
+        name: 'Wall of Gardens',
+        url: 'https://wallofgardens.com',
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Delhi NCR' },
+        { '@type': 'City', name: 'New Delhi' },
+        { '@type': 'City', name: 'Gurugram' },
+        { '@type': 'City', name: 'Noida' },
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Mumbai' },
+        { '@type': 'City', name: 'Pune' },
+        { '@type': 'City', name: 'Hyderabad' },
+      ],
+      description: 'Comprehensive office plantation, indoor desk plants, biophilic workspace design, sub-irrigation planters, and scheduled plant maintenance AMC.',
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        description: 'Free site assessment and custom indoor office plantation quotes.',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://wallofgardens.com/services/plantscaping/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What are office plantation services?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Office plantation services encompass the design, supply, installation, and ongoing maintenance of live indoor plants across corporate workplaces, reception lobbies, executive cabins, and cafeterias to enhance air quality, biophilic wellness, and workspace acoustics.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Which indoor plants are best for office plantation in India?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Top air-purifying indoor plants for air-conditioned corporate offices include Sansevieria (Snake Plant), ZZ Plant (Zamioculcas zamiifolia), Aglaonema (Chinese Evergreen), Philodendron, Peace Lily, and Ficus lyrata (Fiddle Leaf Fig), which thrive under calibrated indoor LED lighting.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Wall of Gardens provide plant replacement in office plantation contracts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Under our comprehensive office plantation AMC, any plant that shows signs of decline or damage is replaced promptly with a fresh, acclimatized nursery specimen at zero additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does office plantation maintenance work in corporate facilities?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our trained, background-verified horticultural crew visits your office on scheduled weekly or bi-weekly cycles during non-intrusive office hours, handling watering, organic fertilization, leaf cleaning, and health monitoring with zero water spillage.',
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export default function PlantscapingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(OFFICE_PLANTATION_SCHEMA) }}
+      />
       <Navbar />
 
       <section className="bnr sheet on-dark">
         <div className="shell">
-          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Corporate Plantscaping</div>
-          <div className="rule-tag"><span className="tag gold">Sheet 06 — Scope of works</span></div>
-          <h1 className="d1">Corporate Plantscaping</h1>
+          <div className="crumb"><Link href="/">Home</Link> / <Link href="/services">Services</Link> / Office Plantation &amp; Plantscaping</div>
+          <div className="rule-tag"><span className="tag gold">Sheet 06 — Office Plantation &amp; Scope of Works</span></div>
+          <h1 className="d1">Office Plantation &amp; Corporate Plantscaping</h1>
           <p className="lede light">
-            Indoor planting for offices and workplaces. We specify it against the light your floor actually gets, install it, and keep it alive on a scheduled contract. <em className="g">The plants are yours; the upkeep is ours.</em>
+            Indoor office plantation for corporate headquarters, facilities, and workspaces. We specify cultivars against the light your floor actually gets, install with sub-irrigation, and keep them perpetually lush on a scheduled AMC contract. <em className="g">The plants are yours; the upkeep is ours.</em>
           </p>
         </div>
       </section>

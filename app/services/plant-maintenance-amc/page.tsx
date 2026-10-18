@@ -67,9 +67,53 @@ const FAQS = [
   },
 ];
 
+const PLANT_AMC_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://wallofgardens.com/services/plant-maintenance-amc/#service',
+      name: 'Corporate Plant Maintenance AMC & Office Plant Care',
+      serviceType: 'Plant Maintenance Service',
+      provider: {
+        '@type': 'Organization',
+        name: 'Wall of Gardens',
+        url: 'https://wallofgardens.com',
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Delhi NCR' },
+        { '@type': 'City', name: 'New Delhi' },
+        { '@type': 'City', name: 'Gurugram' },
+        { '@type': 'City', name: 'Noida' },
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Mumbai' },
+        { '@type': 'City', name: 'Pune' },
+        { '@type': 'City', name: 'Hyderabad' },
+      ],
+      description: 'Annual Maintenance Contracts (AMC) for corporate office plants, living walls, and commercial campuses with weekly visits and 100% free plant replacement SLA.',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://wallofgardens.com/services/plant-maintenance-amc/#faq',
+      mainEntity: FAQS.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    },
+  ],
+};
+
 export default function PlantMaintenanceAMCPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PLANT_AMC_SCHEMA) }}
+      />
       <Navbar />
 
       {/* LUXURY BANNER */}
