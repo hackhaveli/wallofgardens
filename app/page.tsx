@@ -42,8 +42,15 @@ const STEPS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Wall of Gardens — Living Architecture, Engineered | Delhi NCR',
-  description: 'Vertical gardens, terraces and living walls engineered for corporate and premium residential spaces across Delhi NCR. Design, installation and maintenance under one team.',
+  title: 'Wall of Gardens — Living Architecture, Vertical Gardens & Plant AMC | Delhi NCR & Pan-India',
+  description: 'India’s premier studio for living walls, vertical gardens, corporate plant AMC, preserved moss walls, and terrace gardens across Delhi NCR, Gurugram, Bengaluru, Mumbai, Pune, and Hyderabad.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Wall of Gardens — Living Architecture & Engineered Vertical Gardens',
+    description: 'Engineered vertical gardens, corporate plant maintenance AMC, and luxury biophilic spaces across Delhi NCR, Bengaluru, Mumbai, Pune, and Hyderabad.',
+    url: 'https://wallofgardens.com',
+    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Living Architecture' }],
+  },
 };
 
 export default async function Home() {

@@ -4,8 +4,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Preserved Moss Walls — Interior Green Features | Wall of Gardens',
-  description: 'Preserved moss walls, moss logos and interior green features for offices and commercial interiors across Delhi NCR. No irrigation, no sunlight, no watering schedule.',
+  title: 'Preserved Scandinavian Moss Walls — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'Zero-irrigation preserved moss walls, acoustic green panels, and branded corporate moss art. 100% natural Scandinavian moss with zero maintenance across Delhi NCR, Bengaluru, Mumbai, and Pune.',
+  alternates: { canonical: '/services/moss-wall' },
+  openGraph: {
+    title: 'Preserved Moss Walls — Acoustic Biophilic Art | Wall of Gardens',
+    description: 'No water, no sunlight, no maintenance. Acoustic sound-dampening preserved moss walls for luxury offices and residences.',
+    url: 'https://wallofgardens.com/services/moss-wall',
+    images: [{ url: '/project_02.jpg', width: 1200, height: 630, alt: 'Preserved Moss Wall by Wall of Gardens' }],
+  },
 };
 
 export default function MossWallPage() {

@@ -4,8 +4,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Vertical Gardens & Living Walls — Delhi NCR | Wall of Gardens',
-  description: 'Natural, hybrid and artificial vertical gardens for offices, lobbies, facades and homes across Delhi NCR. Structure, zoned irrigation and drainage engineered before planting.',
+  title: 'Vertical Gardens & Living Walls — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'India’s #1 engineered living walls and vertical gardens. Multi-zone automated drip irrigation, structural fabrication, and in-house horticultural maintenance across Delhi NCR, Gurugram, Bengaluru, Mumbai, Pune, and Hyderabad.',
+  alternates: { canonical: '/services/vertical-gardens' },
+  openGraph: {
+    title: 'Vertical Gardens & Living Walls — Engineered Architecture | Wall of Gardens',
+    description: 'Natural, hybrid and artificial living walls with automated multi-zone drip irrigation for corporate atriums and luxury residences.',
+    url: 'https://wallofgardens.com/services/vertical-gardens',
+    images: [{ url: '/projects/vertical-gardens/holiday-inn-atrium.jpg', width: 1200, height: 630, alt: 'Vertical Gardens by Wall of Gardens' }],
+  },
 };
 
 export default function VerticalGardensPage() {

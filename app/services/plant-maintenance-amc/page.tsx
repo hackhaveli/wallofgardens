@@ -5,8 +5,15 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Plant Maintenance Service (AMC) — Delhi NCR | Wall of Gardens',
-  description: 'Annual Maintenance Contracts (AMC) for corporate office plants, living walls, terrace gardens, and commercial spaces across Delhi NCR. Scheduled expert visits, organic nutrition, pest control, and guaranteed plant replacements.',
+  title: 'Corporate Plant Maintenance AMC — Delhi NCR, Bangalore, Mumbai | Wall of Gardens',
+  description: 'India’s leading Annual Maintenance Contracts (AMC) for corporate office plants, living walls, and commercial campuses. Scheduled visits, organic nutrition, and 100% free plant replacement SLA guarantee.',
+  alternates: { canonical: '/services/plant-maintenance-amc' },
+  openGraph: {
+    title: 'Corporate Plant Maintenance AMC — Zero Mortality SLA | Wall of Gardens',
+    description: 'Scheduled horticultural care, non-toxic bio pest control, and guaranteed plant replacements across Delhi NCR, Bengaluru, Mumbai, and Pune.',
+    url: 'https://wallofgardens.com/services/plant-maintenance-amc',
+    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Plant Maintenance AMC by Wall of Gardens' }],
+  },
 };
 
 const AMC_BENEFITS = [

@@ -46,6 +46,32 @@ export default function Footer() {
             <li>6th Floor, MERI, Janakpuri,<br />New Delhi – 110058</li>
           </div>
         </div>
+        {/* METRO SERVICE HUBS & COVERAGE */}
+        <div className="ft-metro-band">
+          <div className="ft-metro-title">
+            <span className="dot" />
+            <span>Pan-India Metro Execution &amp; Service Hubs</span>
+          </div>
+          <div className="ft-metro-grid">
+            <div className="ft-metro-col">
+              <strong>Delhi NCR</strong>
+              <span>New Delhi · South Delhi · Gurugram (DLF CyberCity · Golf Course Rd) · Noida Expressway · Aerocity</span>
+            </div>
+            <div className="ft-metro-col">
+              <strong>Bengaluru</strong>
+              <span>Whitefield · Indiranagar · Koramangala · Outer Ring Road · Electronic City Tech Parks</span>
+            </div>
+            <div className="ft-metro-col">
+              <strong>Mumbai</strong>
+              <span>Bandra Kurla Complex (BKC) · Lower Parel · Worli · Powai · South Mumbai Penthouses</span>
+            </div>
+            <div className="ft-metro-col">
+              <strong>Pune &amp; Hyderabad</strong>
+              <span>Hinjewadi · Kharadi · Baner · HITEC City · Gachibowli · Financial District</span>
+            </div>
+          </div>
+        </div>
+
         <div className="ft-bot">
           <span>© 2026 Wall of Gardens Private Limited · Registered 17 Oct 2021 · GSTIN 07AADCW0848G1ZB</span>
           <span><Link href="/contact">Privacy</Link><Link href="/contact">Terms</Link></span>
