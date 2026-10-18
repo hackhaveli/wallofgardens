@@ -1016,6 +1016,171 @@ em.g { font-style: italic; color: var(--gold); }
 .mq-t span:hover { opacity: 1; }
 @keyframes mq { to { transform: translateX(-50%); } }
 
+/* ============================================================
+   ENTERPRISE CLIENTS SHOWCASE GRID (SPACES WE HAVE WORKED ON)
+   ============================================================ */
+.client-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+@media (max-width: 980px) {
+  .client-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 580px) {
+  .client-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.client-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 24, 17, 0.1);
+  border-radius: 8px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(14, 24, 17, 0.04);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+.client-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.client-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(200, 165, 91, 0.55);
+  box-shadow: 0 14px 32px -8px rgba(14, 24, 17, 0.12);
+}
+.client-card:hover::before {
+  opacity: 1;
+}
+
+.client-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.client-badge {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3E6B4A;
+  background: rgba(127, 166, 92, 0.14);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.client-card-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--deep);
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.15;
+}
+.client-card-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(14, 24, 17, 0.52);
+  margin-bottom: 16px;
+}
+.client-card-loc svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.client-card-project {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(14, 24, 17, 0.75);
+  border-top: 1px dashed rgba(14, 24, 17, 0.12);
+  padding-top: 14px;
+  margin-top: auto;
+}
+.client-card-project strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8A6D2B;
+  margin-bottom: 4px;
+}
+
+/* Dark mode client card overrides (for on-dark sections) */
+.on-dark .client-card, .sec-d .client-card {
+  background: rgba(244, 243, 236, 0.04);
+  border-color: rgba(200, 165, 91, 0.22);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.on-dark .client-card:hover, .sec-d .client-card:hover {
+  background: rgba(200, 165, 91, 0.08);
+  border-color: var(--gold);
+  box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.55);
+}
+.on-dark .client-card-title, .sec-d .client-card-title {
+  color: var(--cream);
+}
+.on-dark .client-card-loc, .sec-d .client-card-loc {
+  color: rgba(244, 243, 236, 0.5);
+}
+.on-dark .client-card-project, .sec-d .client-card-project {
+  color: rgba(244, 243, 236, 0.72);
+  border-top-color: rgba(244, 243, 236, 0.1);
+}
+.on-dark .client-card-project strong, .sec-d .client-card-project strong {
+  color: var(--gold);
+}
+.on-dark .client-badge, .sec-d .client-badge {
+  background: rgba(200, 165, 91, 0.16);
+  color: var(--gold);
+}
+
+/* Fallback for raw .cl without .mq */
+.cl:not(:has(.mq)) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 0;
+}
+.cl:not(:has(.mq)) span {
+  display: inline-flex;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid rgba(14,24,17,0.1);
+  border-radius: 6px;
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--deep);
+}
+.sec-d .cl:not(:has(.mq)) span, .on-dark .cl:not(:has(.mq)) span {
+  background: rgba(244,243,236,0.06);
+  border-color: rgba(200,165,91,0.25);
+  color: var(--cream);
+}
+
 /* ---------- sections ---------- */
 .sec { padding: clamp(60px, 7.5vw, 116px) 0; }
 .sec-d { background: var(--deep); color: var(--cream); }

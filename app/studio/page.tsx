@@ -16,6 +16,45 @@ export const metadata: Metadata = {
   },
 };
 
+const ENTERPRISE_CLIENTS = [
+  {
+    name: 'S&P Global',
+    city: 'Cyber City, Gurugram',
+    category: 'Fortune 500 Financial',
+    scope: 'Indoor Corporate Plantscaping & Executive Lounge Living Foliage',
+  },
+  {
+    name: 'DLF Limited',
+    city: 'Delhi NCR',
+    category: 'Commercial Developer',
+    scope: 'Living Facades, Plant Maintenance AMC & Terrace Fit-Outs',
+  },
+  {
+    name: 'Holiday Inn',
+    city: 'New Delhi Hospitality',
+    category: 'Luxury Hotel & Resort',
+    scope: '32-Foot Multi-Tier Atrium Living Wall with Automated Irrigation',
+  },
+  {
+    name: 'Godrej Properties',
+    city: 'Pan-India',
+    category: 'Premium Real Estate',
+    scope: 'Rooftop Lounge Landscapes & Luxury Balcony Sanctuaries',
+  },
+  {
+    name: 'Shangri-La',
+    city: 'Central New Delhi',
+    category: '5-Star Hospitality Suite',
+    scope: 'Preserved Moss Wall Art Installations & Biophilic Interiors',
+  },
+  {
+    name: 'Hira Group',
+    city: 'Industrial Campus',
+    category: 'Enterprise Infrastructure',
+    scope: 'Campus Landscape Architecture & Year-Round Horticultural Care',
+  },
+];
+
 export default function StudioPage() {
   return (
     <>
@@ -358,18 +397,38 @@ export default function StudioPage() {
         <div className="shell">
           <div className="hd rv">
             <div>
-              <div className="rule-tag"><span className="tag gold">Clients</span></div>
+              <div className="rule-tag"><span className="tag gold">Enterprise Clients</span></div>
               <h2 className="d2">Spaces we have worked on.</h2>
+              <p className="lede light" style={{ marginTop: '14px', maxWidth: '64ch' }}>
+                Trusted by leading hospitality brands, developers, and corporate enterprises across Delhi NCR and pan-India.
+              </p>
             </div>
             <span className="tag light">Selected Corporate &amp; Hospitality Partnerships</span>
           </div>
-          <div className="cl rv" style={{ marginBottom: 'clamp(44px,5vw,72px)' }}>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>S&amp;P Global</span>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>DLF</span>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Godrej</span>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Hira Group</span>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Holiday Inn</span>
-            <span style={{ color: 'var(--cream)', opacity: 0.55 }}>Shangri-La</span>
+
+          <div className="client-showcase-grid rv" style={{ marginBottom: 'clamp(44px,5vw,72px)' }}>
+            {ENTERPRISE_CLIENTS.map((c, i) => (
+              <div key={c.name} className="client-card">
+                <div className="client-card-head">
+                  <span className="client-badge">{c.category}</span>
+                  <span style={{ fontSize: '11px', fontFamily: 'var(--mono)', color: 'rgba(244,243,236,0.35)' }}>
+                    0{i + 1}
+                  </span>
+                </div>
+                <h3 className="client-card-title">{c.name}</h3>
+                <div className="client-card-loc">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>{c.city}</span>
+                </div>
+                <div className="client-card-project">
+                  <strong>Delivered Scope</strong>
+                  <span>{c.scope}</span>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="plate dk rvp has-img" data-n="Studio / Team — Wall of Gardens" style={{ aspectRatio: '21/8', minHeight: '220px' }}>
             <Image src="/project_01.jpg" alt="Wall of Gardens Studio and Team" fill sizes="(max-width: 1340px) 100vw, 1220px" />

@@ -158,6 +158,45 @@ const DEFAULT_PROJECT_ITEMS = [
   },
 ];
 
+const ENTERPRISE_CLIENTS = [
+  {
+    name: 'S&P Global',
+    city: 'Cyber City, Gurugram',
+    category: 'Fortune 500 Financial',
+    scope: 'Indoor Corporate Plantscaping & Executive Lounge Living Foliage',
+  },
+  {
+    name: 'DLF Limited',
+    city: 'CyberCity & Golf Course Rd',
+    category: 'Commercial Developer',
+    scope: 'Living Facades, Plant Maintenance AMC & Terrace Fit-Outs',
+  },
+  {
+    name: 'Holiday Inn',
+    city: 'New Delhi Hospitality',
+    category: 'Luxury Hotel & Resort',
+    scope: '32-Foot Multi-Tier Atrium Living Wall with Automated Irrigation',
+  },
+  {
+    name: 'Godrej Properties',
+    city: 'Delhi NCR & Pan-India',
+    category: 'Premium Real Estate',
+    scope: 'Rooftop Lounge Landscapes & Luxury Balcony Sanctuaries',
+  },
+  {
+    name: 'Shangri-La',
+    city: 'Central New Delhi',
+    category: '5-Star Hospitality Suite',
+    scope: 'Preserved Moss Wall Art Installations & Biophilic Interiors',
+  },
+  {
+    name: 'Hira Group',
+    city: 'Industrial Campus',
+    category: 'Enterprise Infrastructure',
+    scope: 'Campus Landscape Architecture & Year-Round Horticultural Care',
+  },
+];
+
 interface ProjectItem {
   cat: string;
   no: string;
@@ -394,19 +433,43 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* CLIENTS */}
-      <section className="sec sheet">
+      {/* ENTERPRISE CLIENTS SHOWCASE */}
+      <section className="sec sheet" id="clients">
         <div className="shell">
           <div className="hd rv">
             <div>
               <div className="rule-tag"><span className="tag">Enterprise Portfolio</span></div>
               <h2 className="d2">Spaces we have worked on.</h2>
+              <p className="lede" style={{ marginTop: '14px', maxWidth: '64ch' }}>
+                From Fortune 500 corporate facilities in Gurugram to 5-star international hotel atriums and luxury residential developments across Delhi NCR, we engineer living greenery to rigorous corporate standards.
+              </p>
             </div>
             <span className="tag">Corporate &amp; Hospitality Partnerships</span>
           </div>
-          <div className="cl rv">
-            <span>S&amp;P Global</span><span>DLF</span><span>Godrej</span>
-            <span>Hira Group</span><span>Holiday Inn</span><span>Shangri-La</span>
+
+          <div className="client-showcase-grid rv">
+            {ENTERPRISE_CLIENTS.map((c, i) => (
+              <div key={c.name} className="client-card">
+                <div className="client-card-head">
+                  <span className="client-badge">{c.category}</span>
+                  <span style={{ fontSize: '11px', fontFamily: 'var(--mono)', color: 'rgba(14,24,17,0.35)' }}>
+                    0{i + 1}
+                  </span>
+                </div>
+                <h3 className="client-card-title">{c.name}</h3>
+                <div className="client-card-loc">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>{c.city}</span>
+                </div>
+                <div className="client-card-project">
+                  <strong>Delivered Scope</strong>
+                  <span>{c.scope}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
