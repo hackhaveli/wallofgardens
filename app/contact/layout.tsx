@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       'Book a site consultation for corporate facilities, living walls, and luxury residences across Delhi NCR, Bengaluru, Mumbai, and Pune.',
     url: 'https://wallofgardens.com/contact',
-    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Contact Wall of Gardens' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Contact Wall of Gardens' }],
   },
 };
 
@@ -24,7 +24,7 @@ const LOCAL_BUSINESS_JSON_LD = {
       legalName: 'Wall of Gardens Private Limited',
       url: 'https://wallofgardens.com',
       logo: 'https://wallofgardens.com/icon.png',
-      image: 'https://wallofgardens.com/cta_bg.jpg',
+      image: 'https://wallofgardens.com/og-image.jpg',
       telephone: '+91-99909-60669',
       email: 'founder@wallofgardens.com',
       priceRange: '₹₹₹₹',

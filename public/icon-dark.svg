@@ -1,30 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <!-- 3x3 Architectural Grid (Wall of Gardens WOG Mark for Light Background) -->
-  <!-- Row 1 -->
-  <rect x="4" y="4" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <rect x="36" y="4" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <rect x="68" y="4" width="28" height="28" rx="4.5" fill="#101E17"/>
+<svg viewBox="0 0 640 640" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="fav_wcl_dark">
+      <rect x="11" y="13" width="34" height="31" />
+    </clipPath>
+  </defs>
 
-  <!-- Row 2 -->
-  <!-- Col 1: W -->
-  <rect x="4" y="36" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <path d="M 9.5 42.5 L 13.8 57.5 L 18 47.5 L 22.2 57.5 L 26.5 42.5" 
-        fill="none" stroke="#F4F3EC" stroke-width="2.7" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <rect width="640" height="640" rx="96" fill="#111E17" />
 
-  <!-- Col 2: O -->
-  <rect x="36" y="36" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <circle cx="50" cy="50" r="7.4" fill="none" stroke="#F4F3EC" stroke-width="2.7"/>
+  <!-- Tile 1: W -->
+  <rect x="76" y="244" width="152" height="152" rx="16" fill="#F6F3EA" />
+  <g transform="translate(76, 244) scale(2.7142857)">
+    <path clip-path="url(#fav_wcl_dark)" d="M11 9 L21 48 L28 27 L35 48 L45 9" fill="none" stroke="#111E17" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt" />
+  </g>
 
-  <!-- Col 3: G with Botanical Sprout -->
-  <rect x="68" y="36" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <!-- G Arc & Bar -->
-  <path d="M 87.2 45.2 C 85.8 43.6 83.8 42.6 81.5 42.6 C 77.2 42.6 74.4 45.8 74.4 50 C 74.4 54.2 77.4 57.4 82 57.4 C 86.4 57.4 89.2 54.8 89.2 51.2 L 82.2 51.2" 
-        fill="none" stroke="#F4F3EC" stroke-width="2.7" stroke-linecap="square"/>
-  <!-- Sprout Leaf -->
-  <path d="M 87 45.5 C 88.5 42.5 91.5 40 93.8 39.2 C 93.2 42 91 45 88.5 46.2 Z" fill="#F4F3EC"/>
+  <!-- Tile 2: O -->
+  <rect x="244" y="244" width="152" height="152" rx="16" fill="#F6F3EA" />
+  <g transform="translate(244, 244) scale(2.7142857)">
+    <circle cx="28" cy="28" r="15.5" fill="none" stroke="#111E17" stroke-width="6.5" />
+  </g>
 
-  <!-- Row 3 -->
-  <rect x="4" y="68" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <rect x="36" y="68" width="28" height="28" rx="4.5" fill="#101E17"/>
-  <rect x="68" y="68" width="28" height="28" rx="4.5" fill="#101E17"/>
+  <!-- Tile 3: G with Leaf Sprout -->
+  <rect x="412" y="244" width="152" height="152" rx="16" fill="#F6F3EA" />
+  <g transform="translate(412, 244) scale(2.7142857)">
+    <path d="M40.5 17.5 A15.5 15.5 0 1 0 43 33 L43 28 L29 28" fill="none" stroke="#111E17" stroke-width="6.5" />
+    <path d="M37 15 C37 9 41 5.5 48 6 C48 12 44 15.5 37 15Z" fill="#111E17" />
+  </g>
 </svg>

@@ -75,15 +75,25 @@ function AdminSidebar() {
     }}>
       {/* Logo */}
       <div style={{
-        padding: '24px 20px',
+        padding: '18px 20px',
         borderBottom: '1px solid rgba(127,166,92,0.12)',
         flexShrink: 0,
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px',
       }}>
-        <div style={{ fontSize: '9px', letterSpacing: '3px', color: '#C8A55B', textTransform: 'uppercase', marginBottom: '6px' }}>
-          Wall of Gardens
-        </div>
-        <div style={{ fontSize: '13px', fontWeight: 700, color: '#F4F3EC', letterSpacing: '0.5px' }}>
-          Admin Console
+        <img
+          src="/icon.png"
+          alt="Wall of Gardens"
+          style={{ width: '38px', height: '38px', borderRadius: '8px', objectFit: 'contain' }}
+        />
+        <div>
+          <div style={{ fontSize: '9px', letterSpacing: '3px', color: '#C8A55B', textTransform: 'uppercase', marginBottom: '3px' }}>
+            Wall of Gardens
+          </div>
+          <div style={{ fontSize: '13px', fontWeight: 700, color: '#F4F3EC', letterSpacing: '0.5px' }}>
+            Admin Console
+          </div>
         </div>
       </div>
 

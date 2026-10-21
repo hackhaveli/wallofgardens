@@ -183,14 +183,8 @@ em.g { font-style: italic; color: var(--gold); }
   animation: tileSunlight 6s ease-in-out infinite;
 }
 .wog-t1 { animation-delay: 0.0s; }
-.wog-t2 { animation-delay: 0.12s; }
-.wog-t3 { animation-delay: 0.24s; }
-.wog-t4 { animation-delay: 0.18s; }
-.wog-t5 { animation-delay: 0.30s; }
-.wog-t6 { animation-delay: 0.42s; }
-.wog-t7 { animation-delay: 0.36s; }
-.wog-t8 { animation-delay: 0.48s; }
-.wog-t9 { animation-delay: 0.60s; }
+.wog-t2 { animation-delay: 0.15s; }
+.wog-t3 { animation-delay: 0.30s; }
 
 @keyframes tileSunlight {
   0%, 80%, 100% { fill: #F6F3EA; filter: none; }
@@ -211,14 +205,9 @@ em.g { font-style: italic; color: var(--gold); }
   100% { transform: rotate(14deg) scale(1.15); }
 }
 
-.brand:hover .wog-t1 { transform: translate(-2px, -2px); }
-.brand:hover .wog-t2 { transform: translate(0px, -2px); }
-.brand:hover .wog-t3 { transform: translate(2px, -2px); }
-.brand:hover .wog-t4 { transform: translate(-2px, 0px); }
-.brand:hover .wog-t6 { transform: translate(2px, 0px); }
-.brand:hover .wog-t7 { transform: translate(-2px, 2px); }
-.brand:hover .wog-t8 { transform: translate(0px, 2px); }
-.brand:hover .wog-t9 { transform: translate(2px, 2px); }
+.brand:hover .wog-t1 { transform: translate(-3px, 0px); }
+.brand:hover .wog-t2 { transform: scale(1.04); }
+.brand:hover .wog-t3 { transform: translate(3px, 0px); }
 .brand:hover .wog-char { stroke: #0d2817; }
 .brand-text-block {
   display: flex;

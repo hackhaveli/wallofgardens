@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo Header — Wall of Gardens (No Back Cover)</title>
+  <title>Logo Header — Wall of Gardens Master Identity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -72,7 +72,6 @@
       font-weight: 600;
       color: var(--cream);
     }
-    /* Real Website Header Simulation */
     .mock-header {
       background: rgba(11, 19, 14, 0.98);
       border-bottom: 1px solid rgba(244,243,236,0.08);
@@ -87,10 +86,9 @@
       gap: 12px;
       text-decoration: none;
     }
-    /* NO BACK COVER: transparent, no border, no card */
     .brand-logo-wrap {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -150,22 +148,48 @@
       margin-left: 20px;
       margin-top: 8px;
     }
+    .grid-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 24px;
+      background: #0b130e;
+    }
+    .grid-item {
+      background: #111e17;
+      border: 1px solid rgba(200,165,91,0.2);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .grid-item img {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 12px;
+      display: block;
+      border-radius: 16px;
+    }
+    .grid-item span {
+      font-size: 12px;
+      color: var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="status-badge">
-      <span class="dot"></span> Applied Live on Website
+      <span class="dot"></span> Master Logo Applied Everywhere Live
     </div>
-    <h1>No Back Cover — Only 9 Visible Squares & W-O-G</h1>
+    <h1>Official W-O-G Brand Logo Live</h1>
     <p class="sub">
-      Aapki requirement ke mutabik: Koi background card/cover nahi hai. Header ke dark green background ke upar direct <b>9 individual floating tiles</b> visible hain, aur middle row mein <b>W, O, G (leaf ke sath)</b> clean dikh raha hai:
+      Aapki upload ki gayi exact image ko master logo bana diya gaya hai — website header, footer, favicon, app icon, social share links (WhatsApp / Twitter / LinkedIn preview), aur PWA manifest har jagah apply ho chuka hai:
     </p>
 
     <div class="card">
       <div class="card-head">
-        <span class="card-title">Live Preview (Navbar Dark Green Background)</span>
-        <span style="font-size:12px; color:var(--gold); font-family:'JetBrains Mono',monospace;">Zero Back Cover</span>
+        <span class="card-title">Live Website Header Preview</span>
+        <span style="font-size:12px; color:var(--gold); font-family:'JetBrains Mono',monospace;">Active Navbar</span>
       </div>
       <div class="mock-header">
         <a class="brand" href="/">
@@ -185,11 +209,35 @@
       <div class="specs-box">
         <b>What Changed:</b>
         <ul>
-          <li><b>Back Cover Removed:</b> Logo container ka square background (`#11281c`), border aur box-shadow 100% hata diya gaya hai.</li>
-          <li><b>9 Squares Fully Visible:</b> Sabhi 9 tiles individual cream squircle tiles hain jo dark green background par float kar rahi hain.</li>
-          <li><b>Gaps Transparent:</b> Tiles ke beech ka 5px gap transparent hai, jahan se website ka green background natural dikhta hai.</li>
-          <li><b>W, O, G Crisp:</b> Middle 3 tiles mein W, O, G deep green vector crisp legible hain.</li>
+          <li><b>Master Logo Replaced:</b> Purana 9-tiles layout hata kar aapka official 3-tiles [W] [O] [G] logo har jagah laga diya gaya hai.</li>
+          <li><b>Site Link / Social Previews (WhatsApp, LinkedIn, Twitter):</b> Jab aap website link share karenge, ab yeh official logo card / preview image dikhegi.</li>
+          <li><b>Favicon &amp; App Icons:</b> Browser tabs (favicon.ico, favicon-32.png, favicon.svg) aur mobile bookmark / home screen icon (apple-touch-icon, icon-192, icon-512) update ho chuke hain.</li>
+          <li><b>Crisp Vector &amp; Hi-Res:</b> SVG vector aur 512x512 retina PNGs sabhi devices par crystal clear render hote hain.</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Generated Master Brand Assets</span>
+      </div>
+      <div class="grid-preview">
+        <div class="grid-item">
+          <img src="/icon.png" alt="icon.png" />
+          <span>icon.png (Retina 512x512)</span>
+        </div>
+        <div class="grid-item">
+          <img src="/icon.svg" alt="icon.svg" />
+          <span>icon.svg (Vector)</span>
+        </div>
+        <div class="grid-item">
+          <img src="/apple-touch-icon.png" alt="apple-touch-icon.png" />
+          <span>apple-touch-icon.png</span>
+        </div>
+        <div class="grid-item">
+          <img src="/og-image.jpg" alt="og-image.jpg" style="width: 140px; height: 73px; border-radius: 8px; object-fit: cover;" />
+          <span>og-image.jpg (Social Link 1200x630)</span>
+        </div>
       </div>
     </div>
   </div>

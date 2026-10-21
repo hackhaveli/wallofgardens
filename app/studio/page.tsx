@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'About Wall of Gardens — Living Architecture Practice',
     description: 'In-house landscape architects and horticulturists engineering living walls and corporate landscapes across India.',
     url: 'https://wallofgardens.com/studio',
-    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Studio' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Studio' }],
   },
 };
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Living Architecture Services | Wall of Gardens',
     description: 'Engineered vertical gardens, corporate plant maintenance AMC, terrace gardens, and preserved moss art across India.',
     url: 'https://wallofgardens.com/services',
-    images: [{ url: '/cta_bg.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Living Architecture Services' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Wall of Gardens Living Architecture Services' }],
   },
 };
 

@@ -74,10 +74,16 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/cta_bg.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Wall of Gardens — Living Architecture, Vertical Gardens & Plant AMC",
+        alt: "Wall of Gardens — Living Architecture & Engineered Vertical Gardens",
+      },
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "Wall of Gardens Master Brand Logo",
       },
     ],
   },
@@ -86,7 +92,7 @@ export const metadata: Metadata = {
     title: "Wall of Gardens — Living Architecture & Vertical Gardens",
     description:
       "Engineered living walls, corporate plant maintenance AMC, and luxury biophilic landscapes across Delhi NCR, Bengaluru, Mumbai, Pune, and Hyderabad.",
-    images: ["/cta_bg.jpg"],
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -106,7 +112,11 @@ export const metadata: Metadata = {
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/icon.png", type: "image/png" },
     ],
-    apple: "/icon.png",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/icon.png" },
+    ],
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -121,7 +131,7 @@ const JSON_LD_GRAPH = {
       alternateName: ["Wall of Gardens Living Architecture", "WOG Studio", "Wall of Gardens India"],
       url: "https://wallofgardens.com",
       logo: "https://wallofgardens.com/icon.png",
-      image: "https://wallofgardens.com/cta_bg.jpg",
+      image: "https://wallofgardens.com/og-image.jpg",
       description:
         "India's leading studio for engineered vertical gardens, living walls, corporate plant maintenance AMC, preserved Scandinavian moss walls, and structural terrace landscapes across Delhi NCR, Bengaluru, Mumbai, Pune, and Hyderabad.",
       foundingDate: "2021-10-17",
