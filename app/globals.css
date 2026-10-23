@@ -489,6 +489,20 @@ em.g { font-style: italic; color: var(--gold); }
   transition: opacity 1.6s cubic-bezier(.4,0,.2,1);
 }
 .hf-slide.is-on { opacity: 1; z-index: 1; }
+.hf-view-desktop,
+.hf-view-mobile {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.hf-view-desktop { display: block; }
+.hf-view-mobile { display: none; }
+
+@media (max-width: 768px), (max-aspect-ratio: 1/1) and (max-width: 900px) {
+  .hf-view-desktop { display: none !important; }
+  .hf-view-mobile { display: block !important; }
+}
 .hf-slide img { object-fit: cover; object-position: 60% 50%; transform: scale(1.1); transform-origin: 70% 50%; }
 .hf-slide.alt img { transform-origin: 30% 40%; }
 .hf-slide.is-on img { animation: hfDrift 9s cubic-bezier(.25,.1,.25,1) forwards; }

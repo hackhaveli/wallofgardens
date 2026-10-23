@@ -12,12 +12,52 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * - prefers-reduced-motion: no autoplay, no drift — manual selection only.
  */
 
-const SLIDES = [
-  { src: '/projects/vertical-gardens/holiday-inn-atrium.webp', no: 'VG—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
-  { src: '/projects/vertical-gardens/multi-species-wave-wall.webp', no: 'VG—02', name: 'Multi-Species Flowing Wave Living Wall', place: 'CyberCity, Gurugram', alt: 'Curved multi-species high-density architectural living wall' },
-  { src: '/projects/vertical-gardens/commercial-plaza-uplight.webp', no: 'VG—03', name: 'Commercial Plaza Architectural Living Wall', place: 'Barakhamba Road, Connaught Place', alt: 'Double-height commercial living wall with architectural ground uplighting' },
-  { src: '/projects/vertical-gardens/courtyard-atrium-skylight.webp', no: 'VG—04', name: 'Courtyard Atrium Skylight Living Wall', place: 'Chhatarpur, South Delhi', alt: 'Double-height courtyard atrium living wall flanked by carved stone cladding' },
-  { src: '/projects/vertical-gardens/architectural-staircase.webp', no: 'VG—05', name: 'Architectural Staircase Living Columns', place: 'Golf Course Road, Gurugram', alt: 'Vertical living columns with black fluted architectural louvers' },
+interface Slide {
+  src: string;
+  mobileSrc?: string;
+  no: string;
+  name: string;
+  place: string;
+  alt: string;
+}
+
+const SLIDES: Slide[] = [
+  {
+    src: '/projects/vertical-gardens/penthouse-terrace-living-wall.webp',
+    mobileSrc: '/projects/vertical-gardens/penthouse-terrace-living-wall-mobile.webp',
+    no: 'VG—01',
+    name: 'Penthouse Verandah Living Wall',
+    place: 'Golf Course Road, Delhi NCR',
+    alt: 'Luxury penthouse terrace living wall with evening ambient illumination',
+  },
+  {
+    src: '/projects/vertical-gardens/holiday-inn-atrium.webp',
+    no: 'VG—02',
+    name: 'Double-Height Living Wall Atrium',
+    place: 'Aerocity, New Delhi',
+    alt: 'Two-story lush architectural living wall in corporate atrium',
+  },
+  {
+    src: '/projects/vertical-gardens/multi-species-wave-wall.webp',
+    no: 'VG—03',
+    name: 'Multi-Species Flowing Wave Living Wall',
+    place: 'CyberCity, Gurugram',
+    alt: 'Curved multi-species high-density architectural living wall',
+  },
+  {
+    src: '/projects/vertical-gardens/commercial-plaza-uplight.webp',
+    no: 'VG—04',
+    name: 'Commercial Plaza Architectural Living Wall',
+    place: 'Barakhamba Road, Connaught Place',
+    alt: 'Double-height commercial living wall with architectural ground uplighting',
+  },
+  {
+    src: '/projects/vertical-gardens/courtyard-atrium-skylight.webp',
+    no: 'VG—05',
+    name: 'Courtyard Atrium Skylight Living Wall',
+    place: 'Chhatarpur, South Delhi',
+    alt: 'Double-height courtyard atrium living wall flanked by carved stone cladding',
+  },
 ];
 
 const HOLD_MS = 7000;
@@ -70,14 +110,39 @@ export default function HeroFilm() {
         {SLIDES.map((s, i) =>
           i === 0 || armed ? (
             <div key={s.src} className={`hf-slide${i === active ? ' is-on' : ''}${i % 2 ? ' alt' : ''}`}>
-              <Image
-                src={s.src}
-                alt=""
-                fill
-                sizes="100vw"
-                preload={i === 0}
-                loading={i === 0 ? 'eager' : 'lazy'}
-              />
+              {s.mobileSrc ? (
+                <>
+                  <div className="hf-view-desktop">
+                    <Image
+                      src={s.src}
+                      alt={s.alt || ''}
+                      fill
+                      sizes="100vw"
+                      preload={i === 0}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                    />
+                  </div>
+                  <div className="hf-view-mobile">
+                    <Image
+                      src={s.mobileSrc}
+                      alt={s.alt || ''}
+                      fill
+                      sizes="100vw"
+                      preload={i === 0}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                    />
+                  </div>
+                </>
+              ) : (
+                <Image
+                  src={s.src}
+                  alt={s.alt || ''}
+                  fill
+                  sizes="100vw"
+                  preload={i === 0}
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                />
+              )}
             </div>
           ) : null,
         )}
