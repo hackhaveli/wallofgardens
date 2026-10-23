@@ -54,12 +54,6 @@ const ENTERPRISE_CLIENTS = [
     scope: 'Executive Undulating Preserved Moss Wave Wall & 3D Backlit Lettering',
   },
   {
-    name: 'Hindustan Unilever Limited',
-    city: 'Corporate Atrium',
-    category: 'Enterprise FMCG',
-    scope: 'Curved Scandinavian Moss Wall with Embedded U-Monogram & Jali Detailing',
-  },
-  {
     name: 'Wipro & Revantage',
     city: 'Technology Campus',
     category: 'Global Enterprise IT',
