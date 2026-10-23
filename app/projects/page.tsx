@@ -158,6 +158,7 @@ const DEFAULT_PROJECT_ITEMS = [
     scope: 'Precision CNC-contoured reindeer moss leaping cat suspended on acoustic smoked glass partition',
     year: 'Completed 2024',
     image: '/projects/moss-walls/puma-brand-moss-icon.webp',
+    imgPosition: 'center 20%',
   },
   {
     cat: 'moss',
@@ -168,26 +169,6 @@ const DEFAULT_PROJECT_ITEMS = [
     scope: 'High-relief 3D preserved moss cartography depicting global office networks across continents',
     year: 'Completed 2024',
     image: '/projects/moss-walls/exl-global-moss-world-map.webp',
-  },
-  {
-    cat: 'moss',
-    no: 'MW—07',
-    name: 'EXL Crimson Moss Inlaid Monogram',
-    client: 'EXL Services Headquarters',
-    location: 'CyberCity DLF, Gurugram',
-    scope: 'Hand-dyed crimson Scandinavian moss monogram in emerald field with white marble pebble planter base',
-    year: 'Completed 2024',
-    image: '/projects/moss-walls/exl-crimson-inlaid-logo.webp',
-  },
-  {
-    cat: 'moss',
-    no: 'MW—08',
-    name: 'EXL Services Panoramic Heritage Mural',
-    client: 'EXL Services Chennai',
-    location: 'Commercial Tech Park, Chennai',
-    scope: '100% Scandinavian preserved greenery with custom architectural inlays & modern halo pendants',
-    year: 'Completed 2024',
-    image: '/projects/moss-walls/exl-chennai-heritage-reception.webp',
   },
 
   // Terrace Gardens
@@ -315,6 +296,7 @@ interface ProjectItem {
   scope: string;
   year: string;
   image: string;
+  imgPosition?: string;
 }
 
 export default function ProjectsPage() {
@@ -438,6 +420,7 @@ export default function ProjectsPage() {
                     loading={idx < 4 ? undefined : 'lazy'}
                     unoptimized={!canOptimize(prj.image)}
                     className="lux-img"
+                    style={prj.imgPosition ? { objectPosition: prj.imgPosition } : undefined}
                   />
                   <div className="lux-img-gradient" />
                 </div>
