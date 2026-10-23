@@ -436,7 +436,7 @@ export default async function Home() {
               </p>
               <div className="hmeth-ph rv rv-img">
                 <div className="hmeth-ph-m">
-                  <Image src="/projects/walkway.webp" alt="Office plantscaping across an open-plan floor" fill sizes="(max-width: 1000px) 100vw, 40vw" />
+                  <Image src="/projects/vertical-gardens/basalt-walkway-living-wall.webp" alt="Architectural living wall along residential walkway site assessment" fill sizes="(max-width: 1000px) 100vw, 40vw" />
                 </div>
                 <span className="hmeth-tag">Site assessment · before pricing</span>
               </div>

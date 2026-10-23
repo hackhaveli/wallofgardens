@@ -14,10 +14,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 const SLIDES = [
   { src: '/projects/vertical-gardens/holiday-inn-atrium.webp', no: 'VG—01', name: 'Double-Height Living Wall Atrium', place: 'Aerocity, New Delhi', alt: 'Two-story lush architectural living wall in corporate atrium' },
-  { src: '/projects/moss-walls/federal-bank-moss-wall.webp', no: 'MW—01', name: 'Federal Bank Executive Moss Wall', place: 'Connaught Place, New Delhi', alt: 'Multi-tone wave preserved Scandinavian reindeer moss wall' },
-  { src: '/projects/vertical-gardens/rooftop-pool-sunset.webp', no: 'TG—01', name: 'Penthouse Rooftop Terrace Lounge', place: 'Greater Kailash, Delhi', alt: 'Rooftop terrace garden at dusk with infinity pool and deck lighting' },
-  { src: '/projects/moss-walls/wipro-revantage-reception.webp', no: 'MW—04', name: 'Wipro & Revantage Executive Lounge', place: 'CyberCity, Gurugram', alt: 'High-density acoustic preserved moss wall with acrylic corporate branding' },
-  { src: '/projects/moss-walls/syngenta-illuminated-crest.webp', no: 'MW—03', name: 'Syngenta Botanical Wall & Crest', place: 'CyberCity, Gurugram', alt: 'Illuminated golden leaf crest on preserved Scandinavian moss wall' },
+  { src: '/projects/vertical-gardens/multi-species-wave-wall.webp', no: 'VG—02', name: 'Multi-Species Flowing Wave Living Wall', place: 'CyberCity, Gurugram', alt: 'Curved multi-species high-density architectural living wall' },
+  { src: '/projects/vertical-gardens/commercial-plaza-uplight.webp', no: 'VG—03', name: 'Commercial Plaza Architectural Living Wall', place: 'Barakhamba Road, Connaught Place', alt: 'Double-height commercial living wall with architectural ground uplighting' },
+  { src: '/projects/vertical-gardens/courtyard-atrium-skylight.webp', no: 'VG—04', name: 'Courtyard Atrium Skylight Living Wall', place: 'Chhatarpur, South Delhi', alt: 'Double-height courtyard atrium living wall flanked by carved stone cladding' },
+  { src: '/projects/vertical-gardens/architectural-staircase.webp', no: 'VG—05', name: 'Architectural Staircase Living Columns', place: 'Golf Course Road, Gurugram', alt: 'Vertical living columns with black fluted architectural louvers' },
 ];
 
 const HOLD_MS = 7000;
