@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Corporate Plant Maintenance AMC — Zero Mortality SLA | Wall of Gardens',
     description: 'Scheduled horticultural care, non-toxic bio pest control, and guaranteed plant replacements across Delhi NCR, Bengaluru, Mumbai, and Pune.',
     url: 'https://wallofgardens.com/services/plant-maintenance-amc',
-    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Plant Maintenance AMC by Wall of Gardens' }],
+    images: [{ url: '/projects/crew_install.webp', width: 1200, height: 630, alt: 'Plant Maintenance AMC by Wall of Gardens' }],
   },
 };
 
@@ -120,7 +120,7 @@ export default function PlantMaintenanceAMCPage() {
       <section className="sv-hero on-dark">
         <div className="sv-hero-bg" aria-hidden="true">
           <Image
-            src="/project_01.jpg"
+            src="/projects/crew_install.webp"
             alt="Wall of Gardens Plant Maintenance AMC"
             fill
             sizes="100vw"
@@ -272,7 +272,7 @@ export default function PlantMaintenanceAMCPage() {
       {/* CLOSING CTA */}
       <section className="hcta on-dark" id="contact">
         <div className="hcta-bg rv" aria-hidden="true">
-          <Image src="/cta_bg.jpg" alt="Plant Maintenance AMC Wall of Gardens" fill sizes="100vw" />
+          <Image src="/projects/vertical-gardens/commercial-plaza-uplight.webp" alt="Plant Maintenance AMC Wall of Gardens" fill sizes="100vw" />
         </div>
         <div className="shell hcta-in">
           <div className="hcta-copy rv">

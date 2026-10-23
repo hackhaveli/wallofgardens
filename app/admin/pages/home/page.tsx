@@ -182,7 +182,7 @@ export default function HomePageEditor() {
       <SectionCard title="Closing CTA (Sheet 07)" badge="CLOSING" defaultOpen={false}>
         <TwoCol>
           <TextField label="Badge" value={content.closing.badge} onChange={v => updateNested('closing', 'badge', v)} />
-          <TextField label="Background Image Path" value={content.closing.bg_image} onChange={v => updateNested('closing', 'bg_image', v)} placeholder="/cta_bg.jpg" />
+          <TextField label="Background Image Path" value={content.closing.bg_image} onChange={v => updateNested('closing', 'bg_image', v)} placeholder="/projects/vertical-gardens/rooftop-pool-sunset.webp" />
         </TwoCol>
         <TextField label="Heading" value={content.closing.heading} onChange={v => updateNested('closing', 'heading', v)} />
         <TextAreaField label="Lead Text" value={content.closing.lede} onChange={v => updateNested('closing', 'lede', v)} rows={2} />

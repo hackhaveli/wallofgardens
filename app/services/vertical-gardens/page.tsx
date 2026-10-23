@@ -523,19 +523,19 @@ export default function VerticalGardensPage() {
           <div className="oth">
             <Link className="rv" href="/services/moss-wall">
               <div className="plate rvp has-img" data-n="Preserved Moss Wall — Reception">
-                <img src="/project_02.jpg" alt="Preserved Moss Wall" />
+                <img src="/projects/moss-walls/federal-bank-moss-wall.webp" alt="Preserved Moss Wall" />
               </div>
               <h3>Moss Walls</h3>
             </Link>
             <Link className="rv dl1" href="/services/plantscaping">
               <div className="plate rvp has-img" data-n="Office Indoor Planting — Workspace">
-                <img src="/project_06.jpg" alt="Office Indoor Planting" />
+                <img src="/projects/grow_lights.webp" alt="Office Indoor Planting" />
               </div>
               <h3>Corporate Plantscaping</h3>
             </Link>
             <Link className="rv dl2" href="/services/terrace-garden">
               <div className="plate rvp has-img" data-n="Rooftop Terrace Garden — Penthouse">
-                <img src="/project_04.jpg" alt="Terrace Garden" />
+                <img src="/projects/vertical-gardens/rooftop-pool-sunset.webp" alt="Terrace Garden" />
               </div>
               <h3>Terrace Gardens</h3>
             </Link>
@@ -546,7 +546,7 @@ export default function VerticalGardensPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Holiday Inn Multi-Story Living Wall — Wall of Gardens">
-          <img src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Vertical living wall installation at Holiday Inn" />
+          <img src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Vertical living wall installation at Holiday Inn" />
         </div>
         <div className="shell">
           <div className="close-in rv">

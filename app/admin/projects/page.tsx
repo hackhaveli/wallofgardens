@@ -116,7 +116,7 @@ export default function ProjectsManager() {
         </SectionCard>
 
         <SectionCard title="Image & Display">
-          <TextField label="Image URL / Path" value={editing.img} onChange={v => setEditing(e => e && { ...e, img: v })} placeholder="/project_01.jpg" hint="Use /filename.jpg for images in /public folder" />
+          <TextField label="Image URL / Path" value={editing.img} onChange={v => setEditing(e => e && { ...e, img: v })} placeholder="/projects/crew_install.webp" hint="Use /projects/name.webp for images in /public folder" />
           <TextField label="Image Alt Text" value={editing.alt} onChange={v => setEditing(e => e && { ...e, alt: v })} />
           {editing.img && (
             <div style={{ width: '100%', height: 160, background: '#F0EFE9', borderRadius: '2px', overflow: 'hidden', marginBottom: '16px', position: 'relative' }}>

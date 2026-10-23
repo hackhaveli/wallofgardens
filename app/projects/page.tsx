@@ -395,7 +395,7 @@ export default function ProjectsPage() {
             location: p.location || 'Delhi NCR',
             scope: p.description || p.area || p.type || 'Custom landscaping',
             year: p.status || 'Completed',
-            image: p.img || '/project_01.jpg',
+            image: p.img || '/projects/vertical-gardens/holiday-inn-atrium.webp',
           })));
         }
       })
@@ -528,11 +528,11 @@ export default function ProjectsPage() {
           </div>
 
           <div className="cs-imgs rv">
-            <div className="plate rvp has-img" data-n="Pre-installation bare structural wall">
-              <Image src="/project_04.jpg" alt="Pre-installation structural atrium wall" fill sizes="(max-width: 800px) 100vw, 50vw" />
+            <div className="plate rvp has-img" data-n="Modular frame & irrigation engineering on site">
+              <Image src="/projects/crew_install.webp" alt="Modular frame & irrigation engineering on site" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
             <div className="plate rvp has-img" data-n="Completed living architecture installation">
-              <Image src="/projects/vertical-gardens/holiday-inn-atrium.jpg" alt="Completed Holiday Inn Living Wall by Wall of Gardens" fill sizes="(max-width: 800px) 100vw, 50vw" />
+              <Image src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Completed Holiday Inn Living Wall by Wall of Gardens" fill sizes="(max-width: 800px) 100vw, 50vw" />
             </div>
           </div>
 
@@ -636,7 +636,7 @@ export default function ProjectsPage() {
       {/* CLOSING */}
       <section className="close">
         <div className="plate dk has-img" data-n="Wall of Gardens Projects">
-          <Image src="/cta_bg.jpg" alt="Wall of Gardens Projects" fill sizes="100vw" />
+          <Image src="/projects/vertical-gardens/courtyard-atrium-skylight.webp" alt="Wall of Gardens Projects" fill sizes="100vw" />
         </div>
         <div className="shell">
           <div className="close-in rv">

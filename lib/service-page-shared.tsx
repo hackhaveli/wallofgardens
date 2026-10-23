@@ -157,7 +157,7 @@ export function ServicePageContent({ content }: ServicePageProps) {
         <section className="close img-bg">
           <div className="close-bg">
             <Image
-              src={(c.closing as { bg_image: string }).bg_image || '/cta_bg.jpg'}
+              src={(c.closing as { bg_image: string }).bg_image || '/projects/vertical-gardens/rooftop-pool-sunset.webp'}
               alt="Wall of Gardens project"
               fill
               style={{ objectFit: 'cover' }}

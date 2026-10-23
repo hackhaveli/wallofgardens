@@ -449,7 +449,7 @@ export default function StudioPage() {
             ))}
           </div>
           <div className="plate dk rvp has-img" data-n="Studio / Team — Wall of Gardens" style={{ aspectRatio: '21/8', minHeight: '220px' }}>
-            <Image src="/project_01.jpg" alt="Wall of Gardens Studio and Team" fill sizes="(max-width: 1340px) 100vw, 1220px" />
+            <Image src="/projects/crew_install.webp" alt="Wall of Gardens Studio and Team" fill sizes="(max-width: 1340px) 100vw, 1220px" />
           </div>
         </div>
       </section>
@@ -457,7 +457,7 @@ export default function StudioPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Studio Janakpuri — Wall of Gardens">
-          <Image src="/cta_bg.jpg" alt="Wall of Gardens Studio" fill sizes="100vw" />
+          <Image src="/projects/vertical-gardens/courtyard-atrium-skylight.webp" alt="Wall of Gardens Studio" fill sizes="100vw" />
         </div>
         <div className="shell">
           <div className="close-in rv">

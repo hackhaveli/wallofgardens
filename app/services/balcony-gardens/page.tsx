@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Luxury Balcony Gardens & Compact Green Spaces | Wall of Gardens',
     description: 'Space-optimized balcony landscaping engineered for orientation, micro-climate, and clean drainage.',
     url: 'https://wallofgardens.com/services/balcony-gardens',
-    images: [{ url: '/project_05.jpg', width: 1200, height: 630, alt: 'Balcony Gardens by Wall of Gardens' }],
+    images: [{ url: '/projects/modular_system.webp', width: 1200, height: 630, alt: 'Balcony Gardens by Wall of Gardens' }],
   },
 };
 
@@ -423,19 +423,19 @@ export default function BalconyGardensPage() {
           <div className="oth">
             <Link className="rv" href="/services/terrace-garden">
               <div className="plate rvp has-img" data-n="Rooftop Terrace — Delhi NCR">
-                <img src="/project_04.jpg" alt="Terrace garden" />
+                <img src="/projects/vertical-gardens/rooftop-pool-sunset.webp" alt="Terrace garden" />
               </div>
               <h3>Terrace Gardens</h3>
             </Link>
             <Link className="rv dl1" href="/services/vertical-gardens">
               <div className="plate rvp has-img" data-n="Living Wall — Noida">
-                <img src="/project_03.jpg" alt="Vertical garden" />
+                <img src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Vertical garden" />
               </div>
               <h3>Vertical Gardens</h3>
             </Link>
             <Link className="rv dl2" href="/services/moss-wall">
               <div className="plate rvp has-img" data-n="Preserved Moss Wall — Reception">
-                <img src="/project_02.jpg" alt="Preserved moss wall" />
+                <img src="/projects/moss-walls/federal-bank-moss-wall.webp" alt="Preserved moss wall" />
               </div>
               <h3>Moss Walls</h3>
             </Link>
@@ -446,7 +446,7 @@ export default function BalconyGardensPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Balcony Garden — Wall of Gardens">
-          <img src="/project_05.jpg" alt="Balcony garden photograph" />
+          <img src="/projects/portal_door.webp" alt="Balcony garden photograph" />
         </div>
         <div className="shell">
           <div className="close-in rv">

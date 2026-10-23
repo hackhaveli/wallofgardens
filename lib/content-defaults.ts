@@ -113,7 +113,7 @@ export const DEFAULT_HOME_CONTENT = {
     cta_primary_href: 'mailto:founder@wallofgardens.com',
     cta_secondary_label: 'WhatsApp Us',
     cta_secondary_href: 'https://wa.me/919990960669',
-    bg_image: '/cta_bg.jpg',
+    bg_image: '/projects/vertical-gardens/rooftop-pool-sunset.webp',
   },
 };
 
@@ -192,7 +192,7 @@ export const DEFAULT_SERVICES_CONTENT = {
     cta_primary_href: 'mailto:founder@wallofgardens.com',
     cta_secondary_label: 'WhatsApp Us',
     cta_secondary_href: 'https://wa.me/919990960669',
-    bg_image: '/cta_bg.jpg',
+    bg_image: '/projects/vertical-gardens/rooftop-pool-sunset.webp',
   },
 };
 
@@ -255,7 +255,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { q: 'Are your pest and fertilizer treatments safe for offices?', a: 'Yes. We use 100% odorless, eco-friendly, organic bio-fertilizers and botanical neem sprays that are non-toxic to indoor personnel.' },
       { q: 'How is the AMC priced?', a: 'Pricing is based transparently on total plant count, vertical garden area, and required visit frequency. No hidden charges.' },
     ],
-    closing: { badge: 'AMC Enquiry', heading: 'Ready for hassle-free plant maintenance?', lede: 'Site audits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Get AMC Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_01.jpg' },
+    closing: { badge: 'AMC Enquiry', heading: 'Ready for hassle-free plant maintenance?', lede: 'Site audits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Get AMC Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/crew_install.webp' },
   },
   'corporate-landscaping': {
     slug: 'corporate-landscaping',
@@ -284,7 +284,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
     faqs: [
       { q: 'How does the Plant Replacement Guarantee work?', a: 'If any plant under our AMC dies or declines, we replace it with a healthy nursery-grade specimen at no additional charge.' },
     ],
-    closing: { badge: 'AMC Enquiry', heading: 'Ready for hassle-free plant maintenance?', lede: 'Site audits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Get AMC Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_01.jpg' },
+    closing: { badge: 'AMC Enquiry', heading: 'Ready for hassle-free plant maintenance?', lede: 'Site audits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Get AMC Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/crew_install.webp' },
   },
   'vertical-gardens': {
     slug: 'vertical-gardens',
@@ -331,7 +331,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { q: 'Can you do a wall on an exterior façade?', a: 'Yes, and it is a different design problem — wind loading on the frame, direct sun, reflected heat off adjacent glazing and a much narrower species list.' },
       { q: 'Can you take over a wall someone else installed?', a: 'Often, once we have seen it. We would survey the irrigation, the backing and the channel first.' },
     ],
-    closing: { badge: 'Contact', heading: 'Have a wall in mind?', lede: 'Send us dimensions and a photograph. Site visits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Book a Site Visit', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_03.jpg' },
+    closing: { badge: 'Contact', heading: 'Have a wall in mind?', lede: 'Send us dimensions and a photograph. Site visits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Book a Site Visit', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/vertical-gardens/holiday-inn-atrium.webp' },
   },
   'terrace-garden': {
     slug: 'terrace-garden',
@@ -377,7 +377,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { q: 'Which plants survive a Delhi summer on a rooftop?', a: 'Full-sun, heat-tolerant species — ornamental grasses, bougainvillea, adenium, frangipani, succulents and hardy shrubs hold well.' },
       { q: 'What happens during monsoon?', a: 'A correctly built terrace handles it — the drainage board carries water to the outlets and the filter fabric keeps medium out of them.' },
     ],
-    closing: { badge: 'Contact', heading: 'Have a terrace to talk about?', lede: 'Site visits within Delhi NCR are free and carry no obligation. We would rather see it than quote a number that only works on paper.', cta_primary_label: 'Book a Site Visit', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_04.jpg' },
+    closing: { badge: 'Contact', heading: 'Have a terrace to talk about?', lede: 'Site visits within Delhi NCR are free and carry no obligation. We would rather see it than quote a number that only works on paper.', cta_primary_label: 'Book a Site Visit', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/terrace_drainage.webp' },
   },
   'balcony-gardens': {
     slug: 'balcony-gardens',
@@ -416,7 +416,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { no: '04 / Maintain', title: 'Care schedule', desc: 'Written schedule handed over, with a maintenance contract available where you want it.' },
     ],
     faqs: [],
-    closing: { badge: 'Contact', heading: 'Tell us about the balcony.', lede: 'A photograph, rough dimensions and which direction it faces is enough to start. Site visits within Delhi NCR are free.', cta_primary_label: 'Start a Project', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/cta_bg.jpg' },
+    closing: { badge: 'Contact', heading: 'Tell us about the balcony.', lede: 'A photograph, rough dimensions and which direction it faces is enough to start. Site visits within Delhi NCR are free.', cta_primary_label: 'Start a Project', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/vertical-gardens/rooftop-pool-sunset.webp' },
   },
   'moss-wall': {
     slug: 'moss-wall',
@@ -461,7 +461,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { q: 'Can it go outside?', a: 'No — and this applies to covered balconies and semi-outdoor spaces as well. Delhi conditions will degrade it faster than the interior guarantee covers.' },
       { q: 'Does it need any maintenance?', a: 'Periodic dusting, and we will repaste or replace any section that lifts over time.' },
     ],
-    closing: { badge: 'Contact', heading: 'Have a wall in mind?', lede: 'Send us dimensions and a photograph of the space. Specification is quick once we have seen it.', cta_primary_label: 'Start a Project', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_02.jpg' },
+    closing: { badge: 'Contact', heading: 'Have a wall in mind?', lede: 'Send us dimensions and a photograph of the space. Specification is quick once we have seen it.', cta_primary_label: 'Start a Project', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/moss-walls/federal-bank-moss-wall.webp' },
   },
   'plantscaping': {
     slug: 'plantscaping',
@@ -506,7 +506,7 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
       { q: 'Can you work around our office hours?', a: 'Usually yes. Most maintenance is quiet work that can happen during a normal working day.' },
       { q: 'We have existing plants. Can you take over the care?', a: 'Yes. We would survey the existing planting, assess condition and light, and propose a care plan.' },
     ],
-    closing: { badge: 'Contact', heading: 'Tell us about your office and what you are trying to achieve.', lede: 'We will visit, take light readings and come back with a specification and a maintenance quote.', cta_primary_label: 'Book a Survey', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/project_05.jpg' },
+    closing: { badge: 'Contact', heading: 'Tell us about your office and what you are trying to achieve.', lede: 'We will visit, take light readings and come back with a specification and a maintenance quote.', cta_primary_label: 'Book a Survey', cta_primary_href: 'mailto:founder@wallofgardens.com', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/grow_lights.webp' },
   },
 };
 

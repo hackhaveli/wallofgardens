@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Office Plantation & Corporate Plantscaping Services | Wall of Gardens',
     description: 'Indoor office plant hire, installation, and scheduled maintenance for corporate workplaces across Delhi NCR, Bengaluru, and Mumbai.',
     url: 'https://wallofgardens.com/services/plantscaping',
-    images: [{ url: '/project_01.jpg', width: 1200, height: 630, alt: 'Office Plantation by Wall of Gardens' }],
+    images: [{ url: '/projects/grow_lights.webp', width: 1200, height: 630, alt: 'Office Plantation by Wall of Gardens' }],
   },
 };
 
@@ -387,19 +387,19 @@ export default function PlantscapingPage() {
           <div className="oth">
             <Link className="rv" href="/services/vertical-gardens">
               <div className="plate rvp has-img" data-n="Living Wall — Noida">
-                <img src="/project_03.jpg" alt="Vertical garden" />
+                <img src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Vertical garden" />
               </div>
               <h3>Vertical Gardens</h3>
             </Link>
             <Link className="rv dl1" href="/services/moss-wall">
               <div className="plate rvp has-img" data-n="Preserved Moss Wall — Reception">
-                <img src="/project_02.jpg" alt="Preserved moss wall" />
+                <img src="/projects/moss-walls/federal-bank-moss-wall.webp" alt="Preserved moss wall" />
               </div>
               <h3>Moss Walls</h3>
             </Link>
             <Link className="rv dl2" href="/services/corporate-landscaping">
               <div className="plate rvp has-img" data-n="Corporate Landscape — Gurugram">
-                <img src="/project_01.jpg" alt="Corporate landscape" />
+                <img src="/projects/crew_install.webp" alt="Corporate landscape" />
               </div>
               <h3>Corporate Landscaping</h3>
             </Link>
@@ -410,7 +410,7 @@ export default function PlantscapingPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Corporate Plantscaping — Wall of Gardens">
-          <img src="/project_06.jpg" alt="Office indoor planting" />
+          <img src="/projects/walkway.webp" alt="Office indoor planting" />
         </div>
         <div className="shell">
           <div className="close-in rv">

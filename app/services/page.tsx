@@ -73,7 +73,7 @@ export default function ServicesPage() {
       <section className="sv-hero on-dark" id="top">
         <div className="sv-hero-bg" aria-hidden="true">
           <Image
-            src="/project_03.jpg"
+            src="/projects/vertical-gardens/holiday-inn-atrium.webp"
             alt="Wall of Gardens living architecture"
             fill
             sizes="100vw"
@@ -261,7 +261,7 @@ export default function ServicesPage() {
       {/* HIGH-IMPACT CLOSING SECTION */}
       <section className="hcta on-dark" id="contact">
         <div className="hcta-bg rv" aria-hidden="true">
-          <Image src="/cta_bg.jpg" alt="Wall of Gardens living architecture" fill sizes="100vw" />
+          <Image src="/projects/vertical-gardens/rooftop-pool-sunset.webp" alt="Wall of Gardens living architecture" fill sizes="100vw" />
         </div>
         <div className="shell hcta-in">
           <div className="hcta-copy rv">

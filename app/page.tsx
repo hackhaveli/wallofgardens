@@ -17,12 +17,12 @@ const FACTS = [
 ];
 
 const SERVICES = [
-  { no: '01', href: '/services/plant-maintenance-amc', title: 'Plant Maintenance (AMC)', text: 'Annual Maintenance Contracts for offices, living walls and gardens. Scheduled visits, pest control and free plant replacements.', img: '/project_01.jpg', alt: 'Plant Maintenance AMC by Wall of Gardens' },
-  { no: '02', href: '/services/vertical-gardens', title: 'Vertical Gardens', text: 'Natural, artificial and hybrid living walls, engineered before they are planted.', img: '/projects/vertical-gardens/holiday-inn-atrium.jpg', alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens' },
-  { no: '03', href: '/services/terrace-garden', title: 'Terrace Gardens', text: 'Rooftop landscapes designed around load, waterproofing and where the water actually goes.', img: '/project_04.jpg', alt: 'Rooftop terrace garden at dusk' },
-  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/project_05.jpg', alt: 'Luxury apartment balcony garden with living wall' },
-  { no: '05', href: '/services/moss-wall', title: 'Moss Walls', text: 'Preserved moss installations. No irrigation, no sunlight, no watering schedule.', img: '/project_02.jpg', alt: 'Preserved moss wall in executive boardroom' },
-  { no: '06', href: '/services/plantscaping', title: 'Office Plantation & Plantscaping', text: 'Indoor office plantation, installed and maintained under scheduled contract. The plants are yours; the upkeep is ours.', img: '/project_01.jpg', alt: 'Indoor corporate office plantation by Wall of Gardens' },
+  { no: '01', href: '/services/plant-maintenance-amc', title: 'Plant Maintenance (AMC)', text: 'Annual Maintenance Contracts for offices, living walls and gardens. Scheduled visits, pest control and free plant replacements.', img: '/projects/crew_install.webp', alt: 'Plant Maintenance AMC by Wall of Gardens' },
+  { no: '02', href: '/services/vertical-gardens', title: 'Vertical Gardens', text: 'Natural, artificial and hybrid living walls, engineered before they are planted.', img: '/projects/vertical-gardens/holiday-inn-atrium.webp', alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens' },
+  { no: '03', href: '/services/terrace-garden', title: 'Terrace Gardens', text: 'Rooftop landscapes designed around load, waterproofing and where the water actually goes.', img: '/projects/vertical-gardens/rooftop-pool-sunset.webp', alt: 'Rooftop terrace garden at dusk' },
+  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/projects/modular_system.webp', alt: 'Luxury apartment balcony garden with living wall' },
+  { no: '05', href: '/services/moss-wall', title: 'Moss Walls', text: 'Preserved moss installations. No irrigation, no sunlight, no watering schedule.', img: '/projects/moss-walls/federal-bank-moss-wall.webp', alt: 'Preserved moss wall in executive boardroom' },
+  { no: '06', href: '/services/plantscaping', title: 'Office Plantation & Plantscaping', text: 'Indoor office plantation, installed and maintained under scheduled contract. The plants are yours; the upkeep is ours.', img: '/projects/grow_lights.webp', alt: 'Indoor corporate office plantation by Wall of Gardens' },
 ];
 
 const METHOD = [
@@ -225,7 +225,7 @@ export default async function Home() {
               <div className="dual-media">
                 <span className="dual-badge">Corporate &amp; Commercial</span>
                 <Image
-                  src="/project_01.jpg"
+                  src="/projects/crew_install.webp"
                   alt="Corporate Plant Maintenance AMC & Greenery"
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
@@ -271,7 +271,7 @@ export default async function Home() {
               <div className="dual-media">
                 <span className="dual-badge" style={{ borderColor: 'rgba(127,166,92,0.5)', color: '#7fa65c' }}>Luxury Residential</span>
                 <Image
-                  src="/project_04.jpg"
+                  src="/projects/vertical-gardens/rooftop-pool-sunset.webp"
                   alt="Luxury Terrace & Balcony Gardens"
                   fill
                   sizes="(max-width: 900px) 100vw, 50vw"
@@ -399,7 +399,7 @@ export default async function Home() {
 
           <div className={`hwork n${Math.min(featuredProjects.length, 3)}`}>
             {featuredProjects.slice(0, 3).map((p, idx) => {
-              const src = p.img || `/project_0${idx + 1}.jpg`;
+              const src = p.img || '/projects/vertical-gardens/holiday-inn-atrium.webp';
               return (
                 <Link key={p.id || idx} href="/projects" className="hwork-c rv rv-img" style={{ '--d': idx } as React.CSSProperties}>
                   <div className="hwork-m">
@@ -436,7 +436,7 @@ export default async function Home() {
               </p>
               <div className="hmeth-ph rv rv-img">
                 <div className="hmeth-ph-m">
-                  <Image src="/project_05.jpg" alt="Office plantscaping across an open-plan floor" fill sizes="(max-width: 1000px) 100vw, 40vw" />
+                  <Image src="/projects/walkway.webp" alt="Office plantscaping across an open-plan floor" fill sizes="(max-width: 1000px) 100vw, 40vw" />
                 </div>
                 <span className="hmeth-tag">Site assessment · before pricing</span>
               </div>
@@ -507,7 +507,7 @@ export default async function Home() {
       {/* CLOSING */}
       <section className="hcta on-dark" id="contact">
         <div className="hcta-bg rv" aria-hidden="true">
-          <Image src="/cta_bg.jpg" alt="Wall of Gardens living architecture consultation background" fill sizes="100vw" />
+          <Image src="/projects/vertical-gardens/courtyard-atrium-skylight.webp" alt="Wall of Gardens living architecture consultation background" fill sizes="100vw" />
         </div>
         <div className="shell hcta-in">
           <div className="hcta-copy rv">

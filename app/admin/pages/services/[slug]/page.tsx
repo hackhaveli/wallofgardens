@@ -149,7 +149,7 @@ export default function ServicePageEditor({ params }: { params: Promise<{ slug: 
           <>
             <TwoCol>
               <TextField label="Badge" value={(content.closing as { badge?: string }).badge || ''} onChange={v => update('closing', { ...(content.closing as object), badge: v })} />
-              <TextField label="Background Image" value={(content.closing as { bg_image?: string }).bg_image || ''} onChange={v => update('closing', { ...(content.closing as object), bg_image: v })} placeholder="/project_01.jpg" />
+              <TextField label="Background Image" value={(content.closing as { bg_image?: string }).bg_image || ''} onChange={v => update('closing', { ...(content.closing as object), bg_image: v })} placeholder="/projects/crew_install.webp" />
             </TwoCol>
             <TextField label="Heading" value={(content.closing as { heading?: string }).heading || ''} onChange={v => update('closing', { ...(content.closing as object), heading: v })} />
             <TextAreaField label="Lead Text" value={(content.closing as { lede?: string }).lede || ''} onChange={v => update('closing', { ...(content.closing as object), lede: v })} rows={2} />

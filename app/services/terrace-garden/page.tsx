@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Terrace Gardens & Rooftop Landscape Engineering | Wall of Gardens',
     description: 'Rooftop landscapes engineered for slab load, waterproofing protection, and automated irrigation.',
     url: 'https://wallofgardens.com/services/terrace-garden',
-    images: [{ url: '/project_04.jpg', width: 1200, height: 630, alt: 'Terrace Garden Engineering by Wall of Gardens' }],
+    images: [{ url: '/projects/vertical-gardens/rooftop-pool-sunset.webp', width: 1200, height: 630, alt: 'Terrace Garden Engineering by Wall of Gardens' }],
   },
 };
 
@@ -320,19 +320,19 @@ export default function TerraceGardenPage() {
           <div className="oth">
             <Link className="rv" href="/services/vertical-gardens">
               <div className="plate rvp has-img" data-n="Living Wall — Noida">
-                <img src="/project_03.jpg" alt="Vertical garden" />
+                <img src="/projects/vertical-gardens/holiday-inn-atrium.webp" alt="Vertical garden" />
               </div>
               <h3>Vertical Gardens</h3>
             </Link>
             <Link className="rv dl1" href="/services/moss-wall">
               <div className="plate rvp has-img" data-n="Preserved Moss Wall — Reception">
-                <img src="/project_02.jpg" alt="Preserved moss wall" />
+                <img src="/projects/moss-walls/federal-bank-moss-wall.webp" alt="Preserved moss wall" />
               </div>
               <h3>Moss Walls</h3>
             </Link>
             <Link className="rv dl2" href="/services/plantscaping">
               <div className="plate rvp has-img" data-n="Office Indoor Planting — Workspace">
-                <img src="/project_06.jpg" alt="Office indoor planting" />
+                <img src="/projects/grow_lights.webp" alt="Office indoor planting" />
               </div>
               <h3>Corporate Plantscaping</h3>
             </Link>
@@ -343,7 +343,7 @@ export default function TerraceGardenPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Terrace Garden — Wall of Gardens">
-          <img src="/project_04.jpg" alt="Terrace garden photograph" />
+          <img src="/projects/terrace_drainage.webp" alt="Terrace garden photograph" />
         </div>
         <div className="shell">
           <div className="close-in rv">
