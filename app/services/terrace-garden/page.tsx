@@ -332,7 +332,7 @@ export default function TerraceGardenPage() {
             </Link>
             <Link className="rv dl2" href="/services/plantscaping">
               <div className="plate rvp has-img" data-n="Office Indoor Planting — Workspace">
-                <img src="/projects/grow_lights.webp" alt="Office indoor planting" />
+                <img src="/projects/vertical-gardens/architectural-staircase.webp" alt="Office indoor planting" />
               </div>
               <h3>Corporate Plantscaping</h3>
             </Link>
@@ -343,7 +343,7 @@ export default function TerraceGardenPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Terrace Garden — Wall of Gardens">
-          <img src="/projects/terrace_drainage.webp" alt="Terrace garden photograph" />
+          <img src="/projects/vertical-gardens/multi-species-wave-wall.webp" alt="Terrace garden photograph" />
         </div>
         <div className="shell">
           <div className="close-in rv">

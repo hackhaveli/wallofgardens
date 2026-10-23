@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Luxury Balcony Gardens & Compact Green Spaces | Wall of Gardens',
     description: 'Space-optimized balcony landscaping engineered for orientation, micro-climate, and clean drainage.',
     url: 'https://wallofgardens.com/services/balcony-gardens',
-    images: [{ url: '/projects/modular_system.webp', width: 1200, height: 630, alt: 'Balcony Gardens by Wall of Gardens' }],
+    images: [{ url: '/projects/vertical-gardens/pergola-trellis-close-up.webp', width: 1200, height: 630, alt: 'Balcony Gardens by Wall of Gardens' }],
   },
 };
 
@@ -446,7 +446,7 @@ export default function BalconyGardensPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Balcony Garden — Wall of Gardens">
-          <img src="/projects/portal_door.webp" alt="Balcony garden photograph" />
+          <img src="/projects/vertical-gardens/pergola-trellis-close-up.webp" alt="Balcony garden photograph" />
         </div>
         <div className="shell">
           <div className="close-in rv">

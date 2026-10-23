@@ -383,7 +383,7 @@ export default function MossWallPage() {
             </Link>
             <Link className="rv dl1" href="/services/plantscaping">
               <div className="plate rvp has-img" data-n="Office Indoor Planting — Workspace">
-                <img src="/projects/grow_lights.webp" alt="Office Indoor Planting" />
+                <img src="/projects/vertical-gardens/architectural-staircase.webp" alt="Office Indoor Planting" />
               </div>
               <h3>Corporate Plantscaping</h3>
             </Link>

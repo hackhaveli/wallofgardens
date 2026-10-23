@@ -36,10 +36,10 @@ export default function MediaLibraryPage() {
             ['/projects/crew_install.webp', 'Corporate AMC In-House Crew'],
             ['/projects/vertical-gardens/holiday-inn-atrium.webp', 'Holiday Inn Living Wall'],
             ['/projects/vertical-gardens/rooftop-pool-sunset.webp', 'Penthouse Rooftop Terrace'],
-            ['/projects/modular_system.webp', 'Modular Balcony Living Wall'],
+            ['/projects/vertical-gardens/pergola-trellis-close-up.webp', 'Pergola Verandah Living Wall'],
             ['/projects/moss-walls/federal-bank-moss-wall.webp', 'Federal Bank Preserved Moss Wall'],
-            ['/projects/grow_lights.webp', 'Office Plantscaping & Lights'],
-            ['/projects/walkway.webp', 'Commercial Biophilic Walkway'],
+            ['/projects/vertical-gardens/architectural-staircase.webp', 'Architectural Staircase Plantscaping'],
+            ['/projects/vertical-gardens/basalt-walkway-living-wall.webp', 'Basalt Walkway Living Wall'],
           ].map(([path, label]) => (
             <div key={path} style={{ border: '1px solid rgba(14,24,17,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
               <div style={{ height: '80px', background: '#F0EFE9', position: 'relative' }}>

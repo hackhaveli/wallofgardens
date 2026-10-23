@@ -11,15 +11,15 @@
     "thumbWebp": "/projects/moss-walls/federal-bank-moss-wall-thumb.webp"
   },
   {
-    "id": "hul-unilever-curved-wall",
-    "title": "Hindustan Unilever Atrium Feature Wall",
-    "client": "Hindustan Unilever Limited (HUL)",
-    "category": "Enterprise Reception",
-    "angle": "Curved Architectural Panorama",
-    "technique": "Seamless Reindeer Moss Field with Embedded Unilever U-Monogram & Terracotta Jali Screens",
-    "imageJpg": "/projects/moss-walls/hul-unilever-curved-wall.jpg",
-    "imageWebp": "/projects/moss-walls/hul-unilever-curved-wall.webp",
-    "thumbWebp": "/projects/moss-walls/hul-unilever-curved-wall-thumb.webp"
+    "id": "outdoor-architectural-courtyard-facade",
+    "title": "Multi-Tone Bun Moss & Ivy Feature Facade",
+    "client": "Private Luxury Estate",
+    "category": "Multi-Texture Living Facade",
+    "angle": "Full-Height Architectural Courtyard Sconce Angle",
+    "technique": "3D Relief Bun Moss Nodules with Ground-Recessed Grazing Lights and Cascading English Ivy Canopy",
+    "imageJpg": "/projects/moss-walls/outdoor-architectural-courtyard-facade.jpg",
+    "imageWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade.webp",
+    "thumbWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade-thumb.webp"
   },
   {
     "id": "syngenta-illuminated-crest",
@@ -36,7 +36,7 @@
     "id": "wipro-revantage-reception",
     "title": "Wipro & Revantage Executive Lounge",
     "client": "Wipro & Revantage Campus",
-    "category": "Corporate Reception",
+    "category": "Enterprise Reception",
     "angle": "Full Lounge Perspective with Pebble Planter Base",
     "technique": "High-Density Forest Green Moss Acoustic Wall with Precision Matte Acrylic Corporate Logos & Pebble Planter",
     "imageJpg": "/projects/moss-walls/wipro-revantage-reception.jpg",
@@ -86,49 +86,5 @@
     "imageJpg": "/projects/moss-walls/exl-chennai-heritage-reception.jpg",
     "imageWebp": "/projects/moss-walls/exl-chennai-heritage-reception.webp",
     "thumbWebp": "/projects/moss-walls/exl-chennai-heritage-reception-thumb.webp"
-  },
-  {
-    "id": "genpact-timber-slat-column",
-    "title": "Genpact Fluted Timber & Moss Inset",
-    "client": "Genpact India HQ",
-    "category": "Architectural Feature",
-    "angle": "Vertical Architectural Grazing Light",
-    "technique": "Recessed Full-Height Reindeer Moss Column Interlocked with White Oak Acoustic Battens",
-    "imageJpg": "/projects/moss-walls/genpact-timber-slat-column.jpg",
-    "imageWebp": "/projects/moss-walls/genpact-timber-slat-column.webp",
-    "thumbWebp": "/projects/moss-walls/genpact-timber-slat-column-thumb.webp"
-  },
-  {
-    "id": "geometric-rhythm-corridor",
-    "title": "Executive Corridor Geometric Rhythm Wall",
-    "client": "Corporate Campus Gurugram",
-    "category": "Architectural Feature",
-    "angle": "Dynamic Corridor Linear Perspective",
-    "technique": "Alternating Fluted Timber Mullions, Glass Vision Panels, and Preserved Moss Acoustic Spandrels",
-    "imageJpg": "/projects/moss-walls/geometric-rhythm-corridor.jpg",
-    "imageWebp": "/projects/moss-walls/geometric-rhythm-corridor.webp",
-    "thumbWebp": "/projects/moss-walls/geometric-rhythm-corridor-thumb.webp"
-  },
-  {
-    "id": "outdoor-architectural-courtyard-facade",
-    "title": "Multi-Tone Bun Moss & Ivy Feature Facade",
-    "client": "Private Luxury Estate",
-    "category": "Multi-Texture Living Facade",
-    "angle": "Full-Height Architectural Courtyard Sconce Angle",
-    "technique": "3D Relief Bun Moss Nodules with Ground-Recessed Grazing Lights and Cascading English Ivy Canopy",
-    "imageJpg": "/projects/moss-walls/outdoor-architectural-courtyard-facade.jpg",
-    "imageWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade.webp",
-    "thumbWebp": "/projects/moss-walls/outdoor-architectural-courtyard-facade-thumb.webp"
-  },
-  {
-    "id": "vertical-fluted-moss-panel",
-    "title": "Architectural Stone & Multi-Texture Moss Column",
-    "client": "Private Residence & Studio",
-    "category": "Multi-Texture Living Facade",
-    "angle": "Full Vertical Architectural Symmetrical Frame",
-    "technique": "Precision Alternating Bands of Flat, Reindeer, and Cushion Bun Moss Flanked by Fluted Wall Cladding",
-    "imageJpg": "/projects/moss-walls/vertical-fluted-moss-panel.jpg",
-    "imageWebp": "/projects/moss-walls/vertical-fluted-moss-panel.webp",
-    "thumbWebp": "/projects/moss-walls/vertical-fluted-moss-panel-thumb.webp"
   }
 ]

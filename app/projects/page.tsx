@@ -108,7 +108,7 @@ const DEFAULT_PROJECT_ITEMS = [
     image: '/projects/vertical-gardens/basalt-walkway-living-wall.webp',
   },
 
-  // 10 Curated Enterprise Moss Walls
+  // 8 Curated Enterprise Moss Walls
   {
     cat: 'moss',
     no: 'MW—01',
@@ -122,12 +122,12 @@ const DEFAULT_PROJECT_ITEMS = [
   {
     cat: 'moss',
     no: 'MW—02',
-    name: 'Hindustan Unilever Atrium Feature Wall',
-    client: 'Hindustan Unilever Limited (HUL)',
-    location: 'Corporate Headquarters Atrium, Delhi NCR',
-    scope: 'Seamless reindeer moss field with embedded Unilever U-monogram & terracotta jali detailing',
+    name: 'Multi-Tone Bun Moss & Ivy Feature Facade',
+    client: 'Private Luxury Estate',
+    location: 'Chhatarpur, New Delhi',
+    scope: '3D relief bun moss nodules with ground-recessed grazing lights and cascading English ivy canopy',
     year: 'Completed 2024',
-    image: '/projects/moss-walls/hul-unilever-curved-wall.webp',
+    image: '/projects/moss-walls/outdoor-architectural-courtyard-facade.webp',
   },
   {
     cat: 'moss',
@@ -189,26 +189,6 @@ const DEFAULT_PROJECT_ITEMS = [
     year: 'Completed 2024',
     image: '/projects/moss-walls/exl-chennai-heritage-reception.webp',
   },
-  {
-    cat: 'moss',
-    no: 'MW—09',
-    name: 'Genpact Fluted Timber & Moss Inset',
-    client: 'Genpact India HQ',
-    location: 'Golf Course Road, Gurugram',
-    scope: 'Recessed full-height reindeer moss column interlocked with white oak acoustic battens',
-    year: 'Completed 2024',
-    image: '/projects/moss-walls/genpact-timber-slat-column.webp',
-  },
-  {
-    cat: 'moss',
-    no: 'MW—10',
-    name: 'Executive Corridor Geometric Rhythm Wall',
-    client: 'Corporate Campus Gurugram',
-    location: 'Aerocity, New Delhi',
-    scope: 'Alternating fluted timber mullions, glass vision panels, and preserved moss acoustic spandrels',
-    year: 'Completed 2024',
-    image: '/projects/moss-walls/geometric-rhythm-corridor.webp',
-  },
 
   // Terrace Gardens
   {
@@ -224,34 +204,24 @@ const DEFAULT_PROJECT_ITEMS = [
   {
     cat: 'terrace',
     no: 'TG—02',
-    name: 'Engineering Terrace Drainage & Decking',
-    client: 'Architectural Residence',
-    location: 'Panchsheel Park, New Delhi',
-    scope: 'High-flow subterranean drain cells, geotextile membrane filter, automated multi-line drip manifold and zero-ponding pavers',
+    name: 'Penthouse Infinity Pool Wave Living Wall',
+    client: 'Sky Penthouse Resident',
+    location: 'Golf Course Road, Gurugram',
+    scope: 'Terrace swimming pool living wall with multi-species diagonal bands, automated nutrition dosing, and marine-grade subframe',
     year: 'Completed 2024',
-    image: '/projects/terrace_drainage.webp',
+    image: '/projects/vertical-gardens/multi-species-wave-wall.webp',
   },
 
   // Balcony Gardens
   {
     cat: 'balcony',
     no: 'BG—01',
-    name: 'High-Rise Balcony Biophilic Sanctuary',
-    client: 'Sky Penthouse Resident',
-    location: 'Golf Course Road, Gurugram',
-    scope: 'Zero-runoff drainage containment, custom powder-coated lightweight aluminum planters & privacy screen vertical planting',
-    year: 'Completed 2024',
-    image: '/projects/modular_system.webp',
-  },
-  {
-    cat: 'balcony',
-    no: 'BG—02',
-    name: 'Covered Verandah Vertical Garden Portal',
-    client: 'Luxury Apartment Residence',
+    name: 'Pergola Verandah Architectural Living Wall',
+    client: 'Penthouse Verandah',
     location: 'Vasant Vihar, New Delhi',
-    scope: 'Flush-mounted architectural doorway surround with automated micro-misting and shade-tolerant Philodendron cultivars',
+    scope: 'Custom timber pergola canopy with vertical living screen, concealed drip manifold & anti-glare terrace glazing',
     year: 'Completed 2024',
-    image: '/projects/portal_door.webp',
+    image: '/projects/vertical-gardens/pergola-trellis-close-up.webp',
   },
 
   // Plant Maintenance AMC
@@ -265,16 +235,6 @@ const DEFAULT_PROJECT_ITEMS = [
     year: 'Ongoing AMC',
     image: '/projects/crew_install.webp',
   },
-  {
-    cat: 'amc',
-    no: 'AMC—02',
-    name: 'Commercial Developer Multi-Floor Plant Maintenance',
-    client: 'DLF CyberPark Corporate Tower',
-    location: 'Udyog Vihar, Gurugram',
-    scope: 'Full facility biophilic plant maintenance across 4 office floors, soil moisture probes, pruning and regular nutrient feeding',
-    year: 'Ongoing AMC',
-    image: '/projects/grow_lights.webp',
-  },
 
   // Corporate Plantscaping
   {
@@ -283,19 +243,9 @@ const DEFAULT_PROJECT_ITEMS = [
     name: 'Biophilic Headquarters Interior Plantscaping',
     client: 'Global Financial Services Campus',
     location: 'Barakhamba Road, New Delhi',
-    scope: 'Lux-survey mapped indoor cultivars, sub-irrigation planter systems, sound-dampening acoustic greenery & executive planters',
+    scope: 'Lux-survey mapped indoor cultivars, sub-irrigation planter systems, sound-dampening acoustic greenery & architectural living columns',
     year: 'Completed & Maintained',
-    image: '/projects/grow_lights.webp',
-  },
-  {
-    cat: 'plantscaping',
-    no: 'PS—02',
-    name: 'Modern Atrium & Walkway Planter Network',
-    client: 'Enterprise Tech Headquarters',
-    location: 'Sector 132, Noida Expressway',
-    scope: 'Large-scale specimen Ficus Lyrata, Sansevieria zeylanica clusters, architectural fiberglass planters with integrated drainage',
-    year: 'Completed & Maintained',
-    image: '/projects/walkway.webp',
+    image: '/projects/vertical-gardens/architectural-staircase.webp',
   },
 ];
 
@@ -337,10 +287,10 @@ const ENTERPRISE_CLIENTS = [
     scope: 'Executive Undulating Preserved Moss Wave Wall & 3D Backlit Lettering',
   },
   {
-    name: 'Hindustan Unilever Limited',
-    city: 'Corporate Atrium',
-    category: 'Enterprise FMCG',
-    scope: 'Curved Scandinavian Moss Wall with Embedded U-Monogram & Jali Detailing',
+    name: 'Syngenta India',
+    city: 'CyberCity, Gurugram',
+    category: 'Agri-Science Enterprise',
+    scope: 'Preserved Moss Wall with Illuminated Golden Leaf Crest & Fluted Desk',
   },
   {
     name: 'Wipro & Revantage',

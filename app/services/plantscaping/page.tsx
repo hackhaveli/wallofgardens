@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Office Plantation & Corporate Plantscaping Services | Wall of Gardens',
     description: 'Indoor office plant hire, installation, and scheduled maintenance for corporate workplaces across Delhi NCR, Bengaluru, and Mumbai.',
     url: 'https://wallofgardens.com/services/plantscaping',
-    images: [{ url: '/projects/grow_lights.webp', width: 1200, height: 630, alt: 'Office Plantation by Wall of Gardens' }],
+    images: [{ url: '/projects/vertical-gardens/architectural-staircase.webp', width: 1200, height: 630, alt: 'Office Plantation & Plantscaping by Wall of Gardens' }],
   },
 };
 
@@ -410,7 +410,7 @@ export default function PlantscapingPage() {
       {/* CLOSING */}
       <section className="close" id="contact">
         <div className="plate dk has-img" data-n="Corporate Plantscaping — Wall of Gardens">
-          <img src="/projects/walkway.webp" alt="Office indoor planting" />
+          <img src="/projects/vertical-gardens/architectural-staircase.webp" alt="Corporate office indoor plantscaping" />
         </div>
         <div className="shell">
           <div className="close-in rv">

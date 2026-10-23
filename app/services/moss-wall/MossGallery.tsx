@@ -22,7 +22,6 @@ const CATEGORIES = [
   { key: 'Enterprise Reception', label: 'Corporate Atriums & Lounges' },
   { key: 'Corporate Boardroom', label: 'Executive Boardrooms' },
   { key: '3D Art & Sculpture', label: '3D Maps & Cartography' },
-  { key: 'Architectural Feature', label: 'Timber & Acoustic Insets' },
   { key: 'Multi-Texture Living Facade', label: 'Multi-Texture Facades' },
 ];
 
@@ -208,16 +207,16 @@ export default function MossGallery() {
               <span>✓ Bespoke Corporate Logo Integration</span>
             </div>
           </div>
-          <div className="moss-craft-media" onClick={() => setSelectedProject(projects.find(p => p.id === 'exl-world-map-craftsmanship') || projects[0])}>
+          <div className="moss-craft-media" onClick={() => setSelectedProject(projects.find(p => p.id === 'exl-global-moss-world-map') || projects[0])}>
             <Image
-              src="/projects/moss-walls/exl-world-map-craftsmanship.webp"
-              alt="Artisan hand-tufting moss wall"
+              src="/projects/moss-walls/exl-global-moss-world-map.webp"
+              alt="High-relief 3D continental moss world map"
               fill
               sizes="(max-width: 900px) 100vw, 42vw"
               className="moss-craft-img"
             />
             <div className="moss-craft-tag">
-              <span>On-Site Hand-Tufting · EXL World Map</span>
+              <span>Precision 3D Sculpting · EXL Global World Map</span>
             </div>
           </div>
         </div>
