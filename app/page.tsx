@@ -20,9 +20,9 @@ const SERVICES = [
   { no: '01', href: '/services/plant-maintenance-amc', title: 'Plant Maintenance (AMC)', text: 'Annual Maintenance Contracts for offices, living walls and gardens. Scheduled visits, pest control and free plant replacements.', img: '/projects/crew_install.webp', alt: 'Plant Maintenance AMC by Wall of Gardens' },
   { no: '02', href: '/services/vertical-gardens', title: 'Vertical Gardens', text: 'Natural, artificial and hybrid living walls, engineered before they are planted.', img: '/projects/vertical-gardens/holiday-inn-atrium.webp', alt: 'Holiday Inn Multi-Story Living Wall by Wall of Gardens' },
   { no: '03', href: '/services/terrace-garden', title: 'Terrace Gardens', text: 'Rooftop landscapes designed around load, waterproofing and where the water actually goes.', img: '/projects/vertical-gardens/rooftop-pool-sunset.webp', alt: 'Rooftop terrace garden at dusk' },
-  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/projects/vertical-gardens/pergola-trellis-close-up.webp', alt: 'Sunlit apartment verandah living wall under architectural pergola' },
+  { no: '04', href: '/services/balcony-gardens', title: 'Balcony Gardens', text: 'Compact spaces planned to the square foot so the balcony stays usable.', img: '/projects/modular_system.webp', alt: 'Luxury apartment balcony garden with living wall' },
   { no: '05', href: '/services/moss-wall', title: 'Moss Walls', text: 'Preserved moss installations. No irrigation, no sunlight, no watering schedule.', img: '/projects/moss-walls/federal-bank-moss-wall.webp', alt: 'Preserved moss wall in executive boardroom' },
-  { no: '06', href: '/services/plantscaping', title: 'Office Plantation & Plantscaping', text: 'Indoor office plantation, installed and maintained under scheduled contract. The plants are yours; the upkeep is ours.', img: '/projects/vertical-gardens/architectural-staircase.webp', alt: 'Indoor corporate architectural plantscaping and vertical feature' },
+  { no: '06', href: '/services/plantscaping', title: 'Office Plantation & Plantscaping', text: 'Indoor office plantation, installed and maintained under scheduled contract. The plants are yours; the upkeep is ours.', img: '/projects/grow_lights.webp', alt: 'Indoor corporate office plantation by Wall of Gardens' },
 ];
 
 const METHOD = [
@@ -436,7 +436,7 @@ export default async function Home() {
               </p>
               <div className="hmeth-ph rv rv-img">
                 <div className="hmeth-ph-m">
-                  <Image src="/projects/vertical-gardens/basalt-walkway-living-wall.webp" alt="Architectural living wall along residential walkway" fill sizes="(max-width: 1000px) 100vw, 40vw" />
+                  <Image src="/projects/walkway.webp" alt="Office plantscaping across an open-plan floor" fill sizes="(max-width: 1000px) 100vw, 40vw" />
                 </div>
                 <span className="hmeth-tag">Site assessment · before pricing</span>
               </div>
