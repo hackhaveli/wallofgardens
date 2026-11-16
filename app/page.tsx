@@ -176,7 +176,7 @@ export default async function Home() {
           <div className="cl-head">
             <div className="rule-tag"><span className="tag">Spaces We Have Worked On</span></div>
             <p className="cl-trust-sub">
-              Trusted by Fortune 500 campuses, 5-star hotels &amp; premier residential estates across Delhi NCR
+              Trusted by leading corporate campuses, luxury hotels &amp; premier residential estates across Delhi NCR
             </p>
           </div>
         </div>
@@ -286,7 +286,7 @@ export default async function Home() {
                 <ul className="dual-checklist">
                   <li>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                    <span><strong>Zero-Leakage Drainage Guarantee:</strong> Dual-layer root barriers &amp; high-flow drain cells.</span>
+                    <span><strong>Engineered Drainage System:</strong> Dual-layer root barriers &amp; high-flow drain cells designed to prevent waterlogging.</span>
                   </li>
                   <li>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
@@ -294,7 +294,7 @@ export default async function Home() {
                   </li>
                   <li>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                    <span><strong>Smart Micro-Drip Irrigation:</strong> Automated timer-controlled watering with zero manual hassle.</span>
+                    <span><strong>Smart Micro-Drip Irrigation:</strong> Automated timer-controlled watering that minimises daily upkeep.</span>
                   </li>
                   <li>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
@@ -322,13 +322,13 @@ export default async function Home() {
           <div className="sla-grid">
             <div className="sla-item">
               <span className="sla-num">01 / REPLACEMENT</span>
-              <h4>100% Plant Replacement</h4>
-              <p>Any plant showing distress or mortality under our AMC is promptly renewed at zero extra billing.</p>
+              <h4>Free Plant Replacement</h4>
+              <p>Plants showing distress under our active AMC are replaced at no extra cost, subject to contract terms.</p>
             </div>
             <div className="sla-item">
               <span className="sla-num">02 / COMPLIANCE</span>
-              <h4>Background-Verified Staff</h4>
-              <p>Police-verified, ID-badged, and trained horticulturists adhering strictly to corporate security protocols.</p>
+              <h4>Verified &amp; Trained Staff</h4>
+              <p>ID-badged, background-checked horticulturists trained to follow corporate security and access protocols.</p>
             </div>
             <div className="sla-item">
               <span className="sla-num">03 / ECO-FRIENDLY</span>

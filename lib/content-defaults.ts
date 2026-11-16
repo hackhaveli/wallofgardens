@@ -136,9 +136,9 @@ export const DEFAULT_PROJECTS = [
 ];
 
 export const DEFAULT_TESTIMONIALS = [
-  { id: 'T-01', quote: 'Totally impressed with how Wall of Gardens transformed my terrace into a tranquil retreat. Their expertise in plant selection and layout design is exceptional.', author: 'Amit Gupta', service: 'Terrace Garden', order_index: 1, active: true },
-  { id: 'T-02', quote: 'Wall of Gardens consistently delivers exceptional results, from balcony garden designs to office plant maintenance. Their creativity and reliability are unmatched.', author: 'Sneha Joshi', service: 'Balcony & Plant Care', order_index: 2, active: true },
-  { id: 'T-03', quote: 'Thrilled with the vertical garden installed by Wall of Gardens. It is beautiful and adds a refreshing touch to our space. The attention to technical detail is evident.', author: 'Neha Sharma', service: 'Vertical Garden', order_index: 3, active: true },
+  { id: 'T-01', quote: 'Wall of Gardens completely transformed our terrace — from a bare, unused rooftop to a lush garden retreat. The drainage engineering and plant selection were clearly thought through. Three months in, every plant is thriving.', author: 'Amit Gupta', service: 'Terrace Garden · South Delhi', order_index: 1, active: true },
+  { id: 'T-02', quote: 'We engaged them for our office plantscaping and balcony garden at home. Both projects were delivered on time, the team was professional, and the AMC keeps everything looking fresh without us having to think about it.', author: 'Sneha Joshi', service: 'Office Plantscaping & Balcony Garden · Gurugram', order_index: 2, active: true },
+  { id: 'T-03', quote: 'The vertical garden in our reception lobby gets comments from almost every visitor. The irrigation system is completely hidden, and the Wall of Gardens team handles maintenance on a fixed schedule so we never have to follow up.', author: 'Neha Sharma', service: 'Vertical Garden · Noida', order_index: 3, active: true },
 ];
 
 export const DEFAULT_SERVICES_CONTENT = {
@@ -262,32 +262,32 @@ export const SERVICE_PAGE_DEFAULTS: Record<string, {
   },
   'corporate-landscaping': {
     slug: 'corporate-landscaping',
-    sheet: 'Sheet 01 — Scope of works',
-    title: 'Plant Maintenance Service (AMC)',
-    lede: 'Dedicated Annual Maintenance Contracts (AMC) for corporate offices, living walls, terrace gardens and luxury residences across Delhi NCR.',
-    breadcrumb: 'Home / Services / Plant Maintenance (AMC)',
-    overview_heading: 'Why greenery declines without a scientific AMC.',
+    sheet: 'Sheet 06 — Scope of works',
+    title: 'Corporate Landscaping',
+    lede: 'End-to-end landscaping solutions for corporate campuses, tech parks, and commercial properties across Delhi NCR and pan-India.',
+    breadcrumb: 'Home / Services / Corporate Landscaping',
+    overview_heading: 'Why corporate campuses need professional landscape management.',
     overview_body: [
-      'Most indoor plants and outdoor gardens fail not from a lack of water, but from overwatering, poor drainage, root suffocation, or pests that go unnoticed until the foliage drops.',
-      'Wall of Gardens provides a structured Annual Maintenance Contract (AMC). Dead or damaged plants are replaced free under our comprehensive contract.',
+      'A well-maintained corporate landscape creates a lasting first impression, improves employee well-being, and reinforces brand identity. Generic maintenance rarely achieves this.',
+      'Wall of Gardens designs, installs, and manages corporate green spaces — from entrance atriums and courtyard gardens to rooftop terraces and parking lot perimeters — with structured maintenance schedules.',
     ],
-    scope_heading: 'What is covered under your Plant AMC.',
+    scope_heading: 'What our corporate landscaping covers.',
     scope_items: [
-      { no: '01', title: 'Dedicated scheduled visits', desc: 'Weekly or bi-weekly visits by trained gardeners and supervising horticulturists.' },
-      { no: '02', title: 'Plant replacement guarantee', desc: 'Any declining or dead plant is promptly replaced at zero extra cost.' },
+      { no: '01', title: 'Campus landscape design', desc: 'Comprehensive green-space planning for lobbies, atriums, courtyards, pathways, and common areas.' },
+      { no: '02', title: 'Installation & hardscaping', desc: 'Planting, irrigation setup, decorative hardscaping, and outdoor furniture integration.' },
     ],
-    method_heading: 'What we evaluate during the free site audit.',
-    method_lede: 'Before submitting an AMC quote, our horticulturists inspect every environmental factor.',
+    method_heading: 'What we assess during the campus walkthrough.',
+    method_lede: 'Before proposing a corporate landscape plan, we evaluate every area of the campus.',
     method_items: [
-      { no: '01', title: 'Plant inventory & health', desc: 'Count, species, and current health status of all existing greenery.' },
+      { no: '01', title: 'Campus zone mapping', desc: 'Identifying high-visibility zones, employee gathering spots, and underutilised green areas.' },
     ],
     process_items: [
-      { no: '01 / Audit', title: 'Site health check', desc: 'Complete plant and irrigation inspection across Delhi NCR free of cost.' },
+      { no: '01 / Walkthrough', title: 'Campus assessment', desc: 'Full property walkthrough to map sun exposure, irrigation access, and traffic flow.' },
     ],
     faqs: [
-      { q: 'How does the Plant Replacement Guarantee work?', a: 'If any plant under our AMC dies or declines, we replace it with a healthy nursery-grade specimen at no additional charge.' },
+      { q: 'Do you handle large corporate campuses?', a: 'Yes. We work with corporate campuses of all sizes, from single-floor offices to multi-building tech parks with outdoor landscaping.' },
     ],
-    closing: { badge: 'AMC Enquiry', heading: 'Ready for hassle-free plant maintenance?', lede: 'Site audits within Delhi NCR are free and carry no obligation.', cta_primary_label: 'Get AMC Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/crew_install.webp' },
+    closing: { badge: 'Corporate Enquiry', heading: 'Ready to transform your corporate campus?', lede: 'Campus walkthroughs across Delhi NCR are complimentary.', cta_primary_label: 'Get a Landscape Proposal', cta_primary_href: '/contact', cta_secondary_label: 'WhatsApp Us', cta_secondary_href: 'https://wa.me/919990960669', bg_image: '/projects/crew_install.webp' },
   },
   'vertical-gardens': {
     slug: 'vertical-gardens',
